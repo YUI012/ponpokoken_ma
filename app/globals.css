@@ -97,7 +97,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monos
 }
 .headerNav { display: none; }
 
-/* Shared page shell: designed around 360–430px smartphones */
+/* Shared page shell: designed around 360â€“430px smartphones */
 .pageShell,
 .articleShell,
 .publicIndexPage {
@@ -331,7 +331,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monos
 }
 .toc summary::-webkit-details-marker { display: none; }
 .toc summary::after { content: "+"; float: right; color: #8b96a5; }
-.toc[open] summary::after { content: "−"; }
+.toc[open] summary::after { content: "âˆ’"; }
 .toc ol { margin: 12px 0 0; padding-left: 1.25em; }
 .toc li { margin: 7px 0; color: #5f6b7a; font-size: 13px; }
 .toc a { text-decoration: underline; text-underline-offset: 3px; }
@@ -832,7 +832,7 @@ main.articleShell {
 }
 
 
-/* v5.6 — single-source card spacing
+/* v5.6 â€” single-source card spacing
    Outer card spacing is controlled ONLY by parent gap.
    Markdown authors never need to add blank spacing for layout. */
 .pageShell,
@@ -1027,4 +1027,200 @@ main.articleShell {
   .taxonomyLinkList { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pagination { justify-content: center; }
   .paginationEdge { margin: 0 8px; }
+}
+
+/* =========================================================
+   v6.0 Reader-first blog / quote cards
+   å®Ÿä¾‹ãƒ–ãƒ­ã‚°ãƒ»å£ã‚³ãƒŸã‚’ã€Œæœ¬æ–‡ã€ã¨è¦–è¦šçš„ã«åˆ†é›¢ã™ã‚‹
+   MarkdownArticle.tsx ã®æ—¢å­˜ .sourceEntry ã‚’åˆ©ç”¨
+   ========================================================= */
+
+.sourceEntry {
+  padding: 17px 16px;
+  border: 1px solid #e2e6ec;
+  border-radius: 14px;
+  background: #f5f6f8;
+}
+
+.sourceEntry > h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.55;
+}
+
+.sourceEntry p {
+  color: #475569;
+}
+
+/* åŽŸæ–‡å¼•ç”¨ã ã‘ã€ã‚«ãƒ¼ãƒ‰å†…ã§ã‚‚ã†ä¸€æ®µè¦‹åˆ†ã‘ã‚„ã™ãã™ã‚‹ */
+.sourceEntry blockquote {
+  margin: 13px 0 12px;
+  padding: 13px 15px 13px 17px;
+  border: 0;
+  border-left: 4px solid #9aa4b2;
+  border-radius: 10px;
+  background: #fff;
+  color: #334155;
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 1.85;
+}
+
+.sourceEntry blockquote p {
+  margin: 0;
+  color: inherit;
+}
+
+/* å¼•ç”¨å…ƒãƒªãƒ³ã‚¯ */
+.sourceEntry a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.sourceEntry a::after {
+  content: "â†’";
+  text-decoration: none;
+}
+
+/* 3ã¤ã®å¼•ç”¨ã‚«ãƒ¼ãƒ‰ã®é–“éš” */
+.sourceEntryList {
+  gap: 12px;
+}
+
+/* =========================================================
+   v6.0 Compact affiliate CTA
+   æ­£å¼ã‚¿ã‚¤ãƒˆãƒ«ã¯æœ¬æ–‡ã€ãƒœã‚¿ãƒ³ã¯çŸ­ã„CTAãƒ©ãƒ™ãƒ«ã«ã™ã‚‹å‰æ
+   ========================================================= */
+
+.richCta > a {
+  min-height: 52px;
+  padding: 11px 14px;
+  font-size: 14px;
+  line-height: 1.4;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+.richCta > a span:first-child {
+  min-width: 0;
+}
+
+.richCta small {
+  margin-top: 8px;
+  font-size: 10px;
+}
+
+/* ã‚¹ãƒžãƒ›ã§ã¯ä½™ç™½ã‚’å°‘ã—ç· ã‚ã‚‹ */
+@media (max-width: 640px) {
+  .sourceEntry {
+    padding: 15px 14px;
+    border-radius: 12px;
+  }
+
+  .sourceEntry blockquote {
+    margin: 11px 0 10px;
+    padding: 12px 13px 12px 15px;
+    border-radius: 9px;
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
+
+  .richCta > a {
+    min-height: 50px;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
+
+/* ===== Quote UI fix 2026-09-19 ===== */
+/* =========================================================
+   Quote UI fix
+   - ã‚°ãƒ¬ãƒ¼èƒŒæ™¯ã¯å¼•ç”¨éƒ¨åˆ†ã ã‘
+   - å¼•ç”¨å…ƒãƒªãƒ³ã‚¯ã®æ–‡å­—åŒ–ã‘çŸ¢å°ã‚’å‰Šé™¤
+   - å¤–å´ã®ãƒ–ãƒ­ã‚°ã‚«ãƒ¼ãƒ‰ã¯ç™½èƒŒæ™¯
+   ========================================================= */
+
+.sourceEntry {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.sourceEntry > h3 {
+  margin: 24px 0 10px;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.55;
+}
+
+.sourceEntry p {
+  color: #475569;
+}
+
+/* å¼•ç”¨éƒ¨åˆ†ã ã‘ã‚°ãƒ¬ãƒ¼ */
+.sourceEntry blockquote,
+.markdownBody .sourceEntry blockquote {
+  margin: 14px 0 12px;
+  padding: 16px 18px;
+  border: 0;
+  border-left: 4px solid #94a3b8;
+  border-radius: 12px;
+  background: #f3f4f6;
+  color: #334155;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.85;
+}
+
+.sourceEntry blockquote p,
+.markdownBody .sourceEntry blockquote p {
+  margin: 0;
+  color: inherit;
+}
+
+/* å¼•ç”¨å…ƒãƒªãƒ³ã‚¯ */
+.sourceEntry a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* "Ã¢â€ â€™" ã®åŽŸå› ã«ãªã‚‹ç–‘ä¼¼è¦ç´ ã‚’å®Œå…¨ã«æ¶ˆã™ */
+.sourceEntry a::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* CTAã¯è¬›åº§ã‚¿ã‚¤ãƒˆãƒ«ã‚’æœ¬æ–‡ã«å‡ºã—ã€ãƒœã‚¿ãƒ³ã¯çŸ­ã */
+.richCta > a {
+  min-height: 50px;
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 1.4;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .sourceEntry blockquote,
+  .markdownBody .sourceEntry blockquote {
+    padding: 14px 15px;
+    border-radius: 10px;
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
 }

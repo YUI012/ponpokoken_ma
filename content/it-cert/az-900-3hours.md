@@ -1,0 +1,84 @@
+---
+title: "AZ-900は3時間で合格できる？短期合格者を調べた結果"
+description: "AZ-900に3時間で合格した実例はありますが、Microsoft Fundamentals資格を複数取得済み。5〜10時間例と比較し、前提条件を整理します。"
+date: "2026-09-19"
+updated: "2026-09-19"
+author: "IT資格ナビ編集部"
+tags: ["Azure", "AZ-900", "短期合格", "3時間", "Udemy"]
+featured: false
+primaryCtaLabel: "AZ-900模試を確認"
+primaryCtaUrl: "https://trk.udemy.com/vDmZqj"
+primaryCtaNote: "PR：価格・キャンペーンはリンク先でご確認ください"
+stickyCta: true
+noindex: false
+---
+
+# AZ-900は3時間で合格できる？短期合格者を調べた結果
+
+## 結論
+
+AZ-900に約3時間で合格した実例はあります。ただしAzure実務未経験でも、PL-900・MS-900・SC-900を取得済みでした。完全未経験者の3時間合格として扱うのは危険です。
+
+他にも6〜7時間、5日・10時間で合格した例があり、短期組ほどIT・クラウドやMicrosoft資格の前提知識を持っています。
+
+## Udemy
+
+**【2026年版】AZ-900 Microsoft Azure Fundamentals模擬試験問題集（6回分420問）**
+
+- 模擬試験6回・420問
+- 短時間でアウトプット量を確保
+- 前提知識がある人の仕上げ向け
+
+:::cta label="AZ-900模試を確認" url="https://trk.udemy.com/vDmZqj" note="PR：価格・キャンペーンはリンク先でご確認ください"
+:::
+
+## 短期合格者3人の実例
+
+| 事例 | 勉強時間 | 経験 | 結果 | 主な教材 |
+|---|---:|---|---|---|
+| 1 | 約3時間 | 非エンジニア、MS資格3つ | 合格 | 赤本 |
+| 2 | 6〜7時間 | IT経験あり | 合格 | Udemy模試など |
+| 3 | 10時間・5日 | 基本情報・CLF取得済み | 920点 | Udemy講座＋模試 |
+
+## 実例ブログ・口コミ
+
+### 1. 約3時間で合格
+
+> 勉強時間：約3時間
+
+Azure実務経験はなくても、Microsoft Fundamentalsの共通知識がありました。
+
+[引用元を見る](https://qiita.com/ponponmikankan/items/c27d6db74bac7cb44fef)
+
+### 2. 6〜7時間で突破
+
+> AZ-900を6,7時間くらいの勉強で乗り越えた話
+
+短時間でも模試を使って出題形式に慣れています。
+
+[引用元を見る](https://zenn.dev/ikegumana/articles/6b5efe495274d4)
+
+### 3. 5日・10時間で920点
+
+> 10時間/5日間
+
+基本情報とAWS CLFを取得済みで、クラウド基礎を持った状態からAzure固有部分を詰めています。
+
+[引用元を見る](https://note.com/forsom/n/n3fb6c731cfdf)
+
+## 改めて結論
+
+3時間合格は可能ですが、前提知識ありの短縮例です。Microsoft資格やクラウド基礎がなければ、講義で用語を押さえてから模試へ進む方が安全です。
+
+**まず模試を1回解き、未知の用語が多ければ3時間目標を捨てて基礎学習へ戻してください。**
+
+## Udemy
+
+**【2026年版】AZ-900 Microsoft Azure Fundamentals模擬試験問題集（6回分420問）**
+
+- 420問で試験範囲を確認
+- 短期合格者の仕上げに使いやすい
+- 誤答分野だけ復習
+
+:::cta label="AZ-900模試を確認" url="https://trk.udemy.com/vDmZqj" note="PR：価格・キャンペーンはリンク先でご確認ください"
+:::
