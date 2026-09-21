@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '@/components/StaticLink';
 import type { CSSProperties } from 'react';
 import type { ArticleMeta } from '@/lib/content';
 import type { AffiliateOffer, QualificationEntry } from '@/lib/archive';

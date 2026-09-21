@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '@/components/StaticLink';
 import type { SiteConfig } from '@/lib/sites';
 import { siteHref } from '@/lib/urls';
 

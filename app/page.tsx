@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import type { CSSProperties } from 'react';
-import Link from 'next/link';
+import Link from '@/components/StaticLink';
 import { getArticles } from '@/lib/content';
 import { sites } from '@/lib/sites';
 import { canonicalUrl } from '@/lib/urls';

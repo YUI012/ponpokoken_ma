@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import Link from '@/components/StaticLink';
 import type { CSSProperties } from 'react';
 import type { Article, ArticleMeta } from '@/lib/content';
 import type { SiteConfig } from '@/lib/sites';
