@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     default: 'ぽんぽこメディア｜IT・AI・学習を比較して選ぶ',
     template: '%s｜ぽんぽこメディア',
   },
-  description: 'IT資格、AIツール、Python自動化、動画・デザイン、英語学習などを比較して、選びやすく整理する専門メディアです。',
-  keywords: ['IT資格', 'AIツール', 'Python', 'AI動画', '英語学習', '比較', 'おすすめ'],
+  description: 'AIツール、IT資格、Python自動化、セキュリティ、データ分析、DevOps、Web開発などをカテゴリ別に整理する専門メディアです。',
+  keywords: ['IT資格', 'AIツール', 'Python', 'セキュリティ', 'データ分析', 'DevOps', 'Web開発'],
   openGraph: { type: 'website', siteName: 'ぽんぽこメディア', locale: 'ja_JP' },
   robots: { index: true, follow: true },
 };

@@ -11,12 +11,12 @@ const baseUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://ponpokoken.com').r
 
 export const metadata: Metadata = {
   title: { absolute: 'ぽんぽこメディア｜IT・AI・学習を比較して選ぶ' },
-  description: 'IT資格、AIツール、Python自動化、動画・デザイン、英語学習などを、料金・使い方・学習方法から比較して選べる専門メディアです。',
+  description: 'AIツール、IT資格、Python自動化、セキュリティ、Microsoft 365、データ分析、DevOps、Web開発などを分野別に整理する専門メディアです。',
   alternates: { canonical: `${baseUrl}/` },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'ぽんぽこメディア｜IT・AI・学習を比較して選ぶ',
-    description: 'IT・AI・学習・仕事術を中心に、迷いやすい選択肢を比較してわかりやすく整理します。',
+    description: 'IT・AI・開発・データ分野を、大カテゴリから迷わず探せる形に整理します。',
     type: 'website',
     url: `${baseUrl}/`,
     siteName: 'ぽんぽこメディア',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary',
     title: 'ぽんぽこメディア｜IT・AI・学習を比較して選ぶ',
-    description: 'IT・AI・学習・仕事術を中心に、迷いやすい選択肢を比較してわかりやすく整理します。',
+    description: 'IT・AI・開発・データ分野を、大カテゴリから迷わず探せる形に整理します。',
   },
 };
 
@@ -85,7 +85,7 @@ export default function Home() {
           </div>
           <h1>学びたい・使いたいを、比較して選べる。</h1>
           <p className="pageLead">
-            IT資格、AIツール、Python自動化、動画・デザイン、英語学習まで。料金・使い方・学習方法を整理し、選ぶ前に確認したい情報をまとめています。
+            AIツール、IT資格、Python自動化、セキュリティ、データ分析、DevOps、Web開発まで。分野を選び、その中の記事とおすすめ教材をまとめて確認できます。
           </p>
         </section>
 

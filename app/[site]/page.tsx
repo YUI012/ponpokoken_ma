@@ -35,8 +35,9 @@ export default async function SitePage({ params }: { params: Promise<{ site: str
   if (!site) return notFound();
 
   const allArticles = getArticles(site.slug).filter((article) => !article.noindex);
-  const latestArticles = allArticles.slice(0, 12);
+  const latestArticles = allArticles.slice(0, 6);
   const categories = getCategories(site.slug);
+  const visibleCategories = categories;
   const pageUrl = canonicalUrl(site);
 
   const collectionJsonLd = {
@@ -47,11 +48,11 @@ export default async function SitePage({ params }: { params: Promise<{ site: str
     url: pageUrl,
     mainEntity: {
       '@type': 'ItemList',
-      itemListElement: latestArticles.map((article, index) => ({
+      itemListElement: visibleCategories.map((category, index) => ({
         '@type': 'ListItem',
         position: index + 1,
-        name: article.title,
-        url: canonicalUrl(site, `${article.slug}/`),
+        name: category.name,
+        url: canonicalUrl(site, `category/${category.slug}/`),
       })),
     },
   };
@@ -61,32 +62,45 @@ export default async function SitePage({ params }: { params: Promise<{ site: str
       <SiteHeader site={site} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }} />
 
-      <main className="pageShell">
-        <section className="pageHeroCard uiCard">
-          <div className="articleTags"><span>{site.topic}</span></div>
+      <main className="pageShell simpleSiteHome">
+        <section className="simpleHomeHero">
+          <p className="simpleHomeEyebrow">{site.topic}</p>
           <h1>{site.name}</h1>
-          <p className="pageLead">{site.description}</p>
+          <p>{site.description}</p>
         </section>
 
-        {categories.length > 0 && (
-          <section className="directorySection uiCard">
-            <div className="sectionHead"><div><h2>テーマから探す</h2><p>資格・分野ごとに記事をまとめています。</p></div></div>
-            <div className="taxonomyLinkList">
-              {categories.map((category) => <Link key={category.slug} href={siteHref(site, `category/${category.slug}/`)}>{category.name}<span>{category.count}</span></Link>)}
+        <section className="simpleCategorySection" id="categories">
+          <div className="sectionHead compactHead">
+            <div>
+              <h2>{site.categoryHeading}</h2>
+              <p>最初に大カテゴリだけ選びます。細かい記事は各カテゴリページにまとめています。</p>
+            </div>
+          </div>
+
+          <div className="simpleCategoryList">
+            {visibleCategories.map((category) => (
+              <Link className="simpleCategoryLink" key={category.slug} href={siteHref(site, `category/${category.slug}/`)}>
+                <span className="simpleCategoryText">
+                  <strong>{category.name}</strong>
+                  <small>{category.description}</small>
+                </span>
+                <span className="simpleCategoryMeta">{category.count > 0 ? `${category.count}記事` : '準備中'} <b>→</b></span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {latestArticles.length > 0 && (
+          <section className="simpleLatestSection">
+            <div className="sectionHead compactHead">
+              <div><h2>新着記事</h2><p>最新6件だけ表示します。</p></div>
+              {allArticles.length > 6 && <Link href={siteHref(site, 'articles/')}>すべて見る</Link>}
+            </div>
+            <div className="categoryArticleList">
+              {latestArticles.map((article) => <ArticleCard key={article.slug} article={article} compact />)}
             </div>
           </section>
         )}
-
-
-        <section className="articleIndexSection uiCard" id="articles">
-          <div className="sectionHead">
-            <div><h2>最新記事</h2><p>新しく公開・更新した記事を12件まで表示しています。</p></div>
-            {allArticles.length > 12 && <Link href={siteHref(site, 'articles/')}>すべての記事を見る</Link>}
-          </div>
-          {latestArticles.length > 0 ? (
-            <div className="articleList">{latestArticles.map((article) => <ArticleCard key={article.slug} article={article} />)}</div>
-          ) : <p className="emptyState">記事を準備中です。</p>}
-        </section>
       </main>
       <SiteFooter site={site} />
     </div>

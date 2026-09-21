@@ -1,3 +1,51 @@
+# Affiliate Media Engine v6.3 — IT資格だけ詳細資格を1階層追加
+
+- 通常9サイト: `TOP → カテゴリ → 記事`
+- IT資格ナビ: `TOP → AWS/Azure等 → SAA/AZ-900等 → 記事`
+- AWS/Azure等の親カテゴリは「資格を選ぶ」ページ
+- SAA/AZ-900等の詳細資格ページが「結論 → Udemy → 資格DB → 学習ルート → 記事」のメイン記事
+- 個別記事の戻り先も、判定できる場合は詳細資格ページへ変更
+- 空の詳細資格ページはnoindex、記事がある資格だけサイトマップへ追加
+
+詳細は `ARCHITECTURE-v6.3.md` を参照してください。
+
+## 記事生成マスター
+
+記事生成用マスターは `docs/writer-master-v1.3-10media.md` を使用します。これは今回指定された Writer Master v1.3（固定10媒体対応版）です。
+
+- Udemy講座カタログ調査: `docs/udemy-catalog-research-master-v4.1-10media.md`
+- 記事生成: `docs/writer-master-v1.3-10media.md`
+
+役割を分け、既存のUdemyカタログ調査マスターは残しています。
+
+
+---
+
+
+## v6.2 カテゴリメイン記事方式
+
+カテゴリ定義は `data/sites.json` に集約しました。Udemy Catalog Research Master v4.1 の固定10媒体・推奨topicClustersを `topicCluster` として保持します。
+
+カテゴリページは「結論 → カテゴリ指定Udemy → 学習DB → 学習ルート → 記事一覧」の共通フォーマットです。Udemyはカテゴリ内の記事から自動抽出せず、`data/udemy/{siteId}-udemy-catalog.json` の `topicCluster` 完全一致を優先します。カタログ未投入時のみ `featuredArticleSlugs` のCTAを使います。
+
+記事一覧は最下部に置き、最初の12件だけを簡素なテキストリンクとして表示します。
+
+# Affiliate Media Engine v6.1 — 100サイト共通のシンプル構成
+
+今回の構成では、全メディアを `TOP → 大カテゴリ → 記事` の3階層に固定しました。
+
+- TOPは6〜10個の大カテゴリだけを主役にする
+- カテゴリページは「カテゴリ説明 → おすすめUdemy最大3件 → カテゴリ内全記事」
+- 記事末尾は「Udemy → カテゴリTOP → 関連記事1本」の最大3導線
+- ハンバーガーメニューは使わず、ヘッダーはサイト名＋カテゴリだけ
+- 記事の大カテゴリは `lib/sites.ts` の `categories[].match` から自動判定
+- 10サイト構成を、AIツール / IT資格 / Python自動化 / セキュリティ / Microsoft 365 / デジタルマーケ / データ分析 / データサイエンス / DevOps / Webアプリ開発に整理
+- カテゴリの20件ページネーションを廃止し、カテゴリ専用ページで全記事を確認できる構成に変更
+
+詳細は `ARCHITECTURE-v6.1.md` を参照してください。
+
+---
+
 # Affiliate Media Engine v5.11 — Cloudflare公開用最終版
 
 IT資格ナビに表示確認用を含む32記事を収録しています。

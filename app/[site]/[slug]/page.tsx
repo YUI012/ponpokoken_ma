@@ -42,6 +42,6 @@ export default async function ArticleRoute({ params }: { params: Promise<{ site:
   const article = getArticle(site, slug);
   const siteConfig = getSite(site);
   if (!article || !siteConfig) return notFound();
-  const related = getRelatedArticles(article, 4);
+  const related = getRelatedArticles(article, 1);
   return <ArticlePage article={article} site={siteConfig} related={related} />;
 }

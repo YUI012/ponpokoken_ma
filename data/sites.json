@@ -1,0 +1,1977 @@
+[
+  {
+    "slug": "ai-tools",
+    "catalogSiteId": "ai-tools",
+    "subdomain": "ai-tools",
+    "name": "AIツール研究所",
+    "shortName": "AIツール",
+    "description": "AIツールを使う・作る・自動化するための記事とUdemy講座を、ツール別に整理します。",
+    "tagline": "AIを、迷わず使う。",
+    "accent": "#2563eb",
+    "accent2": "#06b6d4",
+    "icon": "✦",
+    "topic": "AIツール",
+    "categoryHeading": "AIツール・テーマから探す",
+    "keywords": [
+      "AIツール",
+      "生成AI",
+      "AIエージェント",
+      "業務効率化",
+      "Udemy"
+    ],
+    "categories": [
+      {
+        "slug": "chatgpt",
+        "name": "ChatGPT",
+        "topicCluster": "ChatGPT",
+        "description": "ChatGPTの使い方・仕事活用・API・講座をまとめます。",
+        "match": [
+          "ChatGPT",
+          "OpenAI",
+          "GPT-",
+          "GPT "
+        ],
+        "featuredArticleSlugs": [
+          "chatgpt-automation",
+          "chatgpt-api-line-bot"
+        ]
+      },
+      {
+        "slug": "claude",
+        "name": "Claude",
+        "topicCluster": "Claude",
+        "description": "Claude、Claude Code、Agent Skillsの活用と講座をまとめます。",
+        "match": [
+          "Claude"
+        ],
+        "featuredArticleSlugs": [
+          "claude-code",
+          "claude-agent-skills"
+        ]
+      },
+      {
+        "slug": "gemini",
+        "name": "Gemini",
+        "topicCluster": "Gemini",
+        "description": "GeminiとGoogle系生成AIの活用記事・講座をまとめます。",
+        "match": [
+          "Gemini",
+          "Google ADK"
+        ],
+        "featuredArticleSlugs": [
+          "google-adk-ai-agent"
+        ]
+      },
+      {
+        "slug": "microsoft-copilot",
+        "name": "Microsoft Copilot",
+        "topicCluster": "Microsoft Copilot",
+        "description": "Microsoft Copilot・GitHub Copilotの活用記事をまとめます。",
+        "match": [
+          "Microsoft Copilot",
+          "GitHub Copilot",
+          "Copilot"
+        ],
+        "featuredArticleSlugs": [
+          "github-copilot-beginner"
+        ]
+      },
+      {
+        "slug": "perplexity",
+        "name": "Perplexity",
+        "topicCluster": "Perplexity",
+        "description": "Perplexityの検索・調査・業務活用をまとめます。",
+        "match": [
+          "Perplexity"
+        ]
+      },
+      {
+        "slug": "ai-agent",
+        "name": "AIエージェント",
+        "topicCluster": "AIエージェント",
+        "description": "AIエージェントの設計・実装・自動化をまとめます。",
+        "match": [
+          "AIエージェント",
+          "Agents SDK",
+          "CrewAI",
+          "AutoGen",
+          "LangGraph",
+          "AgentCore",
+          "MCP"
+        ],
+        "featuredArticleSlugs": [
+          "openai-agents-sdk",
+          "langgraph-ai-workflow",
+          "crewai"
+        ]
+      },
+      {
+        "slug": "prompt",
+        "name": "プロンプト設計",
+        "topicCluster": "プロンプト設計",
+        "description": "生成AIのプロンプト設計・改善・テンプレートをまとめます。",
+        "match": [
+          "プロンプト"
+        ],
+        "featuredArticleSlugs": [
+          "chatgpt-prompt-copy-paste"
+        ]
+      },
+      {
+        "slug": "genai-work",
+        "name": "生成AI業務活用",
+        "topicCluster": "生成AI業務活用",
+        "description": "生成AIを仕事に組み込む方法と実例をまとめます。",
+        "match": [
+          "業務活用",
+          "仕事活用",
+          "生産性",
+          "提案書",
+          "メール作成",
+          "時間管理"
+        ],
+        "featuredArticleSlugs": [
+          "chatgpt-paid-productivity"
+        ]
+      },
+      {
+        "slug": "rag",
+        "name": "RAG",
+        "topicCluster": "RAG",
+        "description": "RAG、社内検索、LlamaIndexなどの実装をまとめます。",
+        "match": [
+          "RAG",
+          "LlamaIndex",
+          "社内PDF",
+          "PDF検索"
+        ],
+        "featuredArticleSlugs": [
+          "rag-private-documents",
+          "amazon-bedrock-rag",
+          "llamaindex-pdf-rag"
+        ]
+      },
+      {
+        "slug": "nocode-ai",
+        "name": "ノーコードAI",
+        "topicCluster": "ノーコードAI",
+        "description": "Dify・n8nなどノーコード/ローコードAI活用をまとめます。",
+        "match": [
+          "Dify",
+          "n8n",
+          "ノーコードAI"
+        ],
+        "featuredArticleSlugs": [
+          "dify-no-code-ai-app",
+          "n8n-ai-automation"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "it-cert",
+    "catalogSiteId": "it-cert",
+    "subdomain": "it-cert",
+    "name": "IT資格ナビ",
+    "shortName": "IT資格",
+    "description": "IT資格をできるだけ遠回りせず取るために、資格・勉強法・教材・Udemy講座を資格ジャンル別に整理します。",
+    "tagline": "IT資格を、最短ルートで選ぶ。",
+    "accent": "#2563eb",
+    "accent2": "#22c55e",
+    "icon": "✓",
+    "topic": "IT資格",
+    "categoryHeading": "資格ジャンルから探す",
+    "keywords": [
+      "IT資格",
+      "AWS",
+      "CCNA",
+      "LPIC",
+      "SAA",
+      "Udemy"
+    ],
+    "categories": [
+      {
+        "slug": "aws",
+        "name": "AWS",
+        "topicCluster": "AWS資格",
+        "description": "AWS資格、SAA・CLF・AI Practitionerなどの勉強法とUdemy教材をまとめます。",
+        "match": [
+          "AWS",
+          "CLF-C02",
+          "SAA-C03",
+          "AIF-C01",
+          "AWS AI Practitioner"
+        ],
+        "featuredArticleSlugs": [
+          "aws-saa-c03-udemy",
+          "aws-clf-c02-difficulty",
+          "aws-aif-c01-udemy-short-term"
+        ],
+        "qualifications": [
+          {
+            "slug": "clf-c02",
+            "name": "AWS Cloud Practitioner",
+            "shortName": "CLF",
+            "code": "CLF-C02",
+            "description": "AWSの基礎を学ぶ入門資格。CLF-C02の記事・Udemy講座をまとめます。",
+            "match": [
+              "CLF-C02",
+              "AWS CLF",
+              "Cloud Practitioner",
+              "クラウドプラクティショナー"
+            ],
+            "featuredArticleSlugs": [
+              "aws-clf-c02-difficulty",
+              "aws-clf-c02-1week",
+              "aws-clf-c02-study-time"
+            ]
+          },
+          {
+            "slug": "saa-c03",
+            "name": "AWS Solutions Architect - Associate",
+            "shortName": "SAA",
+            "code": "SAA-C03",
+            "description": "AWSの設計・アーキテクチャを学ぶSAA-C03の記事・Udemy講座をまとめます。",
+            "match": [
+              "SAA-C03",
+              "AWS SAA",
+              "Solutions Architect - Associate"
+            ],
+            "featuredArticleSlugs": [
+              "aws-saa-c03-udemy",
+              "aws-saa-c03-mock-score",
+              "aws-saa-c03-exam-difficulty"
+            ]
+          },
+          {
+            "slug": "aif-c01",
+            "name": "AWS AI Practitioner",
+            "shortName": "AIF",
+            "code": "AIF-C01",
+            "description": "AWSのAI・生成AI基礎を扱うAIF-C01の記事・Udemy講座をまとめます。",
+            "match": [
+              "AIF-C01",
+              "AWS AI Practitioner",
+              "AI Practitioner"
+            ],
+            "featuredArticleSlugs": [
+              "aws-aif-c01-udemy-short-term",
+              "aws-aif-c01-udemy-score",
+              "aws-aif-c01-10hours"
+            ]
+          },
+          {
+            "slug": "dva-c02",
+            "name": "AWS Developer - Associate",
+            "shortName": "DVA",
+            "code": "DVA-C02",
+            "description": "AWS上のアプリケーション開発を扱うDVA-C02の学習情報をまとめます。",
+            "match": [
+              "DVA-C02",
+              "AWS Developer",
+              "Developer - Associate"
+            ]
+          },
+          {
+            "slug": "sap-c02",
+            "name": "AWS Solutions Architect - Professional",
+            "shortName": "SAP",
+            "code": "SAP-C02",
+            "description": "AWSアーキテクチャの上級資格SAP-C02の学習情報をまとめます。",
+            "match": [
+              "SAP-C02",
+              "AWS SAP",
+              "Solutions Architect - Professional"
+            ]
+          },
+          {
+            "slug": "scs-c02",
+            "name": "AWS Security - Specialty",
+            "shortName": "Security Specialty",
+            "code": "SCS-C02",
+            "description": "AWSセキュリティ専門資格SCS-C02の学習情報をまとめます。",
+            "match": [
+              "SCS-C02",
+              "AWS Security",
+              "Security - Specialty"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "azure",
+        "name": "Azure",
+        "topicCluster": "Azure資格",
+        "description": "Azure資格、AZ-900・AI-900・SC-900などの勉強法とUdemy教材をまとめます。",
+        "match": [
+          "Azure",
+          "AZ-900",
+          "AI-900",
+          "SC-900"
+        ],
+        "featuredArticleSlugs": [
+          "az-900-udemy",
+          "ai-900-10hours",
+          "sc-900-3hours"
+        ],
+        "qualifications": [
+          {
+            "slug": "az-900",
+            "name": "Microsoft Azure Fundamentals",
+            "shortName": "AZ-900",
+            "code": "AZ-900",
+            "description": "Azureの基礎資格AZ-900の記事・Udemy講座をまとめます。",
+            "match": [
+              "AZ-900",
+              "Azure Fundamentals"
+            ],
+            "featuredArticleSlugs": [
+              "az-900-udemy",
+              "az-900-3hours"
+            ]
+          },
+          {
+            "slug": "az-104",
+            "name": "Microsoft Azure Administrator",
+            "shortName": "AZ-104",
+            "code": "AZ-104",
+            "description": "Azure管理者向けAZ-104の学習情報をまとめます。",
+            "match": [
+              "AZ-104",
+              "Azure Administrator"
+            ]
+          },
+          {
+            "slug": "az-204",
+            "name": "Developing Solutions for Microsoft Azure",
+            "shortName": "AZ-204",
+            "code": "AZ-204",
+            "description": "Azure開発者向けAZ-204の学習情報をまとめます。",
+            "match": [
+              "AZ-204",
+              "Developing Solutions for Microsoft Azure"
+            ]
+          },
+          {
+            "slug": "az-305",
+            "name": "Designing Microsoft Azure Infrastructure Solutions",
+            "shortName": "AZ-305",
+            "code": "AZ-305",
+            "description": "Azure設計者向けAZ-305の学習情報をまとめます。",
+            "match": [
+              "AZ-305",
+              "Azure Solutions Architect"
+            ]
+          },
+          {
+            "slug": "ai-fundamentals",
+            "name": "Microsoft Azure AI Fundamentals",
+            "shortName": "AI Fundamentals",
+            "code": "AI-900 / AI-901",
+            "description": "Azure AI Fundamentalsの学習情報をまとめます。既存のAI-900記事もここに集約します。",
+            "match": [
+              "AI-900",
+              "AI-901",
+              "Azure AI Fundamentals"
+            ],
+            "featuredArticleSlugs": [
+              "ai-900-10hours"
+            ]
+          },
+          {
+            "slug": "sc-900",
+            "name": "Microsoft Security, Compliance, and Identity Fundamentals",
+            "shortName": "SC-900",
+            "code": "SC-900",
+            "description": "Microsoftセキュリティ基礎資格SC-900の記事・教材をまとめます。",
+            "match": [
+              "SC-900",
+              "Security Compliance and Identity Fundamentals"
+            ],
+            "featuredArticleSlugs": [
+              "sc-900-3hours"
+            ]
+          },
+          {
+            "slug": "dp-900",
+            "name": "Microsoft Azure Data Fundamentals",
+            "shortName": "DP-900",
+            "code": "DP-900",
+            "description": "Azureデータ基礎資格DP-900の学習情報をまとめます。",
+            "match": [
+              "DP-900",
+              "Azure Data Fundamentals"
+            ]
+          },
+          {
+            "slug": "ai-102",
+            "name": "Designing and Implementing a Microsoft Azure AI Solution",
+            "shortName": "AI-102",
+            "code": "AI-102",
+            "description": "Azure AI Engineer向けAI-102の学習情報をまとめます。",
+            "match": [
+              "AI-102",
+              "Azure AI Engineer"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "google-cloud",
+        "name": "Google Cloud",
+        "topicCluster": "Google Cloud資格",
+        "description": "Google Cloud資格の勉強法・試験対策・教材をまとめます。",
+        "match": [
+          "Google Cloud資格",
+          "Google Cloud",
+          "GCP資格",
+          "Cloud Digital Leader"
+        ],
+        "qualifications": [
+          {
+            "slug": "cloud-digital-leader",
+            "name": "Cloud Digital Leader",
+            "shortName": "CDL",
+            "code": "Cloud Digital Leader",
+            "description": "Google Cloudの基礎資格Cloud Digital Leaderの学習情報をまとめます。",
+            "match": [
+              "Cloud Digital Leader",
+              "CDL"
+            ]
+          },
+          {
+            "slug": "associate-cloud-engineer",
+            "name": "Associate Cloud Engineer",
+            "shortName": "ACE",
+            "code": "Associate Cloud Engineer",
+            "description": "Google Cloud Associate Cloud Engineerの学習情報をまとめます。",
+            "match": [
+              "Associate Cloud Engineer",
+              "ACE"
+            ]
+          },
+          {
+            "slug": "professional-cloud-architect",
+            "name": "Professional Cloud Architect",
+            "shortName": "PCA",
+            "code": "Professional Cloud Architect",
+            "description": "Google Cloud Professional Cloud Architectの学習情報をまとめます。",
+            "match": [
+              "Professional Cloud Architect",
+              "PCA"
+            ]
+          },
+          {
+            "slug": "professional-data-engineer",
+            "name": "Professional Data Engineer",
+            "shortName": "PDE",
+            "code": "Professional Data Engineer",
+            "description": "Google Cloud Professional Data Engineerの学習情報をまとめます。",
+            "match": [
+              "Professional Data Engineer",
+              "PDE"
+            ]
+          },
+          {
+            "slug": "professional-cloud-devops-engineer",
+            "name": "Professional Cloud DevOps Engineer",
+            "shortName": "DevOps",
+            "code": "Professional Cloud DevOps Engineer",
+            "description": "Google Cloud Professional Cloud DevOps Engineerの学習情報をまとめます。",
+            "match": [
+              "Professional Cloud DevOps Engineer"
+            ]
+          },
+          {
+            "slug": "professional-cloud-security-engineer",
+            "name": "Professional Cloud Security Engineer",
+            "shortName": "Security",
+            "code": "Professional Cloud Security Engineer",
+            "description": "Google Cloud Professional Cloud Security Engineerの学習情報をまとめます。",
+            "match": [
+              "Professional Cloud Security Engineer"
+            ]
+          },
+          {
+            "slug": "professional-machine-learning-engineer",
+            "name": "Professional Machine Learning Engineer",
+            "shortName": "ML Engineer",
+            "code": "Professional Machine Learning Engineer",
+            "description": "Google Cloud Professional Machine Learning Engineerの学習情報をまとめます。",
+            "match": [
+              "Professional Machine Learning Engineer"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "cisco",
+        "name": "CCNA・Cisco",
+        "topicCluster": "CCNA・Cisco資格",
+        "description": "CCNAを中心にCisco・ネットワーク資格の勉強法とUdemy教材をまとめます。",
+        "match": [
+          "CCNA",
+          "Cisco",
+          "200-301"
+        ],
+        "featuredArticleSlugs": [
+          "ccna-udemy"
+        ],
+        "qualifications": [
+          {
+            "slug": "ccna",
+            "name": "Cisco Certified Network Associate",
+            "shortName": "CCNA",
+            "code": "200-301",
+            "description": "CCNA（200-301）の勉強法・Udemy講座・短期合格記事をまとめます。",
+            "match": [
+              "CCNA",
+              "200-301"
+            ],
+            "featuredArticleSlugs": [
+              "ccna-udemy",
+              "ccna-10days",
+              "ccna-simulation"
+            ]
+          },
+          {
+            "slug": "ccnp-enterprise",
+            "name": "CCNP Enterprise",
+            "shortName": "CCNP Enterprise",
+            "code": "350-401 ENCOR",
+            "description": "CCNP Enterpriseの学習情報をまとめます。",
+            "match": [
+              "CCNP Enterprise",
+              "350-401",
+              "ENCOR"
+            ]
+          },
+          {
+            "slug": "cyberops-associate",
+            "name": "Cisco CyberOps Associate",
+            "shortName": "CyberOps",
+            "code": "200-201 CBROPS",
+            "description": "Cisco CyberOps Associateの学習情報をまとめます。",
+            "match": [
+              "CyberOps Associate",
+              "200-201",
+              "CBROPS"
+            ]
+          },
+          {
+            "slug": "ccnp-security",
+            "name": "CCNP Security",
+            "shortName": "CCNP Security",
+            "code": "350-701 SCOR",
+            "description": "CCNP Securityの学習情報をまとめます。",
+            "match": [
+              "CCNP Security",
+              "350-701",
+              "SCOR"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "linux",
+        "name": "LPIC・LinuC",
+        "topicCluster": "LPIC・LinuC",
+        "description": "LPIC・LinuCなどLinux資格の勉強法とUdemy教材をまとめます。",
+        "match": [
+          "LPIC",
+          "LinuC",
+          "Linux資格"
+        ],
+        "featuredArticleSlugs": [
+          "linuc-level1-udemy",
+          "lpic-1-2weeks"
+        ],
+        "qualifications": [
+          {
+            "slug": "lpic-1",
+            "name": "LPIC-1",
+            "shortName": "LPIC-1",
+            "code": "101 / 102",
+            "description": "LPIC-1の101・102試験の記事・教材をまとめます。",
+            "match": [
+              "LPIC-1",
+              "LPIC101",
+              "LPIC102",
+              "LPIC 101",
+              "LPIC 102"
+            ],
+            "featuredArticleSlugs": [
+              "lpic-1-2weeks",
+              "after-lpic1-aws-vs-lpic2"
+            ]
+          },
+          {
+            "slug": "lpic-2",
+            "name": "LPIC-2",
+            "shortName": "LPIC-2",
+            "code": "201 / 202",
+            "description": "LPIC-2の201・202試験の学習情報をまとめます。",
+            "match": [
+              "LPIC-2",
+              "LPIC201",
+              "LPIC202",
+              "LPIC 201",
+              "LPIC 202"
+            ]
+          },
+          {
+            "slug": "lpic-3",
+            "name": "LPIC-3",
+            "shortName": "LPIC-3",
+            "code": "LPIC-3",
+            "description": "LPIC-3の専門分野別試験の学習情報をまとめます。",
+            "match": [
+              "LPIC-3",
+              "LPIC3"
+            ]
+          },
+          {
+            "slug": "linuc-level1",
+            "name": "LinuC Level 1",
+            "shortName": "LinuC Lv1",
+            "code": "101 / 102",
+            "description": "LinuC Level 1の101・102試験の記事・教材をまとめます。",
+            "match": [
+              "LinuC Level1",
+              "LinuC Level 1",
+              "LinuC101",
+              "LinuC102"
+            ],
+            "featuredArticleSlugs": [
+              "linuc-level1-udemy"
+            ]
+          },
+          {
+            "slug": "linuc-level2",
+            "name": "LinuC Level 2",
+            "shortName": "LinuC Lv2",
+            "code": "201 / 202",
+            "description": "LinuC Level 2の学習情報をまとめます。",
+            "match": [
+              "LinuC Level2",
+              "LinuC Level 2",
+              "LinuC201",
+              "LinuC202"
+            ]
+          },
+          {
+            "slug": "linuc-level3",
+            "name": "LinuC Level 3",
+            "shortName": "LinuC Lv3",
+            "code": "Level 3",
+            "description": "LinuC Level 3の学習情報をまとめます。",
+            "match": [
+              "LinuC Level3",
+              "LinuC Level 3"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "comptia",
+        "name": "CompTIA",
+        "topicCluster": "CompTIA",
+        "description": "Security+などCompTIA資格の勉強法・試験対策・教材をまとめます。",
+        "match": [
+          "CompTIA",
+          "Security+"
+        ],
+        "qualifications": [
+          {
+            "slug": "a-plus",
+            "name": "CompTIA A+",
+            "shortName": "A+",
+            "code": "A+",
+            "description": "CompTIA A+の学習情報をまとめます。",
+            "match": [
+              "CompTIA A+",
+              "A+"
+            ]
+          },
+          {
+            "slug": "network-plus",
+            "name": "CompTIA Network+",
+            "shortName": "Network+",
+            "code": "Network+",
+            "description": "CompTIA Network+の学習情報をまとめます。",
+            "match": [
+              "CompTIA Network+",
+              "Network+"
+            ]
+          },
+          {
+            "slug": "security-plus",
+            "name": "CompTIA Security+",
+            "shortName": "Security+",
+            "code": "Security+",
+            "description": "CompTIA Security+の学習情報・Udemy講座をまとめます。",
+            "match": [
+              "CompTIA Security+",
+              "Security+"
+            ]
+          },
+          {
+            "slug": "linux-plus",
+            "name": "CompTIA Linux+",
+            "shortName": "Linux+",
+            "code": "Linux+",
+            "description": "CompTIA Linux+の学習情報をまとめます。",
+            "match": [
+              "CompTIA Linux+",
+              "Linux+"
+            ]
+          },
+          {
+            "slug": "cloud-plus",
+            "name": "CompTIA Cloud+",
+            "shortName": "Cloud+",
+            "code": "Cloud+",
+            "description": "CompTIA Cloud+の学習情報をまとめます。",
+            "match": [
+              "CompTIA Cloud+",
+              "Cloud+"
+            ]
+          },
+          {
+            "slug": "cysa-plus",
+            "name": "CompTIA CySA+",
+            "shortName": "CySA+",
+            "code": "CySA+",
+            "description": "CompTIA CySA+の学習情報をまとめます。",
+            "match": [
+              "CompTIA CySA+",
+              "CySA+"
+            ]
+          },
+          {
+            "slug": "pentest-plus",
+            "name": "CompTIA PenTest+",
+            "shortName": "PenTest+",
+            "code": "PenTest+",
+            "description": "CompTIA PenTest+の学習情報をまとめます。",
+            "match": [
+              "CompTIA PenTest+",
+              "PenTest+"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "fe-ap",
+        "name": "基本情報・応用情報",
+        "topicCluster": "基本情報・応用情報",
+        "description": "基本情報技術者・応用情報技術者の勉強法と教材をまとめます。",
+        "match": [
+          "基本情報",
+          "応用情報",
+          "FE",
+          "AP"
+        ],
+        "featuredArticleSlugs": [
+          "fe-section-b-udemy",
+          "it-passport-skip-fe"
+        ],
+        "qualifications": [
+          {
+            "slug": "it-passport",
+            "name": "ITパスポート",
+            "shortName": "iパス",
+            "code": "ITパスポート",
+            "description": "ITパスポートの学習情報・教材をまとめます。",
+            "match": [
+              "ITパスポート",
+              "iパス"
+            ],
+            "featuredArticleSlugs": [
+              "it-passport-skip-fe"
+            ]
+          },
+          {
+            "slug": "fe",
+            "name": "基本情報技術者試験",
+            "shortName": "基本情報",
+            "code": "FE",
+            "description": "基本情報技術者試験（FE）の学習情報・Udemy講座をまとめます。",
+            "match": [
+              "基本情報技術者",
+              "基本情報",
+              "FE",
+              "科目B"
+            ],
+            "featuredArticleSlugs": [
+              "fe-section-b-udemy"
+            ]
+          },
+          {
+            "slug": "ap",
+            "name": "応用情報技術者試験",
+            "shortName": "応用情報",
+            "code": "AP",
+            "description": "応用情報技術者試験（AP）の学習情報をまとめます。",
+            "match": [
+              "応用情報技術者",
+              "応用情報",
+              "AP"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "riss",
+        "name": "情報処理安全確保支援士",
+        "topicCluster": "情報処理安全確保支援士",
+        "description": "情報処理安全確保支援士の勉強法・試験対策をまとめます。",
+        "match": [
+          "情報処理安全確保支援士",
+          "支援士",
+          "SC試験"
+        ],
+        "qualifications": [
+          {
+            "slug": "registered-information-security-specialist",
+            "name": "情報処理安全確保支援士試験",
+            "shortName": "支援士",
+            "code": "SC",
+            "description": "情報処理安全確保支援士試験の勉強法・教材・試験対策をまとめます。",
+            "match": [
+              "情報処理安全確保支援士",
+              "支援士",
+              "SC試験"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "microsoft-cert",
+        "name": "Microsoft資格",
+        "topicCluster": "Microsoft資格",
+        "description": "Microsoft認定資格の勉強法・試験対策・教材をまとめます。",
+        "match": [
+          "Microsoft資格",
+          "Microsoft認定",
+          "MS-900",
+          "PL-900",
+          "DP-900"
+        ],
+        "qualifications": [
+          {
+            "slug": "ms-900",
+            "name": "Microsoft 365 Fundamentals",
+            "shortName": "MS-900",
+            "code": "MS-900",
+            "description": "Microsoft 365 Fundamentals（MS-900）の学習情報をまとめます。",
+            "match": [
+              "MS-900",
+              "Microsoft 365 Fundamentals"
+            ]
+          },
+          {
+            "slug": "pl-900",
+            "name": "Microsoft Power Platform Fundamentals",
+            "shortName": "PL-900",
+            "code": "PL-900",
+            "description": "Power Platform Fundamentals（PL-900）の学習情報をまとめます。",
+            "match": [
+              "PL-900",
+              "Power Platform Fundamentals"
+            ]
+          },
+          {
+            "slug": "pl-300",
+            "name": "Microsoft Power BI Data Analyst",
+            "shortName": "PL-300",
+            "code": "PL-300",
+            "description": "Power BI Data Analyst（PL-300）の学習情報をまとめます。",
+            "match": [
+              "PL-300",
+              "Power BI Data Analyst"
+            ]
+          },
+          {
+            "slug": "ms-102",
+            "name": "Microsoft 365 Administrator",
+            "shortName": "MS-102",
+            "code": "MS-102",
+            "description": "Microsoft 365 Administrator（MS-102）の学習情報をまとめます。",
+            "match": [
+              "MS-102",
+              "Microsoft 365 Administrator"
+            ]
+          },
+          {
+            "slug": "md-102",
+            "name": "Endpoint Administrator",
+            "shortName": "MD-102",
+            "code": "MD-102",
+            "description": "Endpoint Administrator（MD-102）の学習情報をまとめます。",
+            "match": [
+              "MD-102",
+              "Endpoint Administrator"
+            ]
+          },
+          {
+            "slug": "dp-600",
+            "name": "Implementing Analytics Solutions Using Microsoft Fabric",
+            "shortName": "DP-600",
+            "code": "DP-600",
+            "description": "Microsoft Fabric向けDP-600の学習情報をまとめます。",
+            "match": [
+              "DP-600",
+              "Microsoft Fabric"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "oracle-db-cert",
+        "name": "Oracle・Database資格",
+        "topicCluster": "Oracle・Database資格",
+        "description": "Oracle Databaseなどデータベース資格の勉強法・教材をまとめます。",
+        "match": [
+          "Oracle資格",
+          "Oracle Database",
+          "ORACLE MASTER",
+          "Database資格"
+        ],
+        "qualifications": [
+          {
+            "slug": "oracle-master-bronze-dba",
+            "name": "ORACLE MASTER Bronze DBA",
+            "shortName": "Bronze DBA",
+            "code": "Bronze DBA",
+            "description": "ORACLE MASTER Bronze DBAの学習情報をまとめます。",
+            "match": [
+              "ORACLE MASTER Bronze",
+              "Bronze DBA"
+            ]
+          },
+          {
+            "slug": "oracle-master-silver-sql",
+            "name": "ORACLE MASTER Silver SQL",
+            "shortName": "Silver SQL",
+            "code": "Silver SQL",
+            "description": "ORACLE MASTER Silver SQLの学習情報をまとめます。",
+            "match": [
+              "ORACLE MASTER Silver SQL",
+              "Silver SQL"
+            ]
+          },
+          {
+            "slug": "oracle-master-silver-dba",
+            "name": "ORACLE MASTER Silver DBA",
+            "shortName": "Silver DBA",
+            "code": "Silver DBA",
+            "description": "ORACLE MASTER Silver DBAの学習情報をまとめます。",
+            "match": [
+              "ORACLE MASTER Silver DBA",
+              "Silver DBA"
+            ]
+          },
+          {
+            "slug": "oracle-master-gold-dba",
+            "name": "ORACLE MASTER Gold DBA",
+            "shortName": "Gold DBA",
+            "code": "Gold DBA",
+            "description": "ORACLE MASTER Gold DBAの学習情報をまとめます。",
+            "match": [
+              "ORACLE MASTER Gold DBA",
+              "Gold DBA"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "python-automation",
+    "catalogSiteId": "python-automation",
+    "subdomain": "python",
+    "name": "Python自動化ラボ",
+    "shortName": "Python",
+    "description": "Pythonコードで業務・処理を自動化するための記事とUdemy講座をテーマ別に整理します。",
+    "tagline": "Pythonで、面倒な作業を減らす。",
+    "accent": "#0f766e",
+    "accent2": "#eab308",
+    "icon": "⌘",
+    "topic": "Python自動化",
+    "categoryHeading": "自動化テーマから探す",
+    "keywords": [
+      "Python",
+      "自動化",
+      "API",
+      "スクレイピング",
+      "業務効率化"
+    ],
+    "categories": [
+      {
+        "slug": "python-basics",
+        "name": "Python基礎",
+        "topicCluster": "Python基礎",
+        "description": "Pythonの文法・環境構築・初心者向け学習をまとめます。",
+        "match": [
+          "Python基礎",
+          "Python入門",
+          "Python初心者"
+        ]
+      },
+      {
+        "slug": "excel",
+        "name": "Excel自動化",
+        "topicCluster": "Excel自動化",
+        "description": "openpyxlなどExcel業務の自動化をまとめます。",
+        "match": [
+          "Excel",
+          "openpyxl"
+        ]
+      },
+      {
+        "slug": "file",
+        "name": "ファイル操作",
+        "topicCluster": "ファイル操作",
+        "description": "PDF・CSV・フォルダ・ファイル処理の自動化をまとめます。",
+        "match": [
+          "ファイル操作",
+          "PDF",
+          "CSV",
+          "フォルダ"
+        ]
+      },
+      {
+        "slug": "scraping",
+        "name": "Webスクレイピング",
+        "topicCluster": "Webスクレイピング",
+        "description": "BeautifulSoupなどWebデータ取得をまとめます。",
+        "match": [
+          "スクレイピング",
+          "BeautifulSoup"
+        ]
+      },
+      {
+        "slug": "browser",
+        "name": "ブラウザ自動化",
+        "topicCluster": "ブラウザ自動化",
+        "description": "Selenium・Playwrightなどブラウザ操作の自動化をまとめます。",
+        "match": [
+          "Selenium",
+          "Playwright",
+          "ブラウザ自動化"
+        ]
+      },
+      {
+        "slug": "api",
+        "name": "API自動化",
+        "topicCluster": "API自動化",
+        "description": "PythonからAPIを使う連携・自動処理をまとめます。",
+        "match": [
+          "API自動化",
+          "API連携",
+          "REST API"
+        ]
+      },
+      {
+        "slug": "mail-report",
+        "name": "メール・レポート自動化",
+        "topicCluster": "メール・レポート自動化",
+        "description": "メール送信・通知・レポート作成の自動化をまとめます。",
+        "match": [
+          "メール",
+          "レポート",
+          "通知"
+        ]
+      },
+      {
+        "slug": "pandas",
+        "name": "pandas業務自動化",
+        "topicCluster": "pandas業務自動化",
+        "description": "pandasを使った集計・加工・定型処理をまとめます。",
+        "match": [
+          "pandas"
+        ]
+      },
+      {
+        "slug": "batch",
+        "name": "定期処理・バッチ",
+        "topicCluster": "定期処理・バッチ",
+        "description": "定期実行・バッチ・スケジュール処理をまとめます。",
+        "match": [
+          "定期処理",
+          "バッチ",
+          "cron",
+          "スケジュール"
+        ]
+      },
+      {
+        "slug": "business-tools",
+        "name": "業務ツール作成",
+        "topicCluster": "業務ツール作成",
+        "description": "Pythonで社内・個人向け業務ツールを作る方法をまとめます。",
+        "match": [
+          "業務ツール",
+          "GUI",
+          "社内ツール"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "cybersecurity",
+    "catalogSiteId": "cybersecurity",
+    "subdomain": "security",
+    "name": "サイバーセキュリティ研究所",
+    "shortName": "Security",
+    "description": "セキュリティ技術・防御・検知・診断を、実務テーマ別に整理します。",
+    "tagline": "守る技術を、わかりやすく学ぶ。",
+    "accent": "#0f172a",
+    "accent2": "#2563eb",
+    "icon": "◆",
+    "topic": "セキュリティ",
+    "categoryHeading": "セキュリティ分野から探す",
+    "keywords": [
+      "セキュリティ",
+      "SOC",
+      "脆弱性",
+      "IAM",
+      "インシデント"
+    ],
+    "categories": [
+      {
+        "slug": "basics",
+        "name": "セキュリティ基礎",
+        "topicCluster": "セキュリティ基礎",
+        "description": "サイバーセキュリティの基本用語・考え方をまとめます。",
+        "match": [
+          "セキュリティ基礎",
+          "サイバーセキュリティ入門"
+        ]
+      },
+      {
+        "slug": "network-security",
+        "name": "ネットワークセキュリティ",
+        "topicCluster": "ネットワークセキュリティ",
+        "description": "Firewall・VPN・ネットワーク防御をまとめます。",
+        "match": [
+          "Firewall",
+          "VPN",
+          "ネットワークセキュリティ"
+        ]
+      },
+      {
+        "slug": "pentest",
+        "name": "ペネトレーションテスト",
+        "topicCluster": "ペネトレーションテスト",
+        "description": "侵入テスト・攻撃手法・検証環境をまとめます。",
+        "match": [
+          "ペネトレーション",
+          "Pentest",
+          "Kali"
+        ]
+      },
+      {
+        "slug": "vulnerability",
+        "name": "脆弱性診断",
+        "topicCluster": "脆弱性診断",
+        "description": "脆弱性診断・スキャン・対策をまとめます。",
+        "match": [
+          "脆弱性",
+          "診断"
+        ]
+      },
+      {
+        "slug": "soc-siem",
+        "name": "SOC・SIEM",
+        "topicCluster": "SOC・SIEM",
+        "description": "SOC・SIEM・ログ分析・監視をまとめます。",
+        "match": [
+          "SOC",
+          "SIEM",
+          "Splunk",
+          "ログ分析"
+        ]
+      },
+      {
+        "slug": "cloud-security",
+        "name": "クラウドセキュリティ",
+        "topicCluster": "クラウドセキュリティ",
+        "description": "AWS・Azureなどクラウド環境のセキュリティをまとめます。",
+        "match": [
+          "クラウドセキュリティ",
+          "AWS Security",
+          "Azure Security"
+        ]
+      },
+      {
+        "slug": "iam",
+        "name": "IAM・認証",
+        "topicCluster": "IAM・認証",
+        "description": "IAM・認証・認可・アクセス制御をまとめます。",
+        "match": [
+          "IAM",
+          "認証",
+          "認可",
+          "アクセス制御"
+        ]
+      },
+      {
+        "slug": "incident",
+        "name": "インシデント対応",
+        "topicCluster": "インシデント対応",
+        "description": "検知後の調査・封じ込め・復旧をまとめます。",
+        "match": [
+          "インシデント",
+          "Incident Response"
+        ]
+      },
+      {
+        "slug": "malware",
+        "name": "マルウェア解析",
+        "topicCluster": "マルウェア解析",
+        "description": "マルウェア・不正コードの解析をまとめます。",
+        "match": [
+          "マルウェア",
+          "Malware"
+        ]
+      },
+      {
+        "slug": "operations",
+        "name": "セキュリティ運用",
+        "topicCluster": "セキュリティ運用",
+        "description": "日常のセキュリティ運用・監視・改善をまとめます。",
+        "match": [
+          "セキュリティ運用",
+          "運用監視"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "microsoft365",
+    "catalogSiteId": "m365-work",
+    "subdomain": "m365",
+    "name": "Microsoft 365仕事術",
+    "shortName": "M365",
+    "description": "Microsoft 365で仕事を効率化するための記事とUdemy講座を製品別に整理します。",
+    "tagline": "Microsoft 365を、仕事で使い切る。",
+    "accent": "#2563eb",
+    "accent2": "#0ea5e9",
+    "icon": "▦",
+    "topic": "Microsoft 365",
+    "categoryHeading": "製品・機能から探す",
+    "keywords": [
+      "Microsoft 365",
+      "Excel",
+      "Teams",
+      "Copilot",
+      "Power Automate"
+    ],
+    "categories": [
+      {
+        "slug": "excel",
+        "name": "Excel",
+        "topicCluster": "Excel",
+        "description": "Excelの関数・集計・分析・効率化をまとめます。",
+        "match": [
+          "Excel"
+        ]
+      },
+      {
+        "slug": "teams",
+        "name": "Teams",
+        "topicCluster": "Teams",
+        "description": "Teamsの会議・チャット・共同作業をまとめます。",
+        "match": [
+          "Teams"
+        ]
+      },
+      {
+        "slug": "sharepoint",
+        "name": "SharePoint",
+        "topicCluster": "SharePoint",
+        "description": "SharePointの情報共有・サイト運用をまとめます。",
+        "match": [
+          "SharePoint"
+        ]
+      },
+      {
+        "slug": "outlook",
+        "name": "Outlook",
+        "topicCluster": "Outlook",
+        "description": "Outlookのメール・予定表・業務効率化をまとめます。",
+        "match": [
+          "Outlook"
+        ]
+      },
+      {
+        "slug": "onedrive",
+        "name": "OneDrive",
+        "topicCluster": "OneDrive",
+        "description": "OneDriveのファイル共有・同期・運用をまとめます。",
+        "match": [
+          "OneDrive"
+        ]
+      },
+      {
+        "slug": "power-automate",
+        "name": "Power Automate",
+        "topicCluster": "Power Automate",
+        "description": "Power Automateによる業務自動化をまとめます。",
+        "match": [
+          "Power Automate"
+        ]
+      },
+      {
+        "slug": "power-apps",
+        "name": "Power Apps",
+        "topicCluster": "Power Apps",
+        "description": "Power Appsによる業務アプリ作成をまとめます。",
+        "match": [
+          "Power Apps"
+        ]
+      },
+      {
+        "slug": "copilot",
+        "name": "Microsoft 365 Copilot",
+        "topicCluster": "Microsoft 365 Copilot",
+        "description": "Microsoft 365 Copilotの仕事活用をまとめます。",
+        "match": [
+          "Microsoft 365 Copilot",
+          "Copilot"
+        ],
+        "featuredArticleSlugs": [
+          "free-copilot-vs-m365-copilot",
+          "m365-copilot-not-used"
+        ]
+      },
+      {
+        "slug": "office-productivity",
+        "name": "Office業務効率化",
+        "topicCluster": "Office業務効率化",
+        "description": "Office製品を横断した業務効率化をまとめます。",
+        "match": [
+          "Office業務",
+          "業務効率化"
+        ]
+      },
+      {
+        "slug": "m365-admin",
+        "name": "Microsoft 365管理",
+        "topicCluster": "Microsoft 365管理",
+        "description": "Microsoft 365の管理・設定・運用をまとめます。",
+        "match": [
+          "Microsoft 365管理",
+          "M365管理",
+          "管理センター"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "digital-marketing",
+    "catalogSiteId": "digital-marketing",
+    "subdomain": "marketing",
+    "name": "SNS・デジタルマーケ研究所",
+    "shortName": "Marketing",
+    "description": "SEO・SNS・広告・アクセス解析・集客を、施策別に整理します。",
+    "tagline": "集客を、数字でわかりやすく。",
+    "accent": "#ea580c",
+    "accent2": "#ef4444",
+    "icon": "↗",
+    "topic": "デジタルマーケ",
+    "categoryHeading": "集客テーマから探す",
+    "keywords": [
+      "SEO",
+      "SNS",
+      "広告",
+      "アクセス解析",
+      "デジタルマーケ"
+    ],
+    "categories": [
+      {
+        "slug": "seo",
+        "name": "SEO",
+        "topicCluster": "SEO",
+        "description": "検索流入を増やすSEO施策をまとめます。",
+        "match": [
+          "SEO",
+          "検索流入"
+        ]
+      },
+      {
+        "slug": "content-marketing",
+        "name": "コンテンツマーケティング",
+        "topicCluster": "コンテンツマーケティング",
+        "description": "記事・コンテンツを使った集客施策をまとめます。",
+        "match": [
+          "コンテンツマーケティング"
+        ]
+      },
+      {
+        "slug": "x",
+        "name": "X運用",
+        "topicCluster": "X運用",
+        "description": "Xの投稿・運用・分析をまとめます。",
+        "match": [
+          "X運用",
+          "Twitter"
+        ]
+      },
+      {
+        "slug": "instagram",
+        "name": "Instagram運用",
+        "topicCluster": "Instagram運用",
+        "description": "Instagramの投稿・運用・分析をまとめます。",
+        "match": [
+          "Instagram"
+        ]
+      },
+      {
+        "slug": "tiktok",
+        "name": "TikTok運用",
+        "topicCluster": "TikTok運用",
+        "description": "TikTokの動画・運用・集客をまとめます。",
+        "match": [
+          "TikTok"
+        ]
+      },
+      {
+        "slug": "youtube",
+        "name": "YouTubeマーケティング",
+        "topicCluster": "YouTubeマーケティング",
+        "description": "YouTubeの企画・運用・集客をまとめます。",
+        "match": [
+          "YouTube"
+        ]
+      },
+      {
+        "slug": "web-ads",
+        "name": "Web広告",
+        "topicCluster": "Web広告",
+        "description": "Google広告・SNS広告などWeb広告をまとめます。",
+        "match": [
+          "Web広告",
+          "Google広告",
+          "SNS広告"
+        ]
+      },
+      {
+        "slug": "ga4",
+        "name": "GA4",
+        "topicCluster": "GA4",
+        "description": "GA4の計測・分析・改善をまとめます。",
+        "match": [
+          "GA4",
+          "Google Analytics"
+        ]
+      },
+      {
+        "slug": "email-marketing",
+        "name": "メールマーケティング",
+        "topicCluster": "メールマーケティング",
+        "description": "メール配信・ステップメール・CRM連携をまとめます。",
+        "match": [
+          "メールマーケティング",
+          "メルマガ"
+        ]
+      },
+      {
+        "slug": "marketing-automation",
+        "name": "マーケティング自動化",
+        "topicCluster": "マーケティング自動化",
+        "description": "MA・自動配信・集客業務の自動化をまとめます。",
+        "match": [
+          "マーケティング自動化",
+          "MAツール"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "data-analysis",
+    "catalogSiteId": "data-sql",
+    "subdomain": "data",
+    "name": "データ分析・SQL研究所",
+    "shortName": "Data",
+    "description": "データを集計・分析・可視化するためのSQL・BI・分析ツールを技術別に整理します。",
+    "tagline": "データを、意思決定につなげる。",
+    "accent": "#1d4ed8",
+    "accent2": "#0f766e",
+    "icon": "▥",
+    "topic": "データ分析",
+    "categoryHeading": "ツール・技術から探す",
+    "keywords": [
+      "SQL",
+      "Power BI",
+      "Tableau",
+      "データ分析",
+      "可視化"
+    ],
+    "categories": [
+      {
+        "slug": "sql-basics",
+        "name": "SQL基礎",
+        "topicCluster": "SQL基礎",
+        "description": "SQLの基本文法・抽出・集計をまとめます。",
+        "match": [
+          "SQL基礎",
+          "SELECT",
+          "JOIN"
+        ]
+      },
+      {
+        "slug": "mysql",
+        "name": "MySQL",
+        "topicCluster": "MySQL",
+        "description": "MySQLの設計・SQL・運用をまとめます。",
+        "match": [
+          "MySQL"
+        ]
+      },
+      {
+        "slug": "postgresql",
+        "name": "PostgreSQL",
+        "topicCluster": "PostgreSQL",
+        "description": "PostgreSQLの設計・SQL・運用をまとめます。",
+        "match": [
+          "PostgreSQL"
+        ]
+      },
+      {
+        "slug": "sql-server",
+        "name": "SQL Server",
+        "topicCluster": "SQL Server",
+        "description": "SQL Server・T-SQLの学習記事をまとめます。",
+        "match": [
+          "SQL Server",
+          "T-SQL"
+        ]
+      },
+      {
+        "slug": "bigquery",
+        "name": "BigQuery",
+        "topicCluster": "BigQuery",
+        "description": "BigQueryによる集計・分析をまとめます。",
+        "match": [
+          "BigQuery"
+        ]
+      },
+      {
+        "slug": "data-analysis",
+        "name": "データ分析",
+        "topicCluster": "データ分析",
+        "description": "指標・仮説・集計・分析の基礎をまとめます。",
+        "match": [
+          "データ分析",
+          "分析手法"
+        ]
+      },
+      {
+        "slug": "power-bi",
+        "name": "Power BI",
+        "topicCluster": "Power BI",
+        "description": "Power BIによる可視化・分析をまとめます。",
+        "match": [
+          "Power BI"
+        ]
+      },
+      {
+        "slug": "tableau",
+        "name": "Tableau",
+        "topicCluster": "Tableau",
+        "description": "Tableauによる可視化・ダッシュボードをまとめます。",
+        "match": [
+          "Tableau"
+        ]
+      },
+      {
+        "slug": "looker-studio",
+        "name": "Looker Studio",
+        "topicCluster": "Looker Studio",
+        "description": "Looker Studioによるレポート・可視化をまとめます。",
+        "match": [
+          "Looker Studio"
+        ]
+      },
+      {
+        "slug": "visualization",
+        "name": "データ可視化",
+        "topicCluster": "データ可視化",
+        "description": "グラフ・ダッシュボード・伝え方をまとめます。",
+        "match": [
+          "データ可視化",
+          "可視化"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "data-science-ml",
+    "catalogSiteId": "data-science",
+    "subdomain": "ds-ml",
+    "name": "データサイエンス・機械学習ラボ",
+    "shortName": "DS/ML",
+    "description": "統計・機械学習・深層学習・モデル構築を学習テーマ別に整理します。",
+    "tagline": "データから、予測をつくる。",
+    "accent": "#6d28d9",
+    "accent2": "#2563eb",
+    "icon": "◉",
+    "topic": "データサイエンス",
+    "categoryHeading": "学習テーマから探す",
+    "keywords": [
+      "Python",
+      "統計",
+      "機械学習",
+      "深層学習",
+      "モデル"
+    ],
+    "categories": [
+      {
+        "slug": "statistics",
+        "name": "統計学",
+        "topicCluster": "統計学",
+        "description": "統計・確率・検定などの基礎をまとめます。",
+        "match": [
+          "統計",
+          "確率",
+          "検定"
+        ]
+      },
+      {
+        "slug": "numpy-pandas",
+        "name": "NumPy・pandas",
+        "topicCluster": "NumPy・pandas",
+        "description": "NumPy・pandasによる前処理・分析をまとめます。",
+        "match": [
+          "NumPy",
+          "pandas"
+        ]
+      },
+      {
+        "slug": "machine-learning",
+        "name": "機械学習",
+        "topicCluster": "機械学習",
+        "description": "回帰・分類など機械学習の基礎をまとめます。",
+        "match": [
+          "機械学習",
+          "回帰",
+          "分類"
+        ]
+      },
+      {
+        "slug": "scikit-learn",
+        "name": "scikit-learn",
+        "topicCluster": "scikit-learn",
+        "description": "scikit-learnによるモデル実装をまとめます。",
+        "match": [
+          "scikit-learn"
+        ]
+      },
+      {
+        "slug": "deep-learning",
+        "name": "深層学習",
+        "topicCluster": "深層学習",
+        "description": "ニューラルネットワーク・深層学習をまとめます。",
+        "match": [
+          "深層学習",
+          "ニューラル"
+        ]
+      },
+      {
+        "slug": "pytorch",
+        "name": "PyTorch",
+        "topicCluster": "PyTorch",
+        "description": "PyTorchによる深層学習実装をまとめます。",
+        "match": [
+          "PyTorch"
+        ]
+      },
+      {
+        "slug": "tensorflow",
+        "name": "TensorFlow",
+        "topicCluster": "TensorFlow",
+        "description": "TensorFlow・Kerasによるモデル実装をまとめます。",
+        "match": [
+          "TensorFlow",
+          "Keras"
+        ]
+      },
+      {
+        "slug": "nlp",
+        "name": "自然言語処理",
+        "topicCluster": "自然言語処理",
+        "description": "自然言語処理・テキスト分析をまとめます。",
+        "match": [
+          "自然言語処理",
+          "NLP"
+        ]
+      },
+      {
+        "slug": "time-series",
+        "name": "時系列分析",
+        "topicCluster": "時系列分析",
+        "description": "時系列データの分析・予測をまとめます。",
+        "match": [
+          "時系列"
+        ]
+      },
+      {
+        "slug": "model-evaluation",
+        "name": "モデル評価・改善",
+        "topicCluster": "モデル評価・改善",
+        "description": "評価指標・チューニング・改善をまとめます。",
+        "match": [
+          "モデル評価",
+          "評価指標",
+          "ハイパーパラメータ"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "devops-cloud",
+    "catalogSiteId": "devops-cloud",
+    "subdomain": "devops",
+    "name": "DevOps・クラウドネイティブラボ",
+    "shortName": "DevOps",
+    "description": "インフラを構築・運用・自動化するためのクラウド・コンテナ・IaCを技術別に整理します。",
+    "tagline": "インフラを、コードで動かす。",
+    "accent": "#0369a1",
+    "accent2": "#06b6d4",
+    "icon": "☁",
+    "topic": "DevOps",
+    "categoryHeading": "技術から探す",
+    "keywords": [
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "CI/CD",
+      "クラウド"
+    ],
+    "categories": [
+      {
+        "slug": "docker",
+        "name": "Docker",
+        "topicCluster": "Docker",
+        "description": "Docker・コンテナの基礎と実践をまとめます。",
+        "match": [
+          "Docker"
+        ]
+      },
+      {
+        "slug": "kubernetes",
+        "name": "Kubernetes",
+        "topicCluster": "Kubernetes",
+        "description": "Kubernetesの構築・運用をまとめます。",
+        "match": [
+          "Kubernetes",
+          "K8s"
+        ]
+      },
+      {
+        "slug": "terraform",
+        "name": "Terraform",
+        "topicCluster": "Terraform",
+        "description": "TerraformによるIaCをまとめます。",
+        "match": [
+          "Terraform"
+        ]
+      },
+      {
+        "slug": "ansible",
+        "name": "Ansible",
+        "topicCluster": "Ansible",
+        "description": "Ansibleによる構成管理・自動化をまとめます。",
+        "match": [
+          "Ansible"
+        ]
+      },
+      {
+        "slug": "cicd",
+        "name": "CI/CD",
+        "topicCluster": "CI/CD",
+        "description": "継続的インテグレーション・デリバリーをまとめます。",
+        "match": [
+          "CI/CD",
+          "Jenkins"
+        ]
+      },
+      {
+        "slug": "github-actions",
+        "name": "GitHub Actions",
+        "topicCluster": "GitHub Actions",
+        "description": "GitHub ActionsによるCI/CDをまとめます。",
+        "match": [
+          "GitHub Actions"
+        ]
+      },
+      {
+        "slug": "aws-infra",
+        "name": "AWSインフラ",
+        "topicCluster": "AWSインフラ",
+        "description": "AWSのインフラ設計・構築・運用をまとめます。",
+        "match": [
+          "AWSインフラ",
+          "VPC",
+          "EC2"
+        ]
+      },
+      {
+        "slug": "azure-infra",
+        "name": "Azureインフラ",
+        "topicCluster": "Azureインフラ",
+        "description": "Azureのインフラ設計・構築・運用をまとめます。",
+        "match": [
+          "Azureインフラ",
+          "Azure VM",
+          "VNet"
+        ]
+      },
+      {
+        "slug": "gcp-infra",
+        "name": "Google Cloudインフラ",
+        "topicCluster": "Google Cloudインフラ",
+        "description": "Google Cloudのインフラ設計・構築・運用をまとめます。",
+        "match": [
+          "Google Cloudインフラ",
+          "GCPインフラ"
+        ]
+      },
+      {
+        "slug": "observability",
+        "name": "監視・Observability",
+        "topicCluster": "監視・Observability",
+        "description": "監視・ログ・メトリクス・Observabilityをまとめます。",
+        "match": [
+          "Observability",
+          "監視",
+          "Prometheus",
+          "Grafana"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "webapp-dev",
+    "catalogSiteId": "web-app",
+    "subdomain": "webapp",
+    "name": "Webアプリ開発研究所",
+    "shortName": "Web開発",
+    "description": "Webアプリ・フロントエンド・バックエンド開発を技術別に整理します。",
+    "tagline": "作って、公開する。",
+    "accent": "#2563eb",
+    "accent2": "#16a34a",
+    "icon": "</>",
+    "topic": "Webアプリ開発",
+    "categoryHeading": "技術から探す",
+    "keywords": [
+      "JavaScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "Webアプリ"
+    ],
+    "categories": [
+      {
+        "slug": "html-css-js",
+        "name": "HTML・CSS・JavaScript",
+        "topicCluster": "HTML・CSS・JavaScript",
+        "description": "Webフロントエンドの基礎をまとめます。",
+        "match": [
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ]
+      },
+      {
+        "slug": "typescript",
+        "name": "TypeScript",
+        "topicCluster": "TypeScript",
+        "description": "TypeScriptの型・設計・実践をまとめます。",
+        "match": [
+          "TypeScript"
+        ]
+      },
+      {
+        "slug": "react",
+        "name": "React",
+        "topicCluster": "React",
+        "description": "ReactによるUI・フロントエンド開発をまとめます。",
+        "match": [
+          "React"
+        ]
+      },
+      {
+        "slug": "nextjs",
+        "name": "Next.js",
+        "topicCluster": "Next.js",
+        "description": "Next.jsによるWebアプリ開発をまとめます。",
+        "match": [
+          "Next.js",
+          "Nextjs"
+        ]
+      },
+      {
+        "slug": "vue",
+        "name": "Vue.js",
+        "topicCluster": "Vue.js",
+        "description": "Vue.jsによるフロントエンド開発をまとめます。",
+        "match": [
+          "Vue.js",
+          "Vue"
+        ]
+      },
+      {
+        "slug": "nodejs",
+        "name": "Node.js",
+        "topicCluster": "Node.js",
+        "description": "Node.jsによるバックエンド開発をまとめます。",
+        "match": [
+          "Node.js"
+        ]
+      },
+      {
+        "slug": "django",
+        "name": "Django",
+        "topicCluster": "Django",
+        "description": "DjangoによるWebアプリ開発をまとめます。",
+        "match": [
+          "Django"
+        ]
+      },
+      {
+        "slug": "fastapi",
+        "name": "FastAPI",
+        "topicCluster": "FastAPI",
+        "description": "FastAPIによるAPI・バックエンド開発をまとめます。",
+        "match": [
+          "FastAPI"
+        ]
+      },
+      {
+        "slug": "api",
+        "name": "API開発",
+        "topicCluster": "API開発",
+        "description": "REST API・Web APIの設計・実装をまとめます。",
+        "match": [
+          "API開発",
+          "REST API",
+          "Web API"
+        ]
+      },
+      {
+        "slug": "fullstack",
+        "name": "フルスタック開発",
+        "topicCluster": "フルスタック開発",
+        "description": "フロントからバックエンドまで一通り作る学習をまとめます。",
+        "match": [
+          "フルスタック",
+          "Full Stack",
+          "Fullstack"
+        ]
+      }
+    ]
+  }
+]

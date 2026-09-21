@@ -25,7 +25,8 @@ title: "記事タイトル"
 description: "検索結果で内容が伝わる説明文を120〜150文字程度で記載します。"
 date: "${today}"
 author: "編集部"
-# 先頭のタグが「テーマから探す」の分類に自動で使われます
+# 大カテゴリは data/sites.json の categories[].match から自動判定されます
+# IT資格ナビだけは、同じファイルの qualifications[].match で詳細資格ページにも自動所属します
 tags: ["メインテーマ", "関連テーマ"]
 featured: false
 noindex: false

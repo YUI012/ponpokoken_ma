@@ -3,10 +3,10 @@ import Link from 'next/link';
 import type { CSSProperties } from 'react';
 import type { Article, ArticleMeta } from '@/lib/content';
 import type { SiteConfig } from '@/lib/sites';
+import { getArticleCategory, getArticleQualification } from '@/lib/archive';
 import { MarkdownArticle } from './MarkdownArticle';
 import { SiteHeader } from './SiteHeader';
 import { SiteFooter } from './SiteFooter';
-import { ArticleCard } from './ArticleCard';
 import { canonicalUrl, siteHref, siteOrigin } from '@/lib/urls';
 
 function absoluteUrl(pathOrUrl: string | undefined, base: string) {
@@ -21,6 +21,13 @@ export function ArticlePage({ article, site, related }: { article: Article; site
   const pageUrl = canonicalUrl(site, `${article.slug}/`);
   const imageUrl = absoluteUrl(article.hero, origin);
   const hasAffiliate = Boolean(article.primaryCtaUrl) || /trk\.udemy\.com|px\.a8\.net|a8\.net|impact\.com|affiliate/i.test(article.content);
+  const category = getArticleCategory(site.slug, article);
+  const categoryHref = siteHref(site, `category/${category.slug}/`);
+  const qualification = getArticleQualification(site.slug, article);
+  const qualificationHref = qualification
+    ? siteHref(site, `category/${category.slug}/${qualification.slug}/`)
+    : undefined;
+  const nextArticle = related[0];
 
   const articleJsonLd = {
     '@context': 'https://schema.org',
@@ -39,10 +46,18 @@ export function ArticlePage({ article, site, related }: { article: Article; site
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: site.name, item: canonicalUrl(site) },
-      { '@type': 'ListItem', position: 2, name: article.title, item: pageUrl },
-    ],
+    itemListElement: qualification
+      ? [
+          { '@type': 'ListItem', position: 1, name: site.name, item: canonicalUrl(site) },
+          { '@type': 'ListItem', position: 2, name: category.name, item: canonicalUrl(site, `category/${category.slug}/`) },
+          { '@type': 'ListItem', position: 3, name: qualification.shortName, item: canonicalUrl(site, `category/${category.slug}/${qualification.slug}/`) },
+          { '@type': 'ListItem', position: 4, name: article.title, item: pageUrl },
+        ]
+      : [
+          { '@type': 'ListItem', position: 1, name: site.name, item: canonicalUrl(site) },
+          { '@type': 'ListItem', position: 2, name: category.name, item: canonicalUrl(site, `category/${category.slug}/`) },
+          { '@type': 'ListItem', position: 3, name: article.title, item: pageUrl },
+        ],
   };
 
   return (
@@ -54,10 +69,12 @@ export function ArticlePage({ article, site, related }: { article: Article; site
       <main className="articleShell">
         <article className="articleMain">
           <nav className="breadcrumbs" aria-label="パンくず">
-            <Link href={siteHref(site)}>ホーム</Link>
-            {(article.tags.slice(0, 2).length ? article.tags.slice(0, 2) : ['記事']).map((tag, index) => (
-              <React.Fragment key={`${tag}-${index}`}><span>›</span><span>{tag}</span></React.Fragment>
-            ))}
+            <Link href={siteHref(site)}>ホーム</Link><span>›</span>
+            <Link href={categoryHref}>{category.name}</Link><span>›</span>
+            {qualification && qualificationHref ? (
+              <><Link href={qualificationHref}>{qualification.shortName}</Link><span>›</span></>
+            ) : null}
+            <span>記事</span>
           </nav>
 
           <header className="articleHeader uiCard">
@@ -94,15 +111,35 @@ export function ArticlePage({ article, site, related }: { article: Article; site
 
           <MarkdownArticle markdown={article.content} />
 
-          {related.length > 0 && (
-            <section className="relatedSection uiCard">
-              <div className="sectionHead">
-                <div><h2>関連記事</h2><p>あわせて読みたい記事をまとめました。</p></div>
-                <Link href={siteHref(site)}>記事一覧へ</Link>
+          <section className="articleExit uiCard" aria-labelledby="next-action-title">
+            <div className="sectionHead compactHead">
+              <div>
+                <h2 id="next-action-title">次に見るなら</h2>
+                <p>選択肢は増やさず、次の行き先を最大3つに絞っています。</p>
               </div>
-              <div className="relatedList">{related.map((item) => <ArticleCard key={`${item.site}-${item.slug}`} article={item} compact />)}</div>
-            </section>
-          )}
+            </div>
+
+            <div className="articleExitList">
+              {article.primaryCtaUrl && (
+                <a className="articleExitLink isPrimary" href={article.primaryCtaUrl} target="_blank" rel="nofollow sponsored noopener noreferrer">
+                  <span><strong>{article.primaryCtaLabel || 'おすすめUdemy講座を見る'}</strong><small>講座・教材を確認する</small></span><b>→</b>
+                </a>
+              )}
+
+              <Link className="articleExitLink" href={qualificationHref || categoryHref}>
+                <span>
+                  <strong>{qualification ? `${qualification.shortName}をまとめて見る` : `${category.name}をまとめて見る`}</strong>
+                  <small>{qualification ? '結論・Udemy・資格DB・学習ルートへ' : '結論・Udemy・学習DB・学習ルートへ'}</small>
+                </span><b>→</b>
+              </Link>
+
+              {nextArticle && (
+                <a className="articleExitLink" href={siteHref(site, `${nextArticle.slug}/`)}>
+                  <span><strong>関連する記事を1本読む</strong><small>{nextArticle.title}</small></span><b>→</b>
+                </a>
+              )}
+            </div>
+          </section>
         </article>
       </main>
 

@@ -129,6 +129,42 @@ function splitSourceEntries(markdown: string) {
   return { intro: intro.join('\n').trim(), entries };
 }
 
+
+function splitComparisonEntries(markdown: string) {
+  const lines = markdown.split('\n');
+  const firstH2 = lines.findIndex((line) => /^##\s+/.test(line));
+  const content = firstH2 >= 0 ? lines.slice(firstH2 + 1) : lines;
+  const intro: string[] = [];
+  const entries: { title: string; fields: { label: string; value: string }[] }[] = [];
+  let currentTitle = '';
+  let currentFields: { label: string; value: string }[] = [];
+
+  const flush = () => {
+    if (currentTitle && currentFields.length) entries.push({ title: currentTitle, fields: currentFields });
+    currentFields = [];
+  };
+
+  for (const line of content) {
+    const heading = line.match(/^###\s+(.+)$/);
+    if (heading) {
+      flush();
+      currentTitle = heading[1].trim();
+      continue;
+    }
+
+    const field = line.match(/^[-*]\s+([^：:]+)[：:]\s*(.+)$/);
+    if (field && currentTitle) {
+      currentFields.push({ label: field[1].trim(), value: field[2].trim() });
+      continue;
+    }
+
+    if (!currentTitle && line.trim()) intro.push(line);
+  }
+
+  flush();
+  return { intro: intro.join('\n').trim(), entries };
+}
+
 function MarkdownChunk({ markdown }: { markdown: string }) {
   const prepared = preprocessRichBlocks(markdown);
 
@@ -172,6 +208,32 @@ function MarkdownChunk({ markdown }: { markdown: string }) {
   );
 }
 
+
+function ComparisonSection({ title, markdown }: { title: string; markdown: string }) {
+  const parsed = splitComparisonEntries(markdown);
+
+  return (
+    <section className="mdSectionCard comparisonSectionCard" aria-labelledby={slugifyHeading(title)}>
+      <h2 id={slugifyHeading(title)}>{title}</h2>
+      {parsed.intro && <div className="comparisonSectionIntro"><MarkdownChunk markdown={parsed.intro} /></div>}
+      <div className="comparisonCaseList">
+        {parsed.entries.map((entry) => (
+          <article className="comparisonCaseCard" key={entry.title}>
+            <div className="comparisonCaseGrid">
+              {entry.fields.slice(0, 4).map((field, index) => (
+                <div className="comparisonCaseField" key={`${entry.title}-${field.label}-${index}`}>
+                  <span className="comparisonCaseLabel">{field.label}</span>
+                  <strong className="comparisonCaseValue">{field.value}</strong>
+                </div>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function SourceSection({ title, markdown }: { title: string; markdown: string }) {
   const parsed = splitSourceEntries(markdown);
 
@@ -201,7 +263,12 @@ export function MarkdownArticle({ markdown }: { markdown: string }) {
           return <div className="mdIntro" key={`${index}-intro`}><MarkdownChunk markdown={section.markdown} /></div>;
         }
 
-        const isSourceSection = /(実例ブログ|個人ブログ|口コミ|体験談|参考ブログ|参考情報|引用)/.test(section.title);
+        const isComparisonSection = /3人.*実例|実例.*3人|3人.*比較/.test(section.title);
+        if (isComparisonSection) {
+          return <ComparisonSection key={`${index}-${section.title}`} title={section.title} markdown={section.markdown} />;
+        }
+
+        const isSourceSection = /(実例ブログ|個人ブログ|口コミ|体験談|参考ブログ|参考情報|引用|合格者3人の学習例)/.test(section.title);
         if (isSourceSection) {
           return <SourceSection key={`${index}-${section.title}`} title={section.title} markdown={section.markdown} />;
         }
