@@ -105,7 +105,7 @@ export function ArticlePage({ article, site, related }: { article: Article; site
           {topHeadings.length >= 5 && (
             <details className="toc uiCard">
               <summary>この記事の目次</summary>
-              <ol>{topHeadings.map((heading) => <li key={heading.id}><a href={`#${heading.id}`}>{heading.text}</a></li>)}</ol>
+              <ol>{topHeadings.map((heading, index) => <li key={`${heading.id}-${index}`}><a href={`#${heading.id}`}>{heading.text}</a></li>)}</ol>
             </details>
           )}
 
@@ -115,7 +115,6 @@ export function ArticlePage({ article, site, related }: { article: Article; site
             <div className="sectionHead compactHead">
               <div>
                 <h2 id="next-action-title">次に見るなら</h2>
-                <p>選択肢は増やさず、次の行き先を最大3つに絞っています。</p>
               </div>
             </div>
 

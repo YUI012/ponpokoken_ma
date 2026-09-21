@@ -85,13 +85,18 @@ export function slugifyHeading(text: string) {
 
 function extractHeadings(content: string) {
   const headings: Article['headings'] = [];
+  const slugCounts = new Map<string, number>();
 
   for (const line of content.split('\n')) {
     const match = line.match(/^(##|###)\s+(.+)$/);
     if (!match) continue;
     const level = match[1] === '##' ? 2 : 3;
     const text = cleanMarkdownText(match[2]);
-    headings.push({ text, level, id: slugifyHeading(text) });
+    const baseId = slugifyHeading(text);
+    const count = (slugCounts.get(baseId) || 0) + 1;
+    slugCounts.set(baseId, count);
+    const id = count === 1 ? baseId : `${baseId}-${count}`;
+    headings.push({ text, level, id });
   }
 
   return headings;

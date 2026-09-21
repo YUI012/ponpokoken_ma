@@ -69,18 +69,21 @@ type Section = {
   title: string;
   markdown: string;
   intro: boolean;
+  id: string;
 };
 
 function splitIntoSections(markdown: string): Section[] {
   const lines = markdown.split('\n');
   const sections: Section[] = [];
+  const slugCounts = new Map<string, number>();
   let buffer: string[] = [];
   let title = '';
+  let id = '';
   let intro = true;
 
   const flush = () => {
     const value = buffer.join('\n').trim();
-    if (value) sections.push({ title, markdown: value, intro });
+    if (value) sections.push({ title, markdown: value, intro, id });
     buffer = [];
   };
 
@@ -89,6 +92,10 @@ function splitIntoSections(markdown: string): Section[] {
     if (match) {
       flush();
       title = match[1].trim();
+      const baseId = slugifyHeading(title);
+      const count = (slugCounts.get(baseId) || 0) + 1;
+      slugCounts.set(baseId, count);
+      id = count === 1 ? baseId : `${baseId}-${count}`;
       intro = false;
       buffer.push(line);
     } else {
@@ -165,7 +172,7 @@ function splitComparisonEntries(markdown: string) {
   return { intro: intro.join('\n').trim(), entries };
 }
 
-function MarkdownChunk({ markdown }: { markdown: string }) {
+function MarkdownChunk({ markdown, h2Id }: { markdown: string; h2Id?: string }) {
   const prepared = preprocessRichBlocks(markdown);
 
   return (
@@ -173,7 +180,7 @@ function MarkdownChunk({ markdown }: { markdown: string }) {
       remarkPlugins={[remarkGfm]}
       components={{
         h1: ({ children }) => <h2 id={slugifyHeading(childText(children))}>{children}</h2>,
-        h2: ({ children }) => <h2 id={slugifyHeading(childText(children))}>{children}</h2>,
+        h2: ({ children }) => <h2 id={h2Id || slugifyHeading(childText(children))}>{children}</h2>,
         h3: ({ children }) => <h3 id={slugifyHeading(childText(children))}>{children}</h3>,
         a: ({ href, children }) => {
           const affiliate = isAffiliate(href);
@@ -209,37 +216,41 @@ function MarkdownChunk({ markdown }: { markdown: string }) {
 }
 
 
-function ComparisonSection({ title, markdown }: { title: string; markdown: string }) {
+function ComparisonSection({ title, markdown, id }: { title: string; markdown: string; id: string }) {
   const parsed = splitComparisonEntries(markdown);
 
   return (
-    <section className="mdSectionCard comparisonSectionCard" aria-labelledby={slugifyHeading(title)}>
-      <h2 id={slugifyHeading(title)}>{title}</h2>
+    <section className="mdSectionCard comparisonSectionCard" aria-labelledby={id}>
+      <h2 id={id}>{title}</h2>
       {parsed.intro && <div className="comparisonSectionIntro"><MarkdownChunk markdown={parsed.intro} /></div>}
       <div className="comparisonCaseList">
-        {parsed.entries.map((entry) => (
-          <article className="comparisonCaseCard" key={entry.title}>
-            <div className="comparisonCaseGrid">
-              {entry.fields.slice(0, 4).map((field, index) => (
-                <div className="comparisonCaseField" key={`${entry.title}-${field.label}-${index}`}>
-                  <span className="comparisonCaseLabel">{field.label}</span>
-                  <strong className="comparisonCaseValue">{field.value}</strong>
-                </div>
-              ))}
-            </div>
-          </article>
-        ))}
+        {parsed.entries.map((entry) => {
+          const fields = entry.fields.slice(0, 4);
+          const countClass = `isCount${Math.max(1, fields.length)}`;
+          return (
+            <article className="comparisonCaseCard" key={entry.title}>
+              <div className={`comparisonCaseGrid ${countClass}`}>
+                {fields.map((field, index) => (
+                  <div className="comparisonCaseField" key={`${entry.title}-${field.label}-${index}`}>
+                    <span className="comparisonCaseLabel">{field.label}</span>
+                    <strong className="comparisonCaseValue">{field.value}</strong>
+                  </div>
+                ))}
+              </div>
+            </article>
+          );
+        })}
       </div>
     </section>
   );
 }
 
-function SourceSection({ title, markdown }: { title: string; markdown: string }) {
+function SourceSection({ title, markdown, id }: { title: string; markdown: string; id: string }) {
   const parsed = splitSourceEntries(markdown);
 
   return (
-    <section className="mdSectionCard sourceSectionCard" aria-labelledby={slugifyHeading(title)}>
-      <h2 id={slugifyHeading(title)}>{title}</h2>
+    <section className="mdSectionCard sourceSectionCard" aria-labelledby={id}>
+      <h2 id={id}>{title}</h2>
       {parsed.intro && <div className="sourceSectionIntro"><MarkdownChunk markdown={parsed.intro} /></div>}
       <div className="sourceEntryList">
         {parsed.entries.map((entry) => (
@@ -265,17 +276,17 @@ export function MarkdownArticle({ markdown }: { markdown: string }) {
 
         const isComparisonSection = /3人.*実例|実例.*3人|3人.*比較/.test(section.title);
         if (isComparisonSection) {
-          return <ComparisonSection key={`${index}-${section.title}`} title={section.title} markdown={section.markdown} />;
+          return <ComparisonSection key={`${index}-${section.title}`} title={section.title} markdown={section.markdown} id={section.id} />;
         }
 
         const isSourceSection = /(実例ブログ|個人ブログ|口コミ|体験談|参考ブログ|参考情報|引用|合格者3人の学習例)/.test(section.title);
         if (isSourceSection) {
-          return <SourceSection key={`${index}-${section.title}`} title={section.title} markdown={section.markdown} />;
+          return <SourceSection key={`${index}-${section.title}`} title={section.title} markdown={section.markdown} id={section.id} />;
         }
 
         return (
           <section className="mdSectionCard" key={`${index}-${section.title}`}>
-            <MarkdownChunk markdown={section.markdown} />
+            <MarkdownChunk markdown={section.markdown} h2Id={section.id} />
           </section>
         );
       })}

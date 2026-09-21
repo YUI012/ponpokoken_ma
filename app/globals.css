@@ -1841,6 +1841,12 @@ main.articleShell {
   min-width: 0;
 }
 
+/* Adaptive comparison-card layout for cases with fewer fields. */
+.comparisonCaseGrid.isCount1 .comparisonCaseField,
+.comparisonCaseGrid.isCount3 .comparisonCaseField:last-child {
+  grid-column: 1 / -1;
+}
+
 .comparisonCaseLabel {
   display: block;
   margin-bottom: 5px;
