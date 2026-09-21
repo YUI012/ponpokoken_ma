@@ -33,11 +33,11 @@ Bedrock AgentCoreを使うと、AWS上でAIエージェントを動かし、Memo
 
 ## 3人の実例
 
-| 事例 | やったこと | 結果 | 前提・環境 | 参考になる点 |
-|---|---|---|---|---|
-| 1 | AIメンターを構築 | 主要機能の役割を把握 | AgentCore＋Strands Agents | 全体像を理解しやすい |
-| 2 | RAGをGatewayへ接続 | エージェントから検索可能 | Gateway＋Knowledge Base | 検索基盤をマネージド化 |
-| 3 | LINE Botを構築 | 会話Botをデプロイ | AgentCore＋LINE API | デプロイを簡素化 |
+| 事例 | 詳細 |
+|---|---|
+| 1 | **やったこと**：AIメンターを構築<br>**結果**：主要機能の役割を把握<br>**前提・環境**：AgentCore＋Strands Agents<br>**参考になる点**：全体像を理解しやすい |
+| 2 | **やったこと**：RAGをGatewayへ接続<br>**結果**：エージェントから検索可能<br>**前提・環境**：Gateway＋Knowledge Base<br>**参考になる点**：検索基盤をマネージド化 |
+| 3 | **やったこと**：LINE Botを構築<br>**結果**：会話Botをデプロイ<br>**前提・環境**：AgentCore＋LINE API<br>**参考になる点**：デプロイを簡素化 |
 
 3人ともAgentCore単体ではなく、周辺サービスと組み合わせています。AWS側へ運用部品を寄せつつ、アプリ固有の設計は人間が残しています。
 

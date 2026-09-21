@@ -34,11 +34,11 @@ Function Callingでは、AIに「どの関数を使うか」「どんな引数�
 
 ## 3人の実例
 
-| 事例 | やったこと | 結果 | 前提・環境 | 参考になる点 |
-|---|---|---|---|---|
-| 1 | IssueからPR作成を自動化 | 簡単なIssueで正しいPR作成まで動作 | GitHub / OpenAI | 回答から実作業へ接続 |
-| 2 | 掛け算用APIをFunction Call | LLMの苦手処理を外部関数へ委譲 | OpenAI API | LLMと既存APIの役割分担 |
-| 3 | GenkitでFunction Calling | 少量コードでツール連携 | Genkit | 実装の核は小さくできる |
+| 事例 | 詳細 |
+|---|---|
+| 1 | **やったこと**：IssueからPR作成を自動化<br>**結果**：簡単なIssueで正しいPR作成まで動作<br>**前提・環境**：GitHub / OpenAI<br>**参考になる点**：回答から実作業へ接続 |
+| 2 | **やったこと**：掛け算用APIをFunction Call<br>**結果**：LLMの苦手処理を外部関数へ委譲<br>**前提・環境**：OpenAI API<br>**参考になる点**：LLMと既存APIの役割分担 |
+| 3 | **やったこと**：GenkitでFunction Calling<br>**結果**：少量コードでツール連携<br>**前提・環境**：Genkit<br>**参考になる点**：実装の核は小さくできる |
 
 OpenAI Function Callingの使い方は3人で異なりますが、全員が「まず動くものを作る」ところまで進めています。単なる機能紹介ではなく、完成物や実測結果があるため、導入後のイメージを持ちやすい事例です。
 
