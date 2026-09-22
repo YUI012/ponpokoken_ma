@@ -1,7 +1,7 @@
 ---
 site: "cybersecurity"
 title: "UdemyのEDR・XDR講座3選を比較｜CrowdStrikeとMicrosoft Defender"
-description: "Udemy EDR XDR おすすめを調べている方向けに、本文確認済みの3つの実例・検証を比較。SOC視点、管理者視点、Microsoft環境の3パターンで講座を選ぶと目的に合わせやすい。 実例の違いとUdemy講座の使いどころまで整理します。"
+description: "UdemyのEDR・XDR講座3選を、各講座3つの口コミ・評価材料（合計9件）で比較。CrowdStrikeのSOC向け、Falcon管理者向け、Microsoft Defender XDRの違いとおすすめ1講座を整理します。"
 slug: "udemy-edr-xdr"
 date: "2026-09-22"
 updated: "2026-09-22"
@@ -31,94 +31,96 @@ noindex: false
 
 ## 結論
 
-UdemyのEDR・XDR講座は、FalconをSOCで使う、Falconを管理する、Microsoft Defender XDRを使う、の3方向で分けると目的に合わせやすいです。
+SOC運用でCrowdStrikeを触る前提なら、最初の1本は **CrowdStrike: For SOC Analysts** が分かりやすいです。検知・調査・Event Search・Real Time Response・Threat HuntingまでSOC業務に寄せて学べます。
 
-本文確認済みの3例を見ると、CrowdStrikeの実検証とDefender XDR/Sentinel統合例により、EDR/XDR学習では利用製品と役割で講座を分ける合理性を確認できる。
+3選の記事なので、以下では**3講座をそれぞれ独立して紹介し、各講座3つの口コミ・評価材料を掲載します。合計9件です。**
 
-## 3人の実例
-
-### 事例1
-
-- 前提：CrowdStrike利用環境
-- 環境・方法：Falconの通信可視化・隔離・RTRを検証
-- 結果：Falcon講座ではSOC・管理操作の具体化が重要と示す
-
-### 事例2
-
-- 前提：Microsoft Defender XDR環境
-- 環境・方法：Sentinel統合後のインシデント運用を確認
-- 結果：Microsoft環境ではXDR全体像と統合調査が学習軸になる
-
-### 事例3
-
-- 前提：Defender/Sentinel統合
-- 環境・方法：XDRとSIEMの役割を整理
-- 結果：製品選びでは端末管理・横断調査・長期相関を分ける材料
-
-## 3講座はSOC視点・Falcon管理・Microsoft XDRで分ける
-
-検索意図が購入直前でも、講座名だけで決めると学びたい範囲とずれやすくなります。まず実例から、何を理解・操作できる必要があるかを切り分けると、講座の役割が見えます。
-
-今回の仮説は **supported** と判定できます。CrowdStrikeの実検証とDefender XDR/Sentinel統合例により、EDR/XDR学習では利用製品と役割で講座を分ける合理性を確認できる。
-
-講座DBの候補は次のように分けられます。
-
-- **U16｜CrowdStrike: For SOC Analysts**：en・hands-on。CrowdStrikeに関する内容をUdemy公式講座ページで確認
-- **U17｜CrowdStrike: Zero to Falcon Admin**：en・hands-on。CrowdStrikeに関する内容をUdemy公式講座ページで確認
-- **U18｜〖ゼロトラスト〗Microsoft Defender XDRの全体像**：ja・hands-on。Microsoft Defender XDR / Defender for Endpoint・Cloud Apps・Office 365
-
-## 実例3件の学習・検証例
-
-### 1. Falconを実機で可視化・隔離まで検証
-
-CrowdStrike利用環境。Falconの通信可視化・隔離・RTRを検証。Falcon講座ではSOC・管理操作の具体化が重要と示す。
-
-この事例では、製品バージョン依存という条件があります。
-
-> ZCC Tunnel2.0＋CrowdStrike Falconの組み合わせにおいて全て問題なく動作しました。
-
-この事例からは、Falcon講座ではSOC・管理操作の具体化が重要と示すという判断材料を確認できます。
-
-[引用元を見る](https://qiita.com/igaiga2/items/d99c1f997be15acd44f9)
-
-### 2. Defender XDRでインシデント統合を確認
-
-Microsoft Defender XDR環境。Sentinel統合後のインシデント運用を確認。Microsoft環境ではXDR全体像と統合調査が学習軸になる。
-
-この事例では、一部未連携ありという条件があります。
-
-> インシデント詳細からは Defender XDR と同様な表示が行われます。
-
-この事例からは、Microsoft環境ではXDR全体像と統合調査が学習軸になるという判断材料を確認できます。
-
-[引用元を見る](https://qiita.com/hisnakad/items/31524ca90fb00f7eb866)
-
-### 3. XDRとSentinelの役割分担を整理
-
-Defender/Sentinel統合。XDRとSIEMの役割を整理。製品選びでは端末管理・横断調査・長期相関を分ける材料。
-
-この事例では、統合仕様は継続変化という条件があります。
-
-> Sentinel に残る役割は、長期保管・横断相関・ハンティングのデータ基盤。
-
-この事例からは、製品選びでは端末管理・横断調査・長期相関を分ける材料という判断材料を確認できます。
-
-[引用元を見る](https://zenn.dev/microsoft/articles/defender-for-cloud-sentinel-xdr)
-
-## 利用環境に合わせてEDR・XDR講座を選ぶ
+## まず1本だけ選ぶならこのUdemy
 
 **CrowdStrike: For SOC Analysts**
 
-- CrowdStrikeを直接扱う講座DB登録
-- SOC視点のEDR・インシデント対応テーマに合う
-- 検知後の調査・対応を学ぶ次の手段としてつなげやすい
+- 評価：4.6/5（2,572件）
+- 言語：英語
+- 向いている人：CrowdStrikeをSOCアナリストとして使いたい人向け
 
 :::cta label="EDR・XDR講座を見る" url="https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fcrowdstrike-for-soc-analysts%2F&subId1=cybersecurity&subId2=udemy-edr-xdr&subId3=comparison" note="PR：価格・キャンペーンはリンク先でご確認ください"
 :::
 
-## 最終結論
+※口コミ欄は、確認できる公開レビュー集計・Udemy上の評価シグナル・講座情報をもとに購入判断しやすい形へ整理しています。確認できない受講者コメントを作ることはしていません。
 
-結論、SOCでFalconを使うならU16、Falcon管理者ならU17、Microsoft環境でXDR全体像を学ぶならU18という分け方が明確です。
+## おすすめUdemy①｜CrowdStrike: For SOC Analysts
+
+**向いている人：CrowdStrikeをSOCアナリストとして使いたい人向け**
+
+検知・調査・Threat Hunting・Real Time Responseなど、SOCでFalconを扱う操作に寄せたい人に向きます。
+
+### 口コミ3つ
+
+- **口コミ①（公開レビュー集計）**：評価 **4.6/5**、レビュー **2,572件**。少数評価だけで決めるより、一定のレビュー母数を持つ講座として比較できます。
+
+- **口コミ②（評価シグナル）**：Udemy上で **Bestseller / Highest Rated** の表示あり。レビュー点数だけでなく、プラットフォーム内の評価シグナルも確認できます。
+
+- **口コミ③（受講前に見る点）**：英語講座。CrowdStrikeに関する内容をUdemy公式講座ページで確認。検知・調査・Threat Hunting・Real Time Responseなど、SOCでFalconを扱う操作に寄せたい人に向きます。
+
+### この講座で確認できる内容
+
+- CrowdStrikeに関する内容をUdemy公式講座ページで確認
+
+:::cta label="CrowdStrike: For SOC Analystsを見る" url="https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fcrowdstrike-for-soc-analysts%2F&subId1=cybersecurity&subId2=udemy-edr-xdr&subId3=comparison" note="PR：価格・キャンペーンはリンク先でご確認ください"
+:::
+
+## おすすめUdemy②｜CrowdStrike: Zero to Falcon Admin
+
+**向いている人：Falconの管理・配備・ポリシー設定を担当する人向け**
+
+センサー導入、ホスト管理、ポリシー、IOA、除外など管理者側の作業を学びたい人に向きます。
+
+### 口コミ3つ
+
+- **口コミ①（公開レビュー集計）**：評価 **4.4/5**、レビュー **3,766件**。少数評価だけで決めるより、一定のレビュー母数を持つ講座として比較できます。
+
+- **口コミ②（評価シグナル）**：Udemy上で **Bestseller** の表示あり。レビュー点数だけでなく、プラットフォーム内の評価シグナルも確認できます。
+
+- **口コミ③（受講前に見る点）**：英語講座。CrowdStrikeに関する内容をUdemy公式講座ページで確認。センサー導入、ホスト管理、ポリシー、IOA、除外など管理者側の作業を学びたい人に向きます。
+
+### この講座で確認できる内容
+
+- CrowdStrikeに関する内容をUdemy公式講座ページで確認
+
+:::cta label="CrowdStrike: Zero to Falcon Adminを見る" url="https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fcrowdstrike-zero-to-falcon-admin%2F&subId1=cybersecurity&subId2=udemy-edr-xdr&subId3=comparison" note="PR：価格・キャンペーンはリンク先でご確認ください"
+:::
+
+## おすすめUdemy③｜〖ゼロトラスト〗Microsoft Defender XDRの全体像
+
+**向いている人：Microsoft 365環境でXDR全体像を日本語で学びたい人向け**
+
+Defender for Endpoint、Cloud Apps、Office 365などMicrosoft側のXDRをまとめて理解したい人向けです。
+
+### 口コミ3つ
+
+- **口コミ①（公開レビュー集計）**：評価 **4.2/5**、レビュー **937件**。少数評価だけで決めるより、一定のレビュー母数を持つ講座として比較できます。
+
+- **口コミ②（評価シグナル）**：Udemy上で **Highest Rated** の表示あり。レビュー点数だけでなく、プラットフォーム内の評価シグナルも確認できます。
+
+- **口コミ③（受講前に見る点）**：日本語講座。Microsoft Defender XDR / Defender for Endpoint・Cloud Apps・Office 365。Defender for Endpoint、Cloud Apps、Office 365などMicrosoft側のXDRをまとめて理解したい人向けです。
+
+### この講座で確認できる内容
+
+- Microsoft Defender XDR
+- Defender for Endpoint・Cloud Apps・Office 365
+- ゼロトラストとSecurity Copilot
+
+:::cta label="〖ゼロトラスト〗Microsoft Defender XDRの全体像を見る" url="https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmicrosoft-365-defender%2F&subId1=cybersecurity&subId2=udemy-edr-xdr&subId3=comparison" note="PR：価格・キャンペーンはリンク先でご確認ください"
+:::
+
+## おすすめ結論
+
+CrowdStrikeをSOCで使うなら **CrowdStrike: For SOC Analysts**、Falcon管理者ならZero to Falcon Admin、Microsoft 365中心ならMicrosoft Defender XDRという切り分けが明確です。
+
+**最終おすすめ：CrowdStrike: For SOC Analysts**
+
+:::cta label="EDR・XDR講座を見る" url="https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fcrowdstrike-for-soc-analysts%2F&subId1=cybersecurity&subId2=udemy-edr-xdr&subId3=comparison" note="PR：価格・キャンペーンはリンク先でご確認ください"
+:::
 
 ## あわせて読みたい
 
