@@ -35,8 +35,8 @@ export async function generateMetadata({
 
   const articles = getArticlesByQualification(siteSlug, categorySlug, qualificationSlug);
   const offers = getQualificationAffiliateOffers(siteSlug, categorySlug, qualificationSlug, 3);
-  const title = `${qualification.shortName}｜最短合格・Udemy・勉強法｜${site.name}`;
-  const description = `${qualification.shortName}を最短で取るための勉強時間・短期合格例・Udemy教材・関連記事を整理。ハンズオン記事がある場合は実践学習もまとめます。`;
+  const title = `${qualification.shortName}資格DB｜試験情報・勉強法・Udemy｜${site.name}`;
+  const description = qualification.description;
   const url = canonicalUrl(site, `category/${categorySlug}/${qualification.slug}/`);
 
   return {

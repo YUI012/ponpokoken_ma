@@ -97,7 +97,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monos
 }
 .headerNav { display: none; }
 
-/* Shared page shell: designed around 360â€“430px smartphones */
+/* Shared page shell: designed around 360-430px smartphones */
 .pageShell,
 .articleShell,
 .publicIndexPage {
@@ -331,7 +331,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monos
 }
 .toc summary::-webkit-details-marker { display: none; }
 .toc summary::after { content: "+"; float: right; color: #8b96a5; }
-.toc[open] summary::after { content: "âˆ’"; }
+.toc[open] summary::after { content: "\2212"; }
 .toc ol { margin: 12px 0 0; padding-left: 1.25em; }
 .toc li { margin: 7px 0; color: #5f6b7a; font-size: 13px; }
 .toc a { text-decoration: underline; text-underline-offset: 3px; }
@@ -417,152 +417,39 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monos
   font-size: .92em;
 }
 
-/* Responsive tables: keep the page fixed; only the table scrolls horizontally. */
-.mdArticleFlow,
-.mdArticleFlow > *,
-.mdSectionCard,
-.markdownBody,
-.comparisonSectionIntro {
-  min-width: 0;
-  max-width: 100%;
-}
+/* Table: only the table scrolls horizontally */
 .tableWrap {
-  display: block;
   width: 100%;
   max-width: 100%;
-  min-width: 0;
   overflow-x: auto;
-  overflow-y: hidden;
   margin: 16px 0 4px;
   border: 1px solid var(--line);
   border-radius: 13px;
   background: #fff;
   -webkit-overflow-scrolling: touch;
-  overscroll-behavior-inline: contain;
   scrollbar-width: thin;
 }
 .markdownBody table {
-  width: max-content;
-  min-width: 100%;
-  max-width: none;
+  width: 100%;
+  min-width: 560px;
   border-collapse: collapse;
-  table-layout: auto;
   font-size: 13px;
 }
 .markdownBody th,
 .markdownBody td {
-  min-width: 120px;
-  max-width: 250px;
   padding: 13px 14px;
   border-bottom: 1px solid var(--line-soft);
   text-align: left;
   vertical-align: top;
-  white-space: normal;
-  overflow-wrap: anywhere;
-  word-break: normal;
 }
 .markdownBody th {
   background: #f7fafc;
   color: #5c6878;
   font-size: 12px;
   font-weight: 850;
-}
-.markdownBody th:first-child,
-.markdownBody td:first-child {
-  position: sticky;
-  left: 0;
-  z-index: 1;
-  min-width: 72px;
-  max-width: 110px;
-  background: #fff;
-  box-shadow: 1px 0 0 var(--line-soft);
-}
-.markdownBody th:first-child {
-  z-index: 2;
-  background: #f7fafc;
+  white-space: nowrap;
 }
 .markdownBody tr:last-child td { border-bottom: 0; }
-
-@media (max-width: 767px) {
-  /* Mobile tables become readable cards instead of forcing horizontal scrolling. */
-  .tableWrap {
-    margin-inline: 0;
-    overflow: visible;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    scrollbar-width: none;
-  }
-
-  .tableWrap::-webkit-scrollbar { display: none; }
-
-  .markdownBody .responsiveMdTable {
-    display: block;
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-    font-size: 14px;
-  }
-
-  .markdownBody .responsiveMdTable thead { display: none; }
-
-  .markdownBody .responsiveMdTable tbody {
-    display: grid;
-    gap: 12px;
-    width: 100%;
-  }
-
-  .markdownBody .responsiveMdTable tr {
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    border: 1px solid var(--line-soft);
-    border-radius: 12px;
-    background: #fff;
-  }
-
-  .markdownBody .responsiveMdTable td,
-  .markdownBody .responsiveMdTable td:first-child {
-    position: static;
-    display: grid;
-    grid-template-columns: minmax(88px, 34%) minmax(0, 1fr);
-    gap: 10px;
-    width: 100%;
-    min-width: 0;
-    max-width: none;
-    padding: 10px 12px;
-    border-bottom: 1px solid var(--line-soft);
-    background: #fff;
-    box-shadow: none;
-    line-height: 1.65;
-    overflow-wrap: anywhere;
-  }
-
-  .markdownBody .responsiveMdTable tr:last-child td { border-bottom: 1px solid var(--line-soft); }
-  .markdownBody .responsiveMdTable tr td:last-child { border-bottom: 0; }
-
-  .markdownBody .responsiveMdTable td::before {
-    content: attr(data-label);
-    color: #64748b;
-    font-size: 11px;
-    font-weight: 850;
-    line-height: 1.45;
-  }
-
-  .markdownBody .responsiveMdTable td:first-child {
-    grid-template-columns: auto minmax(0, 1fr);
-    align-items: center;
-    gap: 7px;
-    background: #f8fafc;
-    color: var(--text);
-    font-weight: 850;
-  }
-
-  .markdownBody .responsiveMdTable td:first-child::before {
-    color: #475569;
-    font-size: 12px;
-  }
-}
 
 /* Blog / quote cards */
 .sourceSectionIntro { margin-bottom: 14px; }
@@ -945,7 +832,7 @@ main.articleShell {
 }
 
 
-/* v5.6 â€” single-source card spacing
+/* v5.6 - single-source card spacing
    Outer card spacing is controlled ONLY by parent gap.
    Markdown authors never need to add blank spacing for layout. */
 .pageShell,
@@ -1144,8 +1031,8 @@ main.articleShell {
 
 /* =========================================================
    v6.0 Reader-first blog / quote cards
-   å®Ÿä¾‹ãƒ–ãƒ­ã‚°ãƒ»å£ã‚³ãƒŸã‚’ã€Œæœ¬æ–‡ã€ã¨è¦–è¦šçš„ã«åˆ†é›¢ã™ã‚‹
-   MarkdownArticle.tsx ã®æ—¢å­˜ .sourceEntry ã‚’åˆ©ç”¨
+   実例ブログ・口コミを「本文」と視覚的に分離する
+   MarkdownArticle.tsx の既存 .sourceEntry を利用
    ========================================================= */
 
 .sourceEntry {
@@ -1167,7 +1054,7 @@ main.articleShell {
   color: #475569;
 }
 
-/* åŽŸæ–‡å¼•ç”¨ã ã‘ã€ã‚«ãƒ¼ãƒ‰å†…ã§ã‚‚ã†ä¸€æ®µè¦‹åˆ†ã‘ã‚„ã™ãã™ã‚‹ */
+/* 原文引用だけ、カード内でもう一段見分けやすくする */
 .sourceEntry blockquote {
   margin: 13px 0 12px;
   padding: 13px 15px 13px 17px;
@@ -1186,7 +1073,7 @@ main.articleShell {
   color: inherit;
 }
 
-/* å¼•ç”¨å…ƒãƒªãƒ³ã‚¯ */
+/* 引用元リンク */
 .sourceEntry a {
   display: inline-flex;
   align-items: center;
@@ -1199,18 +1086,18 @@ main.articleShell {
 }
 
 .sourceEntry a::after {
-  content: "â†’";
+  content: "\2192";
   text-decoration: none;
 }
 
-/* 3ã¤ã®å¼•ç”¨ã‚«ãƒ¼ãƒ‰ã®é–“éš” */
+/* 3つの引用カードの間隔 */
 .sourceEntryList {
   gap: 12px;
 }
 
 /* =========================================================
    v6.0 Compact affiliate CTA
-   æ­£å¼ã‚¿ã‚¤ãƒˆãƒ«ã¯æœ¬æ–‡ã€ãƒœã‚¿ãƒ³ã¯çŸ­ã„CTAãƒ©ãƒ™ãƒ«ã«ã™ã‚‹å‰æ
+   正式タイトルは本文、ボタンは短いCTAラベルにする前提
    ========================================================= */
 
 .richCta > a {
@@ -1231,7 +1118,7 @@ main.articleShell {
   font-size: 10px;
 }
 
-/* ã‚¹ãƒžãƒ›ã§ã¯ä½™ç™½ã‚’å°‘ã—ç· ã‚ã‚‹ */
+/* スマホでは余白を少し狭める */
 @media (max-width: 640px) {
   .sourceEntry {
     padding: 15px 14px;
@@ -1256,9 +1143,9 @@ main.articleShell {
 /* ===== Quote UI fix 2026-09-19 ===== */
 /* =========================================================
    Quote UI fix
-   - ã‚°ãƒ¬ãƒ¼èƒŒæ™¯ã¯å¼•ç”¨éƒ¨åˆ†ã ã‘
-   - å¼•ç”¨å…ƒãƒªãƒ³ã‚¯ã®æ–‡å­—åŒ–ã‘çŸ¢å°ã‚’å‰Šé™¤
-   - å¤–å´ã®ãƒ–ãƒ­ã‚°ã‚«ãƒ¼ãƒ‰ã¯ç™½èƒŒæ™¯
+   - グレー背景は引用部分だけ
+   - 引用元リンクの文字化け矢印を削除
+   - 外側のブログカードは白背景
    ========================================================= */
 
 .sourceEntry {
@@ -1280,7 +1167,7 @@ main.articleShell {
   color: #475569;
 }
 
-/* å¼•ç”¨éƒ¨åˆ†ã ã‘ã‚°ãƒ¬ãƒ¼ */
+/* 引用部分だけグレー */
 .sourceEntry blockquote,
 .markdownBody .sourceEntry blockquote {
   margin: 14px 0 12px;
@@ -1301,7 +1188,7 @@ main.articleShell {
   color: inherit;
 }
 
-/* å¼•ç”¨å…ƒãƒªãƒ³ã‚¯ */
+/* 引用元リンク */
 .sourceEntry a {
   display: inline-flex;
   align-items: center;
@@ -1312,13 +1199,13 @@ main.articleShell {
   text-underline-offset: 3px;
 }
 
-/* "Ã¢â€ â€™" ã®åŽŸå› ã«ãªã‚‹ç–‘ä¼¼è¦ç´ ã‚’å®Œå…¨ã«æ¶ˆã™ */
+/* 文字化け矢印の原因になる疑似要素を完全に消す */
 .sourceEntry a::after {
   content: none !important;
   display: none !important;
 }
 
-/* CTAã¯è¬›åº§ã‚¿ã‚¤ãƒˆãƒ«ã‚’æœ¬æ–‡ã«å‡ºã—ã€ãƒœã‚¿ãƒ³ã¯çŸ­ã */
+/* CTAは講座タイトルを本文に出し、ボタンは短く */
 .richCta > a {
   min-height: 50px;
   padding: 10px 14px;
@@ -1785,7 +1672,7 @@ main.articleShell {
 }
 
 .simpleArticleLinks a::after {
-  content: ' →';
+  content: ' \2192';
   color: var(--accent);
 }
 
@@ -1991,52 +1878,194 @@ main.articleShell {
 }
 
 /* =========================================================
-   v6.4.1 Intent-first category / qualification hubs
-   AI / IT資格 / Python / Cybersecurity
+   v6.5 SEO/DB upgrade
+   - Subdomain TOP: specialist DB summary
+   - IT qualification category: official exam facts + local content DB
    ========================================================= */
-.intentHubSection {
-  padding-top: 26px;
-  padding-bottom: 28px;
+.siteDbSummary {
+  display: grid;
+  gap: 18px;
+  margin: 18px 0 26px;
+  padding: 20px;
 }
 
-.intentSectionIntro {
-  margin: -2px 0 0 !important;
-  color: #475569 !important;
-  font-size: 13px !important;
-  line-height: 1.85 !important;
+.siteDbSummary h2 {
+  margin: 2px 0 8px;
+  font-size: clamp(22px, 5vw, 30px);
+  letter-spacing: -0.02em;
 }
 
-.intentOfferBlock,
-.intentArticleBlock {
-  margin-top: 20px;
+.siteDbSummary > div > p:last-child {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
 }
 
-.intentSubLabel {
-  margin: 0 0 8px;
-  color: var(--accent);
-  font-size: 11px;
+.siteDbStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+}
+
+.siteDbStats > div {
+  display: grid;
+  gap: 4px;
+  padding: 12px 10px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+}
+
+.siteDbStats dt {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.siteDbStats dd {
+  margin: 0;
+  color: var(--text);
+  font-size: 18px;
   font-weight: 900;
 }
 
-.intentAffiliateOffer {
-  border-color: color-mix(in srgb, var(--accent) 36%, var(--line));
-  background: color-mix(in srgb, var(--accent) 4%, #fff);
+.qualificationDbList {
+  display: grid;
+  gap: 12px;
 }
 
-.intentAffiliateOffer .affiliateOfferLabel {
-  font-size: 14px;
+.qualificationDbCard {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
 }
 
-.compactIntentArticleBlock {
-  margin-top: 14px;
+.qualificationDbHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.qualificationDbHead > div {
+  min-width: 0;
+}
+
+.qualificationDbHead h3 {
+  margin: 8px 0 2px;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.qualificationDbHead p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.qualificationDbCount {
+  flex: 0 0 auto;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 8%, #fff);
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.qualificationFactGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--line);
+}
+
+.qualificationFactGrid > div {
+  min-width: 0;
+  padding: 10px;
+  background: #fff;
+}
+
+.qualificationFactGrid dt {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.qualificationFactGrid dd {
+  margin: 3px 0 0;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.qualificationDbActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 13px;
+}
+
+.qualificationDbActions a,
+.officialSourceLink a {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.qualificationVerified {
+  display: block;
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.qualificationNotice {
+  margin: 12px 0 0 !important;
+  padding: 10px 12px;
+  border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 5%, #fff);
+  color: #334155;
+  font-size: 11px !important;
+  line-height: 1.7 !important;
+}
+
+.officialSourceLink {
+  margin: 12px 0 0 !important;
 }
 
 @media (min-width: 768px) {
-  .intentHubSection {
-    padding-top: 32px;
-    padding-bottom: 34px;
+  .siteDbSummary {
+    grid-template-columns: minmax(0, 1fr) 320px;
+    align-items: center;
+    padding: 24px;
   }
-  .intentSectionIntro {
-    font-size: 14px !important;
+
+  .qualificationDbList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .siteDbStats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .siteDbStats > div {
+    padding: 10px 6px;
+  }
+
+  .siteDbStats dd {
+    font-size: 16px;
   }
 }

@@ -24,21 +24,14 @@ export async function generateMetadata({ params }: { params: Promise<{ site: str
   if (!category) return { title: { absolute: `カテゴリ｜${site.name}` }, robots: { index: false, follow: true } };
 
   const hasQualifications = Boolean(category.qualifications?.length);
-  const focusedTitles: Record<string, string> = {
-    'ai-tools': `${category.name}｜課金・選び方・実践を整理｜${site.name}`,
-    'python-automation': `${category.name}｜最短で学ぶ・実務で自動化｜${site.name}`,
-    cybersecurity: `${category.name}｜基礎から実践まで｜${site.name}`,
-  };
   const title = hasQualifications
-    ? `${category.name}資格一覧｜${site.name}`
-    : focusedTitles[site.slug] || `${category.name}完全ガイド｜${site.name}`;
-  const focusedDescriptions: Record<string, string> = {
-    'ai-tools': `${category.name}の導入判断・使い方・実践記事とUdemy講座を、迷わず選べる順に整理します。`,
-    'python-automation': `${category.name}を最短で使い始め、実務の自動化へつなげる入門・比較・ハンズオン記事とUdemy講座を整理します。`,
-    cybersecurity: `${category.name}の基礎・比較から実践・ハンズオンまで、学ぶ順番とUdemy講座を整理します。`,
-    'it-cert': `${category.name}の最短合格・勉強時間・教材・Udemy講座と関連する資格記事を整理します。`,
-  };
-  const description = hasQualifications ? category.description : focusedDescriptions[site.slug] || category.description;
+    ? `${category.name}資格DB｜試験・教材・学習記事を比較｜${site.name}`
+    : site.slug === 'ai-tools'
+      ? `${category.name}活用DB｜使い方・比較・自動化｜${site.name}`
+      : site.slug === 'python-automation'
+        ? `${category.name}自動化DB｜実装・比較・講座｜${site.name}`
+        : `${category.name}テーマDB｜${site.name}`;
+  const description = category.databaseDescription || category.description;
   const url = canonicalUrl(site, `category/${category.slug}/`);
   return {
     title: { absolute: title },

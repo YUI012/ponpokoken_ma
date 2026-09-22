@@ -34,11 +34,21 @@ Linux操作がほぼゼロならLPICを先に、Linuxの基本操作ができて
 
 ## 3人の実例
 
-| 事例 | 取得順 | 状況 | 参考になる点 |
-|---|---|---|---|
-| 1 | LPIC-1→SAA | IT未経験スタート | LPIC知識がSAA学習を助けた |
-| 2 | LPIC Level1→SAA | LPIC直後に開始 | 約1か月でSAA合格 |
-| 3 | AWS資格→LPIC | CLF・SAA・SOA等の後 | クラウドからLinuxを補強 |
+### 事例1
+- 取得順：LPIC-1→SAA
+- 状況：IT未経験スタート
+- 参考になる点：LPIC知識がSAA学習を助けた
+
+### 事例2
+- 取得順：LPIC Level1→SAA
+- 状況：LPIC直後に開始
+- 参考になる点：約1か月でSAA合格
+
+### 事例3
+- 取得順：AWS資格→LPIC
+- 状況：CLF・SAA・SOA等の後
+- 参考になる点：クラウドからLinuxを補強
+
 
 3例から、LPICを先にするとLinux・OS周辺の理解を持った状態でクラウドへ進めます。一方、AWSを先にして必要になったLinuxを後から埋める経路も成立しています。
 
@@ -90,5 +100,3 @@ Level1取得後にすぐSAA学習を始め、約1か月で合格した例です�
 
 :::cta label="SAA講座を見る" url="https://trk.udemy.com/xJoNdk" note="PR：価格・キャンペーンはリンク先でご確認ください"
 :::
-
-

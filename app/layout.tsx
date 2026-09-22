@@ -14,11 +14,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'ぽんぽこメディア｜IT・AI・学習を比較して選ぶ',
+    default: 'ぽんぽこメディア｜IT・AI・開発を10の専門メディアで探す',
     template: '%s｜ぽんぽこメディア',
   },
-  description: 'AIツール、IT資格、Python自動化、セキュリティ、データ分析、DevOps、Web開発などをカテゴリ別に整理する専門メディアです。',
-  keywords: ['IT資格', 'AIツール', 'Python', 'セキュリティ', 'データ分析', 'DevOps', 'Web開発'],
+  description: 'AIツール、IT資格、Python自動化、セキュリティ、Microsoft 365、マーケティング、データ分析、機械学習、DevOps、Web開発を10の専門メディアで整理します。',
+  keywords: ['IT資格', 'AIツール', 'Python自動化', 'セキュリティ', 'Microsoft 365', 'デジタルマーケティング', 'データ分析', '機械学習', 'DevOps', 'Web開発'],
   openGraph: { type: 'website', siteName: 'ぽんぽこメディア', locale: 'ja_JP' },
   robots: { index: true, follow: true },
 };

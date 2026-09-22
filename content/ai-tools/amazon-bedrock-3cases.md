@@ -34,11 +34,24 @@ Amazon Bedrockは、**AWSだけでアプリ全体が完成するサービスで�
 
 ## 3人の実例
 
-| 事例 | やったこと | 結果 | 前提・環境 | 参考になる点 |
-|---|---|---|---|---|
-| 1 | S3・CloudFront・LambdaとBedrockを接続 | 生成AIチャットを構築 | AWSサービスを組み合わせ | Bedrock単体ではなくAWS連携が中心 |
-| 2 | Claude 3を使ってRAGを構築 | Qiita検索型の回答アプリ | Python・Bedrock | 実用寄りのRAGまで拡張できる |
-| 3 | PlaygroundsでClaudeを実行 | ブラウザから回答生成 | 個人AWSアカウント | 最初のモデル実行は比較的軽い |
+### 事例1
+- やったこと：S3・CloudFront・LambdaとBedrockを接続
+- 結果：生成AIチャットを構築
+- 前提・環境：AWSサービスを組み合わせ
+- 参考になる点：Bedrock単体ではなくAWS連携が中心
+
+### 事例2
+- やったこと：Claude 3を使ってRAGを構築
+- 結果：Qiita検索型の回答アプリ
+- 前提・環境：Python・Bedrock
+- 参考になる点：実用寄りのRAGまで拡張できる
+
+### 事例3
+- やったこと：PlaygroundsでClaudeを実行
+- 結果：ブラウザから回答生成
+- 前提・環境：個人AWSアカウント
+- 参考になる点：最初のモデル実行は比較的軽い
+
 
 ## 実例ブログ・口コミ
 

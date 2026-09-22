@@ -10,13 +10,13 @@ import { SiteFooter } from '@/components/SiteFooter';
 const baseUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://ponpokoken.com').replace(/\/$/, '');
 
 export const metadata: Metadata = {
-  title: { absolute: 'ぽんぽこメディア｜IT・AI・学習を比較して選ぶ' },
-  description: 'AIツール、IT資格、Python自動化、セキュリティ、Microsoft 365、データ分析、DevOps、Web開発などを分野別に整理する専門メディアです。',
+  title: { absolute: 'ぽんぽこメディア｜IT・AI・開発を10の専門メディアで探す' },
+  description: 'AIツール、IT資格、Python自動化、セキュリティ、Microsoft 365、マーケティング、データ分析、機械学習、DevOps、Web開発を10の専門メディアで整理します。',
   alternates: { canonical: `${baseUrl}/` },
   robots: { index: true, follow: true },
   openGraph: {
-    title: 'ぽんぽこメディア｜IT・AI・学習を比較して選ぶ',
-    description: 'IT・AI・開発・データ分野を、大カテゴリから迷わず探せる形に整理します。',
+    title: 'ぽんぽこメディア｜IT・AI・開発を10の専門メディアで探す',
+    description: 'IT・AI・開発・データ領域を10の専門メディアに分け、カテゴリDBから探せる形に整理します。',
     type: 'website',
     url: `${baseUrl}/`,
     siteName: 'ぽんぽこメディア',
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary',
-    title: 'ぽんぽこメディア｜IT・AI・学習を比較して選ぶ',
-    description: 'IT・AI・開発・データ分野を、大カテゴリから迷わず探せる形に整理します。',
+    title: 'ぽんぽこメディア｜IT・AI・開発を10の専門メディアで探す',
+    description: 'IT・AI・開発・データ領域を10の専門メディアに分け、カテゴリDBから探せる形に整理します。',
   },
 };
 
@@ -40,7 +40,7 @@ export default function Home() {
     '@type': 'WebSite',
     name: 'ぽんぽこメディア',
     url: `${baseUrl}/`,
-    description: 'IT・AI・学習・仕事術を比較して選びやすく整理する専門メディア。',
+    description: 'IT・AI・開発・データ領域を10の専門メディアとカテゴリDBで整理するポータル。',
   };
 
   const organizationJsonLd = {
@@ -83,17 +83,17 @@ export default function Home() {
           <div className="articleTags">
             <span>ぽんぽこメディア</span>
           </div>
-          <h1>学びたい・使いたいを、比較して選べる。</h1>
+          <h1>10の専門メディアから、学びたい・使いたいを選べる。</h1>
           <p className="pageLead">
-            AIツール、IT資格、Python自動化、セキュリティ、データ分析、DevOps、Web開発まで。分野を選び、その中の記事とおすすめ教材をまとめて確認できます。
+            AIツール、IT資格、Python自動化、セキュリティ、Microsoft 365、マーケティング、データ分析・SQL、データサイエンス・機械学習、DevOps、Webアプリ開発を分野別に整理しています。
           </p>
         </section>
 
         <section className="directorySection uiCard" id="media">
           <div className="sectionHead">
             <div>
-              <h2>テーマから探す</h2>
-              <p>気になる分野を選んで記事を探せます。</p>
+              <h2>10の専門メディアから探す</h2>
+              <p>まず分野を選び、各サブドメインのカテゴリDBから記事・教材へ進めます。</p>
             </div>
           </div>
 

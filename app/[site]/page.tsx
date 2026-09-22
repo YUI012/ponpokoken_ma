@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import type { CSSProperties } from 'react';
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from '@/components/StaticLink';
 import { sites, getSite } from '@/lib/sites';
 import { getArticles } from '@/lib/content';
 import { getCategories } from '@/lib/archive';
@@ -40,11 +40,18 @@ export default async function SitePage({ params }: { params: Promise<{ site: str
   const visibleCategories = categories;
   const pageUrl = canonicalUrl(site);
 
-  const categoryGuideCopy: Record<string, string> = {
-    'ai-tools': '気になるツールを選ぶと、課金・選び方 → おすすめUdemy → 実践記事の順で確認できます。',
-    'it-cert': '資格ジャンルを選び、その先で資格ごとの最短合格 → おすすめUdemy → 関連記事を確認できます。',
-    'python-automation': '自動化したいテーマを選ぶと、最短で使うための入口 → おすすめUdemy → 実装記事の順で確認できます。',
-    cybersecurity: '学びたい分野を選ぶと、基礎・比較 → おすすめUdemy → 実践記事の順で確認できます。',
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: site.name,
+    alternateName: site.shortName,
+    url: pageUrl,
+    description: site.description,
+    publisher: {
+      '@type': 'Organization',
+      name: 'ぽんぽこメディア',
+      url: 'https://ponpokoken.com/',
+    },
   };
 
   const collectionJsonLd = {
@@ -67,6 +74,7 @@ export default async function SitePage({ params }: { params: Promise<{ site: str
   return (
     <div className="siteTheme" style={{ '--accent': site.accent } as CSSProperties}>
       <SiteHeader site={site} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }} />
 
       <main className="pageShell simpleSiteHome">
@@ -76,11 +84,24 @@ export default async function SitePage({ params }: { params: Promise<{ site: str
           <p>{site.description}</p>
         </section>
 
+        <section className="siteDbSummary uiCard" aria-labelledby="site-db-title">
+          <div>
+            <p className="simpleHomeEyebrow">専門DB</p>
+            <h2 id="site-db-title">{site.databaseTitle || `${site.shortName}DB`}</h2>
+            <p>{site.databaseDescription || site.description}</p>
+          </div>
+          <dl className="siteDbStats">
+            <div><dt>大カテゴリ</dt><dd>{visibleCategories.length}</dd></div>
+            <div><dt>公開記事</dt><dd>{allArticles.length}</dd></div>
+            <div><dt>更新対象</dt><dd>{visibleCategories.filter((category) => category.count > 0).length}</dd></div>
+          </dl>
+        </section>
+
         <section className="simpleCategorySection" id="categories">
           <div className="sectionHead compactHead">
             <div>
               <h2>{site.categoryHeading}</h2>
-              <p>{categoryGuideCopy[site.slug] || '最初に大カテゴリだけ選びます。細かい記事は各カテゴリページにまとめています。'}</p>
+              <p>大カテゴリを選ぶと、比較DB・使い方/学習ルート・Udemy・検索意図別の記事をまとめて確認できます。</p>
             </div>
           </div>
 
