@@ -484,22 +484,83 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monos
 .markdownBody tr:last-child td { border-bottom: 0; }
 
 @media (max-width: 767px) {
+  /* Mobile tables become readable cards instead of forcing horizontal scrolling. */
   .tableWrap {
     margin-inline: 0;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    scrollbar-width: none;
+  }
+
+  .tableWrap::-webkit-scrollbar { display: none; }
+
+  .markdownBody .responsiveMdTable {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .markdownBody .responsiveMdTable thead { display: none; }
+
+  .markdownBody .responsiveMdTable tbody {
+    display: grid;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .markdownBody .responsiveMdTable tr {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid var(--line-soft);
     border-radius: 12px;
+    background: #fff;
   }
-  .markdownBody table { font-size: 12.5px; }
-  .markdownBody th,
-  .markdownBody td {
-    min-width: 112px;
-    max-width: 220px;
-    padding: 10px 11px;
+
+  .markdownBody .responsiveMdTable td,
+  .markdownBody .responsiveMdTable td:first-child {
+    position: static;
+    display: grid;
+    grid-template-columns: minmax(88px, 34%) minmax(0, 1fr);
+    gap: 10px;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--line-soft);
+    background: #fff;
+    box-shadow: none;
     line-height: 1.65;
+    overflow-wrap: anywhere;
   }
-  .markdownBody th:first-child,
-  .markdownBody td:first-child {
-    min-width: 64px;
-    max-width: 96px;
+
+  .markdownBody .responsiveMdTable tr:last-child td { border-bottom: 1px solid var(--line-soft); }
+  .markdownBody .responsiveMdTable tr td:last-child { border-bottom: 0; }
+
+  .markdownBody .responsiveMdTable td::before {
+    content: attr(data-label);
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 850;
+    line-height: 1.45;
+  }
+
+  .markdownBody .responsiveMdTable td:first-child {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 7px;
+    background: #f8fafc;
+    color: var(--text);
+    font-weight: 850;
+  }
+
+  .markdownBody .responsiveMdTable td:first-child::before {
+    color: #475569;
+    font-size: 12px;
   }
 }
 

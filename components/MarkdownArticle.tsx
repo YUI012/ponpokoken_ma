@@ -1,4 +1,5 @@
 import ReactMarkdown from 'react-markdown';
+import { Children, cloneElement, isValidElement } from 'react';
 import type { ReactElement, ReactNode } from 'react';
 import remarkGfm from 'remark-gfm';
 import { slugifyHeading } from '@/lib/content';
@@ -172,6 +173,62 @@ function splitComparisonEntries(markdown: string) {
   return { intro: intro.join('\n').trim(), entries };
 }
 
+
+function elementChildren(children: ReactNode): ReactElement<any>[] {
+  return Children.toArray(children).filter((child): child is ReactElement<any> => isValidElement(child));
+}
+
+function isHtmlElement(element: ReactElement<any>, tag: string) {
+  return typeof element.type === 'string' && element.type === tag;
+}
+
+function ResponsiveMarkdownTable({ children }: { children: ReactNode }) {
+  const parts = elementChildren(children);
+  const head = parts.find((part) => isHtmlElement(part, 'thead'));
+  const body = parts.find((part) => isHtmlElement(part, 'tbody'));
+
+  const headerRow = head
+    ? elementChildren(head.props.children).find((row) => isHtmlElement(row, 'tr'))
+    : undefined;
+  const headers = headerRow
+    ? elementChildren(headerRow.props.children)
+        .filter((cell) => isHtmlElement(cell, 'th') || isHtmlElement(cell, 'td'))
+        .map((cell) => childText(cell.props.children).trim())
+    : [];
+
+  const mobileReadyBody = body
+    ? cloneElement(
+        body,
+        body.props,
+        elementChildren(body.props.children).map((row, rowIndex) => {
+          if (!isHtmlElement(row, 'tr')) return row;
+          const cells = elementChildren(row.props.children);
+          return cloneElement(
+            row,
+            { ...row.props, key: row.key ?? `row-${rowIndex}` },
+            cells.map((cell, cellIndex) => {
+              if (!isHtmlElement(cell, 'td')) return cell;
+              const label = headers[cellIndex] || `項目${cellIndex + 1}`;
+              return cloneElement(cell, {
+                ...cell.props,
+                key: cell.key ?? `cell-${rowIndex}-${cellIndex}`,
+                'data-label': label,
+              });
+            }),
+          );
+        }),
+      )
+    : body;
+
+  return (
+    <div className="tableWrap">
+      <table className="responsiveMdTable">
+        {parts.map((part, index) => (part === body ? mobileReadyBody : cloneElement(part, { key: part.key ?? `table-part-${index}` })))}
+      </table>
+    </div>
+  );
+}
+
 function MarkdownChunk({ markdown, h2Id }: { markdown: string; h2Id?: string }) {
   const prepared = preprocessRichBlocks(markdown);
 
@@ -197,7 +254,7 @@ function MarkdownChunk({ markdown, h2Id }: { markdown: string; h2Id?: string }) 
         },
         img: ({ src, alt }) => <img src={src || ''} alt={alt || ''} loading="lazy" />,
         blockquote: ({ children }) => <blockquote>{children}</blockquote>,
-        table: ({ children }) => <div className="tableWrap"><table>{children}</table></div>,
+        table: ({ children }) => <ResponsiveMarkdownTable>{children}</ResponsiveMarkdownTable>,
         pre: ({ children }) => {
           const only = Array.isArray(children) ? children[0] : children;
           if (only && typeof only === 'object' && 'props' in only) {
