@@ -98,6 +98,26 @@ export function getArticleCategory(siteSlug: string, article: ArticleMeta): Taxo
   if (pinned) return { ...pinned, count: 0 };
 
   const primarySignal = normalize(article.category);
+  const legacyAliases: Record<string, Record<string, string>> = {
+    'python-automation': {
+      'browser-automation': 'browser',
+      'web-scraping': 'scraping',
+      'excel-automation': 'excel',
+      'file-operations': 'file',
+      'api-automation': 'api',
+    },
+    'it-cert': {
+      network: 'cisco',
+    },
+  };
+  const aliasedSlug = legacyAliases[siteSlug]?.[primarySignal];
+  const exactPrimary = site?.categories.find((category) =>
+    normalize(category.slug) === primarySignal ||
+    normalize(category.name) === primarySignal ||
+    (aliasedSlug ? category.slug === aliasedSlug : false),
+  );
+  if (exactPrimary) return { ...exactPrimary, count: 0 };
+
   const primaryMatch = site?.categories.find((category) =>
     category.match.some((keyword) => primarySignal.includes(normalize(keyword))),
   );
@@ -157,7 +177,10 @@ export function getArticleQualification(siteSlug: string, article: ArticleMeta):
   if (qualifications.length === 0) return null;
 
   const pinned = qualifications.find((qualification) => qualification.featuredArticleSlugs?.includes(article.slug));
-  const matched = pinned || qualifications.find((qualification) => matchesQualification(article, qualification));
+  const explicitQualification = article.qualification
+    ? qualifications.find((qualification) => normalize(qualification.slug) === normalize(article.qualification || ''))
+    : undefined;
+  const matched = pinned || explicitQualification || qualifications.find((qualification) => matchesQualification(article, qualification));
   if (!matched) return null;
 
   return {

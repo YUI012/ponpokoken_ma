@@ -15,6 +15,15 @@ export type ArticleMeta = {
   author: string;
   tags: string[];
   category: string;
+  articleType?: string;
+  searchIntent?: string;
+  hypothesis?: string;
+  qualification?: string;
+  qualificationName?: string;
+  qualificationHubUrl?: string;
+  udemyCourseTitle?: string;
+  udemyCourseUrl?: string;
+  udemyAffiliateUrl?: string;
   featured: boolean;
   hero?: string;
   heroAlt?: string;
@@ -61,6 +70,12 @@ function inferDescription(content: string) {
     .filter((value) => value.length > 40 && !value.startsWith('※この記事'));
 
   return (paragraphs[0] || '記事の内容を比較・検証し、選ぶためのポイントを整理します。').slice(0, 155);
+}
+
+function inferUdemyCourseTitle(content: string) {
+  const udemySection = content.match(/^##\s+Udemy\s*$([\s\S]*?)(?=^##\s+|(?![\s\S]))/m);
+  const title = udemySection?.[1]?.match(/^\*\*(.+?)\*\*\s*$/m)?.[1]?.trim();
+  return title || undefined;
 }
 
 function inferSummary(content: string) {
@@ -143,6 +158,15 @@ export function getArticle(siteSlug: string, slug: string): Article | null {
     author: String(parsed.data.author || '編集部'),
     tags,
     category,
+    articleType: parsed.data.articleType ? String(parsed.data.articleType) : undefined,
+    searchIntent: parsed.data.searchIntent ? String(parsed.data.searchIntent) : undefined,
+    hypothesis: parsed.data.hypothesis ? String(parsed.data.hypothesis) : undefined,
+    qualification: parsed.data.qualification ? String(parsed.data.qualification) : undefined,
+    qualificationName: parsed.data.qualificationName ? String(parsed.data.qualificationName) : undefined,
+    qualificationHubUrl: parsed.data.qualificationHubUrl ? String(parsed.data.qualificationHubUrl) : undefined,
+    udemyCourseTitle: parsed.data.udemyCourseTitle ? String(parsed.data.udemyCourseTitle) : inferUdemyCourseTitle(bodyContent),
+    udemyCourseUrl: parsed.data.udemyCourseUrl ? String(parsed.data.udemyCourseUrl) : undefined,
+    udemyAffiliateUrl: parsed.data.udemyAffiliateUrl ? String(parsed.data.udemyAffiliateUrl) : undefined,
     featured: Boolean(parsed.data.featured),
     hero: parsed.data.hero ? String(parsed.data.hero) : undefined,
     heroAlt: parsed.data.heroAlt ? String(parsed.data.heroAlt) : title,

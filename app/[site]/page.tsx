@@ -40,6 +40,13 @@ export default async function SitePage({ params }: { params: Promise<{ site: str
   const visibleCategories = categories;
   const pageUrl = canonicalUrl(site);
 
+  const categoryGuideCopy: Record<string, string> = {
+    'ai-tools': '気になるツールを選ぶと、課金・選び方 → おすすめUdemy → 実践記事の順で確認できます。',
+    'it-cert': '資格ジャンルを選び、その先で資格ごとの最短合格 → おすすめUdemy → 関連記事を確認できます。',
+    'python-automation': '自動化したいテーマを選ぶと、最短で使うための入口 → おすすめUdemy → 実装記事の順で確認できます。',
+    cybersecurity: '学びたい分野を選ぶと、基礎・比較 → おすすめUdemy → 実践記事の順で確認できます。',
+  };
+
   const collectionJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
@@ -73,7 +80,7 @@ export default async function SitePage({ params }: { params: Promise<{ site: str
           <div className="sectionHead compactHead">
             <div>
               <h2>{site.categoryHeading}</h2>
-              <p>最初に大カテゴリだけ選びます。細かい記事は各カテゴリページにまとめています。</p>
+              <p>{categoryGuideCopy[site.slug] || '最初に大カテゴリだけ選びます。細かい記事は各カテゴリページにまとめています。'}</p>
             </div>
           </div>
 

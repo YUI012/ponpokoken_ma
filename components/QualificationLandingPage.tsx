@@ -14,23 +14,110 @@ type Props = {
   offers: AffiliateOffer[];
 };
 
-function countBy(articles: ArticleMeta[], pattern: RegExp) {
-  return articles.filter((article) => pattern.test(`${article.title} ${article.description} ${article.tags.join(' ')}`)).length;
+function articleText(article: ArticleMeta) {
+  return `${article.title} ${article.description} ${article.tags.join(' ')} ${article.articleType || ''}`;
 }
 
-function latestDate(articles: ArticleMeta[]) {
-  if (articles.length === 0) return '記事準備中';
-  return articles
-    .map((article) => article.updated || article.date)
-    .sort((a, b) => new Date(b).getTime() - new Date(a).getTime())[0];
+function rankFeatured(articles: ArticleMeta[], featured: string[] = []) {
+  const order = new Map(featured.map((slug, index) => [slug, index]));
+  return [...articles].sort((a, b) => {
+    const ar = order.has(a.slug) ? order.get(a.slug)! : 999;
+    const br = order.has(b.slug) ? order.get(b.slug)! : 999;
+    if (ar !== br) return ar - br;
+    return new Date(b.updated || b.date).getTime() - new Date(a.updated || a.date).getTime();
+  });
+}
+
+function articleOffer(article: ArticleMeta): AffiliateOffer | null {
+  const url = article.udemyAffiliateUrl || article.primaryCtaUrl;
+  if (!url || !/udemy/i.test(url)) return null;
+  return {
+    url,
+    label: article.udemyCourseTitle || article.primaryCtaLabel || 'Udemy講座を見る',
+    sourceTitle: article.title,
+    source: 'article',
+  };
+}
+
+function pickOffer(articles: ArticleMeta[], fallback: AffiliateOffer[], usedUrls: Set<string>, preferred?: RegExp) {
+  const articleOffers = articles.map(articleOffer).filter((offer): offer is AffiliateOffer => Boolean(offer));
+  const combined = [...articleOffers, ...fallback];
+  const preferredOffer = preferred
+    ? combined.find((offer) => !usedUrls.has(offer.url) && preferred.test(`${offer.label} ${offer.sourceTitle} ${offer.meta || ''}`))
+    : undefined;
+  const offer = preferredOffer || combined.find((candidate) => !usedUrls.has(candidate.url));
+  if (offer) usedUrls.add(offer.url);
+  return offer || null;
+}
+
+function ArticleLinks({ site, articles, limit = 5 }: { site: SiteConfig; articles: ArticleMeta[]; limit?: number }) {
+  const first = articles.slice(0, limit);
+  const rest = articles.slice(limit);
+  if (articles.length === 0) return null;
+
+  return (
+    <>
+      <ul className="simpleArticleLinks">
+        {first.map((article) => (
+          <li key={`${article.site}-${article.slug}`}>
+            <Link href={siteHref(site, `${article.slug}/`)}>{article.title}</Link>
+          </li>
+        ))}
+      </ul>
+      {rest.length > 0 && (
+        <details className="remainingArticles">
+          <summary>残り{rest.length}記事を表示</summary>
+          <ul className="simpleArticleLinks">
+            {rest.map((article) => (
+              <li key={`${article.site}-${article.slug}`}>
+                <Link href={siteHref(site, `${article.slug}/`)}>{article.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
+    </>
+  );
+}
+
+function OfferCard({ offer, label = 'おすすめUdemy' }: { offer: AffiliateOffer | null; label?: string }) {
+  if (!offer) return null;
+  return (
+    <div className="intentOfferBlock">
+      <p className="intentSubLabel">{label}</p>
+      <a className="affiliateOffer intentAffiliateOffer" href={offer.url} target="_blank" rel="nofollow sponsored noopener noreferrer">
+        <span className="affiliateOfferLabel">{offer.label}</span>
+        {offer.meta && <span className="affiliateOfferMeta">{offer.meta}</span>}
+        <span className="affiliateOfferSource">{offer.sourceTitle}</span>
+        <span className="affiliateOfferArrow">→</span>
+      </a>
+    </div>
+  );
 }
 
 export function QualificationLandingPage({ site, qualification, articles, offers }: Props) {
-  const firstArticles = articles.slice(0, 12);
-  const restArticles = articles.slice(12);
-  const udemyCount = countBy(articles, /Udemy|教材|講座|参考書|模試/i);
-  const shortTermCount = countBy(articles, /勉強時間|短期|1日|3日|1週間|10時間|20時間|30日|未経験/i);
-  const examCount = countBy(articles, /模試|問題|演習|本番|試験|合格|点|スコア/i);
+  const ranked = rankFeatured(articles, qualification.featuredArticleSlugs || []);
+  const handsOnPattern = /ハンズオン|hands-on|実践|構築|ラボ|環境構築|操作|実装|演習環境/i;
+  const fastPattern = /最短|短期|1日|3日|1週間|10日|20時間|30日|勉強時間|勉強法|未経験|初心者|だけで|模試|模擬|本番|難易度|おすすめ.*udemy|udemy.*おすすめ|ping-t/i;
+
+  const handsOnArticles = ranked.filter((article) => handsOnPattern.test(`${article.title} ${article.articleType || ''}`) || article.articleType === 'hands-on');
+  const handsOnSet = new Set(handsOnArticles.map((article) => article.slug));
+  const fastArticles = ranked.filter((article) => !handsOnSet.has(article.slug) && fastPattern.test(`${article.title} ${article.articleType || ''}`));
+  const fastSet = new Set(fastArticles.map((article) => article.slug));
+  const otherArticles = ranked.filter((article) => !handsOnSet.has(article.slug) && !fastSet.has(article.slug));
+
+  const usedUrls = new Set<string>();
+  const fastOffer = pickOffer(fastArticles.length > 0 ? fastArticles : ranked, offers, usedUrls);
+  const handsOnOffer = handsOnArticles.length > 0
+    ? pickOffer(handsOnArticles, offers, usedUrls, /ハンズオン|hands-on|実践|構築|ラボ/i)
+    : (() => {
+        const matched = offers.find((offer) =>
+          !usedUrls.has(offer.url) && /ハンズオン|hands-on|実践|構築|ラボ/i.test(`${offer.label} ${offer.sourceTitle} ${offer.meta || ''}`),
+        );
+        if (matched) usedUrls.add(matched.url);
+        return matched || null;
+      })();
+  const showHandsOn = handsOnArticles.length > 0 || Boolean(handsOnOffer);
 
   return (
     <div className="siteTheme" style={{ '--accent': site.accent } as CSSProperties}>
@@ -50,93 +137,46 @@ export function QualificationLandingPage({ site, qualification, articles, offers
             <p>{qualification.description}</p>
           </header>
 
-          <section className="categoryMainSection categoryConclusion" aria-labelledby="qualification-conclusion">
-            <p className="categorySectionKicker">まずここだけ</p>
-            <h2 id="qualification-conclusion">結論</h2>
-            <p>{qualification.shortName}を学ぶなら、教材を増やしすぎず、まず1つの講座で全体像をつかみ、問題演習・模試へ進む形に固定します。このページを入口に、Udemy・学習DB・関連記事までまとめて確認できます。</p>
-          </section>
+          {(fastArticles.length > 0 || fastOffer) && (
+            <section className="categoryMainSection intentHubSection" aria-labelledby="qualification-fast">
+              <p className="categorySectionKicker">最初にここだけ</p>
+              <h2 id="qualification-fast">{qualification.shortName}を最短で合格する</h2>
+              <p className="intentSectionIntro">短期合格できるか、何時間必要か、教材や模試をどう絞るか。まず合格までの距離を判断する記事だけを先にまとめます。</p>
+              <OfferCard offer={fastOffer} />
+              {fastArticles.length > 0 && (
+                <div className="intentArticleBlock">
+                  <p className="intentSubLabel">最短合格の判断に使う記事</p>
+                  <ArticleLinks site={site} articles={fastArticles} limit={5} />
+                </div>
+              )}
+            </section>
+          )}
 
-          <section className="categoryMainSection" aria-labelledby="qualification-udemy">
-            <div className="categorySectionHead">
-              <div>
-                <p className="categorySectionKicker">資格指定</p>
-                <h2 id="qualification-udemy">おすすめUdemy</h2>
+          {showHandsOn && (
+            <section className="categoryMainSection intentHubSection" aria-labelledby="qualification-hands-on">
+              <p className="categorySectionKicker">手を動かして理解する</p>
+              <h2 id="qualification-hands-on">{qualification.shortName}をハンズオンで学ぶ</h2>
+              <p className="intentSectionIntro">試験対策だけでなく、実際の操作・構築まで確認したい人向けです。ハンズオン教材や実践記事がある場合だけ表示します。</p>
+              <OfferCard offer={handsOnOffer} label="ハンズオンUdemy" />
+              {handsOnArticles.length > 0 && (
+                <div className="intentArticleBlock">
+                  <p className="intentSubLabel">ハンズオン・実践記事</p>
+                  <ArticleLinks site={site} articles={handsOnArticles} limit={4} />
+                </div>
+              )}
+            </section>
+          )}
+
+          {otherArticles.length > 0 && (
+            <section className="categoryMainSection intentHubSection categoryArticlesSection" aria-labelledby="qualification-other">
+              <p className="categorySectionKicker">必要なときだけ</p>
+              <h2 id="qualification-other">その他の{qualification.shortName}記事</h2>
+              <p className="intentSectionIntro">取得順、他資格との比較など、最短合格・ハンズオン以外の判断材料です。</p>
+              <div className="intentArticleBlock compactIntentArticleBlock">
+                <ArticleLinks site={site} articles={otherArticles} limit={8} />
               </div>
-              <span>{offers.length > 0 ? `${offers.length}件` : '準備中'}</span>
-            </div>
-
-            {offers.length > 0 ? (
-              <div className="affiliateOfferList">
-                {offers.map((offer) => (
-                  <a className="affiliateOffer" key={`${offer.url}-${offer.label}`} href={offer.url} target="_blank" rel="nofollow sponsored noopener noreferrer">
-                    <span className="affiliateOfferLabel">{offer.label}</span>
-                    {offer.meta && <span className="affiliateOfferMeta">{offer.meta}</span>}
-                    <span className="affiliateOfferSource">{offer.sourceTitle}</span>
-                    <span className="affiliateOfferArrow">→</span>
-                  </a>
-                ))}
-              </div>
-            ) : (
-              <p className="categoryQuietText">この資格に一致するUdemy講座はまだ登録されていません。別資格の講座は自動表示しません。</p>
-            )}
-          </section>
-
-          <section className="categoryMainSection" aria-labelledby="qualification-db">
-            <p className="categorySectionKicker">自動集計</p>
-            <h2 id="qualification-db">{qualification.shortName} 資格DB</h2>
-            <div className="categoryDb" role="table" aria-label={`${qualification.shortName} 資格DB`}>
-              <div className="categoryDbRow" role="row"><span role="cell">試験・資格コード</span><strong role="cell">{qualification.code}</strong></div>
-              <div className="categoryDbRow" role="row"><span role="cell">ジャンル</span><strong role="cell">{qualification.categoryName}</strong></div>
-              <div className="categoryDbRow" role="row"><span role="cell">公開記事</span><strong role="cell">{articles.length}件</strong></div>
-              <div className="categoryDbRow" role="row"><span role="cell">Udemy・教材</span><strong role="cell">{udemyCount}件</strong></div>
-              <div className="categoryDbRow" role="row"><span role="cell">短期・勉強時間</span><strong role="cell">{shortTermCount}件</strong></div>
-              <div className="categoryDbRow" role="row"><span role="cell">問題・模試・本番</span><strong role="cell">{examCount}件</strong></div>
-              <div className="categoryDbRow" role="row"><span role="cell">最終更新</span><strong role="cell">{latestDate(articles)}</strong></div>
-            </div>
-          </section>
-
-          <section className="categoryMainSection" aria-labelledby="qualification-route">
-            <p className="categorySectionKicker">迷ったらこの順番</p>
-            <h2 id="qualification-route">学習ルート</h2>
-            <ol className="learningRoute">
-              <li><span>1</span><strong>{qualification.shortName}の試験範囲を確認</strong></li>
-              <li><span>2</span><strong>Udemy講座を1つに絞る</strong></li>
-              <li><span>3</span><strong>問題演習・模試で弱点を出す</strong></li>
-              <li><span>4</span><strong>必要な記事だけ読んで仕上げる</strong></li>
-            </ol>
-          </section>
-
-          <section className="categoryMainSection categoryArticlesSection" id="articles" aria-labelledby="qualification-articles">
-            <div className="categorySectionHead">
-              <div>
-                <p className="categorySectionKicker">必要な記事だけ読む</p>
-                <h2 id="qualification-articles">{qualification.shortName}の記事</h2>
-              </div>
-              <span>{articles.length}件</span>
-            </div>
-
-            {articles.length > 0 ? (
-              <>
-                <ul className="simpleArticleLinks">
-                  {firstArticles.map((article) => (
-                    <li key={`${article.site}-${article.slug}`}><Link href={siteHref(site, `${article.slug}/`)}>{article.title}</Link></li>
-                  ))}
-                </ul>
-                {restArticles.length > 0 && (
-                  <details className="remainingArticles">
-                    <summary>残り{restArticles.length}記事を表示</summary>
-                    <ul className="simpleArticleLinks">
-                      {restArticles.map((article) => (
-                        <li key={`${article.site}-${article.slug}`}><Link href={siteHref(site, `${article.slug}/`)}>{article.title}</Link></li>
-                      ))}
-                    </ul>
-                  </details>
-                )}
-              </>
-            ) : (
-              <p className="categoryQuietText">関連記事を準備中です。このページ自体はnoindexになり、記事または講座が入るまで検索結果には出さない設計です。</p>
-            )}
-          </section>
+            </section>
+          )}
         </article>
       </main>
       <SiteFooter site={site} />

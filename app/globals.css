@@ -1989,3 +1989,54 @@ main.articleShell {
     font-size: 17px;
   }
 }
+
+/* =========================================================
+   v6.4.1 Intent-first category / qualification hubs
+   AI / IT資格 / Python / Cybersecurity
+   ========================================================= */
+.intentHubSection {
+  padding-top: 26px;
+  padding-bottom: 28px;
+}
+
+.intentSectionIntro {
+  margin: -2px 0 0 !important;
+  color: #475569 !important;
+  font-size: 13px !important;
+  line-height: 1.85 !important;
+}
+
+.intentOfferBlock,
+.intentArticleBlock {
+  margin-top: 20px;
+}
+
+.intentSubLabel {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.intentAffiliateOffer {
+  border-color: color-mix(in srgb, var(--accent) 36%, var(--line));
+  background: color-mix(in srgb, var(--accent) 4%, #fff);
+}
+
+.intentAffiliateOffer .affiliateOfferLabel {
+  font-size: 14px;
+}
+
+.compactIntentArticleBlock {
+  margin-top: 14px;
+}
+
+@media (min-width: 768px) {
+  .intentHubSection {
+    padding-top: 32px;
+    padding-bottom: 34px;
+  }
+  .intentSectionIntro {
+    font-size: 14px !important;
+  }
+}
