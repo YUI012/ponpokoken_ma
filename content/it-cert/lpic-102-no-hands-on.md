@@ -1,0 +1,111 @@
+---
+site: "it-cert"
+title: "LPIC-102 Linux実機・コマ問なしでも受かる？3人の勉強法で検証"
+description: "VirtualBoxもコマ問も使わず520点で合格した例がある一方、Ping-tを9割まで仕上げても記述式対策不足で不合格になった例がある。Linux実務経験者にはUdemy模試だけで720点の例もあり、前提経験の差が大きい。合格者3人の実例を比較し、受験判断のポイントを整理します。"
+slug: "lpic-102-no-hands-on"
+date: "2026-09-23"
+updated: "2026-09-23"
+author: "IT資格ナビ編集部"
+category: "linux"
+categoryName: "Linux"
+parentHubUrl: "/category/linux/lpic-1/"
+qualification: "lpic-1"
+qualificationName: "LPIC-1"
+qualificationHubUrl: "/category/linux/lpic-1/"
+articleType: "comparison"
+searchIntent: "informational"
+hypothesis: "LPIC-102は実機・コマ問なしでも合格例があるが、記述式対策不足で不合格になった例もある。経験者は模試中心でも通る一方、未経験者が両方省くのは再現性が低い"
+udemyCourseTitle: "〖LPIC1〗Level1 (101-500/102-500)模擬試験問題集"
+udemyCourseUrl: "https://www.udemy.com/course/lpic1level1-101-500102-500/"
+udemyAffiliateUrl: "https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flpic1level1-101-500102-500%2F&subId1=it-cert&subId2=lpic-102-no-hands-on&subId3=comparison"
+impactBaseUrl: "https://trk.udemy.com/c/7431603/4048681/39854"
+primaryCtaLabel: "LPIC模試を確認する"
+primaryCtaUrl: "https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flpic1level1-101-500102-500%2F&subId1=it-cert&subId2=lpic-102-no-hands-on&subId3=comparison"
+primaryCtaNote: "PR：価格・キャンペーンはリンク先でご確認ください"
+featured: false
+stickyCta: true
+noindex: false
+---
+
+# LPIC-102 Linux実機・コマ問なしでも受かる？3人の勉強法で検証
+
+> **広告について：** 本記事にはアフィリエイト広告を含みます。購入前に価格・内容をリンク先でご確認ください。
+
+## 結論
+
+VirtualBoxもコマ問も使わず520点で合格した例がある一方、Ping-tを9割まで仕上げても記述式対策不足で不合格になった例がある。Linux実務経験者にはUdemy模試だけで720点の例もあり、前提経験の差が大きい。
+
+結論として、**LPIC-102は実機・コマ問なしでも合格例があるが、記述式対策不足で不合格になった例もある。経験者は模試中心でも通る一方、未経験者が両方省くのは再現性が低い** と考えるのが妥当です。ここでいう「受かる」は試験合格の話です。操作経験を省いた場合、資格取得後の実務スキルは別途補う必要があります。
+
+## 3人の実例
+
+### 事例1
+- 前提：LPIC101合格済み
+- 学習期間：約4週間
+- 勉強時間：記載なし
+- 教材：小豆本、スピードマスター、Ping-t
+- 結果：520点で合格
+### 事例2
+- 前提：エンジニア歴7ヶ月
+- 学習期間：4週間
+- 勉強時間：記載なし
+- 教材：Ping-t
+- 結果：1回目不合格・2回目630点合格
+### 事例3
+- 前提：Linux実務経験あり
+- 学習期間：約3時間
+- 勉強時間：約3時間
+- 教材：Udemy模擬試験
+- 結果：720点で合格
+
+## ハンズオンを省ける範囲を分けて考える
+
+ハンズオンなしで合格した例があっても、すべての操作練習を削ってよいとは限りません。AWSやAzureの基礎資格では概念とサービス選定の理解、CCNAではCLIシミュレーション、Linux資格ではコマンドやパスの記述対策など、試験ごとに手を動かす代わりに残すべき学習があります。この記事では「LPIC-102 Linux実機・コマ問なしでも受かる？」という疑問に絞り、上の3人の差を判断材料として確認します。
+
+また、実務経験がある人は過去の操作経験を試験勉強で再利用できます。未経験者が同じ教材量をそのまま真似すると、用語を暗記できても挙動をイメージできないことがあります。3人の実例では「何を省いたか」だけでなく「何で代替したか」を見るのが重要です。この考え方を「LPIC-102 Linux実機・コマ問なしでも受かる？」の判断に当てはめ、3人の違いを自分の学習条件と照らして見ていきます。
+
+## 合格者3人の学習例
+
+### 1. 実機もコマ問もなしで合格
+Monnaさんは、LPIC101合格済みという条件で520点で合格。学習期間は約4週間、教材は小豆本、スピードマスター、Ping-tでした。Udemy利用は記載なしです。
+
+> LPIC102も、結局VirtualBoxを立ち上げることなく終了。
+
+[引用元を見る](https://note.com/monna1985/n/nd81140352997)
+
+### 2. 選択問題だけでは記述対策が弱かった
+beagle_masatoさんは、エンジニア歴7ヶ月という条件で1回目不合格・2回目630点合格。学習期間は4週間、教材はPing-tでした。Udemy利用は記載なしです。
+
+> 問題が9割正解できる状態で受験しましたが、記述式対策不足で不合格でした。
+
+[引用元を見る](https://qiita.com/beagle_masato/items/a44a441a1758014d500c)
+
+### 3. 実務経験あり・模試だけで高得点
+Acro_ooさんは、Linux実務経験ありという条件で720点で合格。学習期間は約3時間、教材はUdemy模擬試験でした。Udemy利用はUdemy模擬試験のみです。
+
+> 使用した教材はUdemyの模擬試験のみです。
+
+[引用元を見る](https://qiita.com/Acro_oo/items/5d24e94db74d66caeeeb)
+
+## ハンズオン不足を補うUdemy候補
+
+**〖LPIC1〗Level1 (101-500/102-500)模擬試験問題集**
+- 添付講座DBで「LPIC-1の資格試験対策」を確認済み
+- 添付講座DBで「模擬試験・問題演習を中心とする」を確認済み
+- 実機やハンズオンを減らす場合でも、試験範囲の抜け漏れを動画・演習で確認する用途に使える
+- 3人の実例と比較し、自分が省略した学習をどこで補うか判断してから購入できる
+
+:::cta label="LPIC模試を確認する" url="https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flpic1level1-101-500102-500%2F&subId1=it-cert&subId2=lpic-102-no-hands-on&subId3=comparison" note="PR：価格・キャンペーンはリンク先でご確認ください"
+:::
+
+## 最終結論
+
+VirtualBoxもコマ問も使わず520点で合格した例がある一方、Ping-tを9割まで仕上げても記述式対策不足で不合格になった例がある。Linux実務経験者にはUdemy模試だけで720点の例もあり、前提経験の差が大きい。
+
+**LPIC-102は実機・コマ問なしでも合格例があるが、記述式対策不足で不合格になった例もある。経験者は模試中心でも通る一方、未経験者が両方省くのは再現性が低い**。合格だけを目標にするならハンズオンを減らせる資格はありますが、シミュレータ・コマ問・問題演習まで全部削るのは別問題です。合格後に実務で使う予定があるなら、試験対策で省いた操作経験を後から補う前提で学習計画を組む方が安全です。
+
+## あわせて読みたい
+
+[LPIC-1の学習情報をまとめて見る](/category/linux/lpic-1/)
+
+[LPIC-102 Linux実務未経験でも受かる？未経験合格者3人を調査](/lpic-102-beginner/)
