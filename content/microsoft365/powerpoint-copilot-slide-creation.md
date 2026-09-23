@@ -42,19 +42,22 @@ noindex: false
 ## 3人の実例
 
 ### 事例1
-- task：提案資料
-- process：Copilotで構成のたたき台→必要情報入力
-- time：1時間以内で完成と記載
+
+> 例題などが最初からあるため入力するのはさほど悩まず入力できます。
+
+[引用元を見る](https://note.com/riku_techlab/n/n7a8eed990348)
 
 ### 事例2
-- before：3時間以上
-- process：Copilotで骨組み→人が肉付け
-- after：30分で完成と記載
+
+> 同じクオリティの資料が30分で完成するようになったんです。
+
+[引用元を見る](https://note.com/ai_katsuyo/n/ne0c32c0ea1dd)
 
 ### 事例3
-- before：1日
-- process：原稿と会社フォーマットをCopilotへ渡す
-- after：1時間で終わったと記載
+
+> Copilotに原稿と会社のフォーマットを渡したら、1時間で終わりました。
+
+[引用元を見る](https://note.com/kozou_copilot/n/n5b456e7710d8)
 
 ## 3人の比較から分かること
 
@@ -63,32 +66,6 @@ noindex: false
 - 聞き手・目的・必要情報を先に渡す
 - 会社フォーマットや元原稿があれば添付する
 - 生成後に内容と見た目を整える
-
-## 3人の詳細実例
-
-### 1. 提案資料、Copilotで構成のたたき台→必要情報入力、1時間以内で完成と記載
-
-提案資料、Copilotで構成のたたき台→必要情報入力、1時間以内で完成と記載。
-
-> 例題などが最初からあるため入力するのはさほど悩まず入力できます。
-
-[引用元を見る](https://note.com/riku_techlab/n/n7a8eed990348)
-
-### 2. 3時間以上、Copilotで骨組み→人が肉付け、30分で完成と記載
-
-3時間以上、Copilotで骨組み→人が肉付け、30分で完成と記載。
-
-> 同じクオリティの資料が30分で完成するようになったんです。
-
-[引用元を見る](https://note.com/ai_katsuyo/n/ne0c32c0ea1dd)
-
-### 3. 1日、原稿と会社フォーマットをCopilotへ渡す、1時間で終わったと記載
-
-1日、原稿と会社フォーマットをCopilotへ渡す、1時間で終わったと記載。
-
-> Copilotに原稿と会社のフォーマットを渡したら、1時間で終わりました。
-
-[引用元を見る](https://note.com/kozou_copilot/n/n5b456e7710d8)
 
 ## 〖PowerPoint〗初心者OK！パワーポイント現場の教科書　実務頻出の時短テクニック〖Copilot〗で体系的に学ぶなら
 
@@ -100,10 +77,6 @@ noindex: false
 
 :::cta label="Udemyで講座を見る" url="https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fyouseful_powerpoint_copilot%2F&subId1=m365-work" note="PR：価格・キャンペーンはリンク先でご確認ください"
 :::
-
-## 最終結論
-
-YES。3人の実例で、Copilotに構成やたたき台を作らせ、人が内容を追加・調整することでPowerPoint作成時間を大きく減らした例が確認できた。
 
 ## あわせて読みたい
 

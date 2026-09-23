@@ -42,13 +42,22 @@ Excelをデータ元にPower Appsを始めた初心者実例が複数あり、Po
 ## 3人の実例
 
 ### 事例1
-- 開始点：Power Appsを初めて触った状態 / 方法：質問・回答を記録する小さなアプリをExcel Online接続で作成 / 結果：フォーム作成からデータ登録までスムーズに進められたと記載
+
+> Power Apps自体は初めて触ったけど
+
+[引用元を見る](https://qiita.com/sanoy625/items/09fb26ae9569f70246cd)
 
 ### 事例2
-- 作業：休暇申請をPower Apps化 / 方法：Excelをデータベースにして画面・フォームを構築 / 結果：調査時間を含め約2時間で完成したと記載
+
+> 着手から完成までおおよそ2時間ほどかかりました。
+
+[引用元を見る](https://qiita.com/sakuryu/items/414e1b6ad1f1d9e47103)
 
 ### 事例3
-- 開始点：Power Appsを初めて利用 / 方法：Excelをデータ元に登録・一覧画面を作成 / 結果：画面設計は進めやすい一方、Excel共有やデータ量には注意点があった
+
+> 画面を見て実際に触りながら開発ができるので、画面設計は楽でした。
+
+[引用元を見る](https://qiita.com/pefume/items/e00e3167765bd2f7f115)
 
 ## 3人の比較から分かること
 
@@ -62,32 +71,6 @@ Excelをデータ元にPower Appsを始めた初心者実例が複数あり、Po
 - Excelは大規模・高頻度同時更新には向きにくい
 - Excelのまま運用できる課題まで無理にアプリ化しない
 
-## 3人の詳細実例
-
-### 1. 初心者がPower Appsで知識を集める仕組みを作ることにした話
-
-Power Appsを初めて触った状態。質問・回答を記録する小さなアプリをExcel Online接続で作成。フォーム作成からデータ登録までスムーズに進められたと記載。
-
-> Power Apps自体は初めて触ったけど
-
-[引用元を見る](https://qiita.com/sanoy625/items/09fb26ae9569f70246cd)
-
-### 2. PowerAppsで休暇申請アプリを作ってみた話
-
-休暇申請をPower Apps化。Excelをデータベースにして画面・フォームを構築。調査時間を含め約2時間で完成したと記載。
-
-> 着手から完成までおおよそ2時間ほどかかりました。
-
-[引用元を見る](https://qiita.com/sakuryu/items/414e1b6ad1f1d9e47103)
-
-### 3. PowerAppsを初めて触って躓いたこと
-
-Power Appsを初めて利用。Excelをデータ元に登録・一覧画面を作成。画面設計は進めやすい一方、Excel共有やデータ量には注意点があった。
-
-> 画面を見て実際に触りながら開発ができるので、画面設計は楽でした。
-
-[引用元を見る](https://qiita.com/pefume/items/e00e3167765bd2f7f115)
-
 ## Microsoft Power Apps 基礎マスターコースで体系的に学ぶなら
 
 **Microsoft Power Apps 基礎マスターコース**
@@ -99,10 +82,6 @@ Power Appsを初めて利用。Excelをデータ元に登録・一覧画面を�
 
 :::cta label="Udemyで講座を見る" url="https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmicrosoft-power-apps2%2F&subId1=m365-work" note="PR：価格・キャンペーンはリンク先でご確認ください"
 :::
-
-## 最終結論
-
-YES。Excelをデータ元にPower Appsを始めた初心者実例が複数あり、Power Appsを学ぶ前にExcelを完全に卒業する必要はない。むしろ既存Excelを入口にして画面・入力・共有の違いを体験し、必要に応じてSharePointやDataverseへ移る方が現実的。
 
 ## あわせて読みたい
 

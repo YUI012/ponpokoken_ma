@@ -42,13 +42,22 @@ Excel・CSV・社内システムなど画面と手順が固定された転記や
 ## 3人の実例
 
 ### 事例1
-- 課題：Excelと社内システム間のデスク作業を繰り返す / 方法：PADでExcel・システムを起動し一連の操作を自動化 / 結果：コピペ中心の定型作業をフロー化
+
+> Power Automate Desktop(PAD)を使って、検査室デスク作業の効率化にチャレンジしました。
+
+[引用元を見る](https://qiita.com/mhsc/items/05238de2f03ee738c097)
 
 ### 事例2
-- 課題：CSVを見ながら社内システムへ繰り返し入力 / 方法：For eachとクリップボードを組み合わせて一括処理 / 結果：システム操作業務の負荷を大幅に低減
+
+> 業務の負荷をほぼ0にすることができました。
+
+[引用元を見る](https://qiita.com/jairozlab/items/6443779f40ef6deb05d6)
 
 ### 事例3
-- 課題：請求書へ部署名と電話番号を毎月コピペ / 方法：PADで複数Excelシートへの入力を自動化 / 結果：定型入力を自動化対象へ置換
+
+> この作業をPowerAutomateDesktopで作業の自動化をしてみたいと思います。
+
+[引用元を見る](https://qiita.com/miyabe-mitsuhiro/items/3347efaf45ac13d2c488)
 
 ## 3人の比較から分かること
 
@@ -62,32 +71,6 @@ Excel・CSV・社内システムなど画面と手順が固定された転記や
 - 画面レイアウト変更でUI要素が壊れることがある
 - 例外データやエラー時の停止方法を設計する
 
-## 3人の詳細実例
-
-### 1. PADでコピペ作業自動化
-
-Excelと社内システム間のデスク作業を繰り返す。PADでExcel・システムを起動し一連の操作を自動化。コピペ中心の定型作業をフロー化。
-
-> Power Automate Desktop(PAD)を使って、検査室デスク作業の効率化にチャレンジしました。
-
-[引用元を見る](https://qiita.com/mhsc/items/05238de2f03ee738c097)
-
-### 2. Power Automate Desktopで社内のクソシステム操作を自動化
-
-CSVを見ながら社内システムへ繰り返し入力。For eachとクリップボードを組み合わせて一括処理。システム操作業務の負荷を大幅に低減。
-
-> 業務の負荷をほぼ0にすることができました。
-
-[引用元を見る](https://qiita.com/jairozlab/items/6443779f40ef6deb05d6)
-
-### 3. Power Automate DesktopでExcelの複数シートにデータ入力
-
-請求書へ部署名と電話番号を毎月コピペ。PADで複数Excelシートへの入力を自動化。定型入力を自動化対象へ置換。
-
-> この作業をPowerAutomateDesktopで作業の自動化をしてみたいと思います。
-
-[引用元を見る](https://qiita.com/miyabe-mitsuhiro/items/3347efaf45ac13d2c488)
-
 ## 〖初心者必見〗Power Automate for Desktop入門！RPAロボットで日常業務を簡単に自動化しようで体系的に学ぶなら
 
 **〖初心者必見〗Power Automate for Desktop入門！RPAロボットで日常業務を簡単に自動化しよう**
@@ -97,10 +80,6 @@ CSVを見ながら社内システムへ繰り返し入力。For eachとクリッ
 
 :::cta label="Udemyで講座を見る" url="https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpad-youseful%2F&subId1=m365-work" note="PR：価格・キャンペーンはリンク先でご確認ください"
 :::
-
-## 最終結論
-
-YES。Excel・CSV・社内システムなど画面と手順が固定された転記やコピペを、Power Automate DesktopのUI操作・ループ・クリップボードで自動化した実例がある。
 
 ## あわせて読みたい
 

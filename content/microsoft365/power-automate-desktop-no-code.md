@@ -42,13 +42,22 @@ noindex: false
 ## 3人の実例
 
 ### 事例1
-- 開始点：プログラミング・VBA未経験の事務員 / 方法：ネット記事や動画を見ながら少しずつ操作 / difficulty：用語や画面で初期につまずき
+
+> 私はプログラミングもVBAもわからない、ごく普通の事務員です。
+
+[引用元を見る](https://note.com/jimu_hirameki/n/n7f5beaa4394b)
 
 ### 事例2
-- 開始点：PADを初めて利用 / 作業：Excel入力からPDF出力まで自動化 / finding：簡単な操作でフローを作れた一方、例外処理課題も確認
+
+> 想像以上に簡単な操作でフローを作成できる
+
+[引用元を見る](https://qiita.com/fuse1012/items/2d867481c10c387d0535)
 
 ### 事例3
-- 開始点：PAD初利用 / 方法：簡単なExcel定型操作から挑戦 / 結果：複数ファイルの操作を自動化
+
+> 初めてPower Automate Desktop使用するので簡単な内容で挑戦できる自動化にしました。
+
+[引用元を見る](https://qiita.com/piropiro_wonwon/items/6464b93042b1773aa93a)
 
 ## 3人の比較から分かること
 
@@ -62,32 +71,6 @@ noindex: false
 - ノーコードでも条件・変数・例外処理の理解は必要
 - 実務導入では保守できる人を増やす必要がある
 
-## 3人の詳細実例
-
-### 1. 初めてのPower Automate Desktop
-
-プログラミング・VBA未経験の事務員。ネット記事や動画を見ながら少しずつ操作。用語や画面で初期につまずき。
-
-> 私はプログラミングもVBAもわからない、ごく普通の事務員です。
-
-[引用元を見る](https://note.com/jimu_hirameki/n/n7f5beaa4394b)
-
-### 2. Power Automate Desktop初心者が業務自動化に挑戦してみた
-
-PADを初めて利用。Excel入力からPDF出力まで自動化。簡単な操作でフローを作れた一方、例外処理課題も確認。
-
-> 想像以上に簡単な操作でフローを作成できる
-
-[引用元を見る](https://qiita.com/fuse1012/items/2d867481c10c387d0535)
-
-### 3. Power Automate Desktopを初めて使用してみた
-
-PAD初利用。簡単なExcel定型操作から挑戦。複数ファイルの操作を自動化。
-
-> 初めてPower Automate Desktop使用するので簡単な内容で挑戦できる自動化にしました。
-
-[引用元を見る](https://qiita.com/piropiro_wonwon/items/6464b93042b1773aa93a)
-
 ## 〖初心者必見〗Power Automate for Desktop入門！RPAロボットで日常業務を簡単に自動化しようで体系的に学ぶなら
 
 **〖初心者必見〗Power Automate for Desktop入門！RPAロボットで日常業務を簡単に自動化しよう**
@@ -97,10 +80,6 @@ PAD初利用。簡単なExcel定型操作から挑戦。複数ファイルの操
 
 :::cta label="Udemyで講座を見る" url="https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpad-youseful%2F&subId1=m365-work" note="PR：価格・キャンペーンはリンク先でご確認ください"
 :::
-
-## 最終結論
-
-YES。プログラミング未経験でも、簡単なフローからPower Automate Desktopを触り、アクションを組み合わせて業務の一部を自動化した実例がある。最初は用語や例外処理でつまずくため、小さな作業から段階的に進めるのが現実的。
 
 ## あわせて読みたい
 

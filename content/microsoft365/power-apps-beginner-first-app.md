@@ -42,13 +42,22 @@ noindex: false
 ## 3人の実例
 
 ### 事例1
-- 開始点：Power Appsを初めて触った状態 / 方法：質問・回答を記録する小さなアプリをExcel Online接続で作成 / 結果：フォーム作成からデータ登録までスムーズに進められたと記載
+
+> Power Apps自体は初めて触ったけど
+
+[引用元を見る](https://qiita.com/sanoy625/items/09fb26ae9569f70246cd)
 
 ### 事例2
-- 作業：休暇申請をPower Apps化 / 方法：Excelをデータベースにして画面・フォームを構築 / 結果：調査時間を含め約2時間で完成したと記載
+
+> 着手から完成までおおよそ2時間ほどかかりました。
+
+[引用元を見る](https://qiita.com/sakuryu/items/414e1b6ad1f1d9e47103)
 
 ### 事例3
-- 開始点：Power Apps初心者として勤怠管理に挑戦 / 方法：Excelテーブルをデータ元に出勤・退勤中心の最小構成で作成 / 結果：最初から機能を増やさず動くものを優先した
+
+> 最低限の動くモノをつくる
+
+[引用元を見る](https://qiita.com/Fu-jio/items/55edfa0836c3fe24c83c)
 
 ## 3人の比較から分かること
 
@@ -62,32 +71,6 @@ noindex: false
 - 最初から権限・複雑な承認・大量データまで盛り込まない
 - Excelをデータ元にする場合は共有やデータ量の制約も確認する
 
-## 3人の詳細実例
-
-### 1. 初心者がPower Appsで知識を集める仕組みを作ることにした話
-
-Power Appsを初めて触った状態。質問・回答を記録する小さなアプリをExcel Online接続で作成。フォーム作成からデータ登録までスムーズに進められたと記載。
-
-> Power Apps自体は初めて触ったけど
-
-[引用元を見る](https://qiita.com/sanoy625/items/09fb26ae9569f70246cd)
-
-### 2. PowerAppsで休暇申請アプリを作ってみた話
-
-休暇申請をPower Apps化。Excelをデータベースにして画面・フォームを構築。調査時間を含め約2時間で完成したと記載。
-
-> 着手から完成までおおよそ2時間ほどかかりました。
-
-[引用元を見る](https://qiita.com/sakuryu/items/414e1b6ad1f1d9e47103)
-
-### 3. 初心者がPowerAppsで勤怠管理アプリを作ってみた
-
-Power Apps初心者として勤怠管理に挑戦。Excelテーブルをデータ元に出勤・退勤中心の最小構成で作成。最初から機能を増やさず動くものを優先した。
-
-> 最低限の動くモノをつくる
-
-[引用元を見る](https://qiita.com/Fu-jio/items/55edfa0836c3fe24c83c)
-
 ## Microsoft Power Apps 基礎マスターコースで体系的に学ぶなら
 
 **Microsoft Power Apps 基礎マスターコース**
@@ -99,10 +82,6 @@ Power Apps初心者として勤怠管理に挑戦。Excelテーブルをデー�
 
 :::cta label="Udemyで講座を見る" url="https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmicrosoft-power-apps2%2F&subId1=m365-work" note="PR：価格・キャンペーンはリンク先でご確認ください"
 :::
-
-## 最終結論
-
-YES。初回のPower Appsで、質問記録・休暇申請・勤怠など「入力して一覧・保存する」小さなアプリから始めた実例が複数ある。最初から大規模な業務システムを狙うより、1つの入力と保存を通す方が基本概念を掴みやすい。
 
 ## あわせて読みたい
 

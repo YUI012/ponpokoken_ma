@@ -42,19 +42,22 @@ SharePointリストは申請データ・承認者・状態・結果を共有管�
 ## 3人の実例
 
 ### 事例1
-- design：SharePointリストを申請フォームとして利用
-- automation：Power Automateで申請業務を自動化
-- result：ノーコードで構築できたと記載
+
+> 全体的に言うとノーコードで作ることができるため、スクリプトを書けなくても問題なかった。
+
+[引用元を見る](https://qiita.com/arowoftree/items/c71a2e9fb7f9af59eeda)
 
 ### 事例2
-- design：承認者マスターと申請管理リストを作成
-- columns：承認者・状態・コメント等を保持
-- automation：Power Automateで承認処理
+
+> 承認者リスト列はユーザー型で複数のユーザーを設定できるようにします。
+
+[引用元を見る](https://qiita.com/Rambosan/items/e5b9fe32ffbd727f5e38)
 
 ### 事例3
-- design：申請詳細リストと承認履歴リストを分離
-- input：Power Appsで登録
-- update：Power Automateで結果列を更新
+
+> Power AppsのSubmitForm関数で申請を記録し、Power Automateで承認結果に応じて、
+
+[引用元を見る](https://qiita.com/DEmodoriGatsuO/items/56c3324dae17a961e891)
 
 ## 3人の比較から分かること
 
@@ -68,32 +71,6 @@ SharePointリストは申請データ・承認者・状態・結果を共有管�
 - 権限設計が複雑になりやすい
 - 多段承認では履歴・否認・再申請の設計が必要
 
-## 3人の詳細実例
-
-### 1. SharePointリストを申請フォームとして利用、Power Automateで申請業務を自動
-
-SharePointリストを申請フォームとして利用、Power Automateで申請業務を自動化、ノーコードで構築できたと記載。
-
-> 全体的に言うとノーコードで作ることができるため、スクリプトを書けなくても問題なかった。
-
-[引用元を見る](https://qiita.com/arowoftree/items/c71a2e9fb7f9af59eeda)
-
-### 2. 承認者マスターと申請管理リストを作成、承認者・状態・コメント等を保持、Power Automat
-
-承認者マスターと申請管理リストを作成、承認者・状態・コメント等を保持、Power Automateで承認処理。
-
-> 承認者リスト列はユーザー型で複数のユーザーを設定できるようにします。
-
-[引用元を見る](https://qiita.com/Rambosan/items/e5b9fe32ffbd727f5e38)
-
-### 3. 申請詳細リストと承認履歴リストを分離、Power Appsで登録、Power Automateで
-
-申請詳細リストと承認履歴リストを分離、Power Appsで登録、Power Automateで結果列を更新。
-
-> Power AppsのSubmitForm関数で申請を記録し、Power Automateで承認結果に応じて、列を更新していくリストになります。
-
-[引用元を見る](https://qiita.com/DEmodoriGatsuO/items/56c3324dae17a961e891)
-
 ## SharePoint Online リスト活用講座で体系的に学ぶなら
 
 **SharePoint Online リスト活用講座**
@@ -104,10 +81,6 @@ SharePointリストを申請フォームとして利用、Power Automateで申�
 
 :::cta label="Udemyで講座を見る" url="https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fsharepoint_lists%2F&subId1=m365-work" note="PR：価格・キャンペーンはリンク先でご確認ください"
 :::
-
-## 最終結論
-
-YES。SharePointリストは申請データ・承認者・状態・結果を共有管理する土台として使える。Power AutomateやPower Appsを組み合わせれば、申請登録から承認・履歴更新までを一連のフローにできる実例がある。
 
 ## あわせて読みたい
 

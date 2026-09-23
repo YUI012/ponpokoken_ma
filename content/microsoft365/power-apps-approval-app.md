@@ -42,13 +42,22 @@ Power Appsで申請画面を作り、Power AutomateやDataverse/SharePointと組
 ## 3人の実例
 
 ### 事例1
-- 作業：申請入力と承認フローを作成 / 方法：Power Apps・Power Automate・SharePointを連携 / 結果：コード記述をほとんどせず短時間で構築できたと記載
+
+> 短時間でコードの記述もほとんどなくアプリを構築
+
+[引用元を見る](https://qiita.com/eiji-noguchi/items/21d52c4efe7c748e7c37)
 
 ### 事例2
-- 作業：シンプルな申請承認アプリ / 方法：Dataverseに申請データを保存しPower AutomateでTeams承認 / 結果：申請から承認通知まで一連の流れを実装
+
+> ごくシンプルな申請承認アプリ
+
+[引用元を見る](https://qiita.com/kumukai/items/94a5c49697f079c3a912)
 
 ### 事例3
-- 作業：図書購入申請をアプリ化 / 方法：Power Appsで申請状態を管理しPower Automateで通知 / 結果：承認中の編集ロックやメール送信まで実装
+
+> 承認プロセス中は編集ロックがかかるシステム
+
+[引用元を見る](https://qiita.com/meccha__eeyan/items/7627df8a33aa9e0e9216)
 
 ## 3人の比較から分かること
 
@@ -62,32 +71,6 @@ Power Appsで申請画面を作り、Power AutomateやDataverse/SharePointと組
 - 多段承認や代理承認は設計が複雑になる
 - 権限と編集制御を申請状態に合わせて確認する
 
-## 3人の詳細実例
-
-### 1. 初心者向け Power Appsで申請・承認フローを作る
-
-申請入力と承認フローを作成。Power Apps・Power Automate・SharePointを連携。コード記述をほとんどせず短時間で構築できたと記載。
-
-> 短時間でコードの記述もほとんどなくアプリを構築
-
-[引用元を見る](https://qiita.com/eiji-noguchi/items/21d52c4efe7c748e7c37)
-
-### 2. Power Apps＆Automateで申請/承認アプリを作る
-
-シンプルな申請承認アプリ。Dataverseに申請データを保存しPower AutomateでTeams承認。申請から承認通知まで一連の流れを実装。
-
-> ごくシンプルな申請承認アプリ
-
-[引用元を見る](https://qiita.com/kumukai/items/94a5c49697f079c3a912)
-
-### 3. Power AppsとPower Automateで図書購入申請アプリを作ってみた
-
-図書購入申請をアプリ化。Power Appsで申請状態を管理しPower Automateで通知。承認中の編集ロックやメール送信まで実装。
-
-> 承認プロセス中は編集ロックがかかるシステム
-
-[引用元を見る](https://qiita.com/meccha__eeyan/items/7627df8a33aa9e0e9216)
-
 ## 作って学ぶPower Apps ！すぐに現場で使えるアプリを3つ以上作成で体系的に学ぶなら
 
 **作って学ぶPower Apps ！すぐに現場で使えるアプリを3つ以上作成**
@@ -98,10 +81,6 @@ Power Appsで申請画面を作り、Power AutomateやDataverse/SharePointと組
 
 :::cta label="Udemyで講座を見る" url="https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpower-platform-one%2F&subId1=m365-work" note="PR：価格・キャンペーンはリンク先でご確認ください"
 :::
-
-## 最終結論
-
-YES。Power Appsで申請画面を作り、Power AutomateやDataverse/SharePointと組み合わせて承認・通知・状態管理まで実装した例が複数ある。入力項目と承認状態を先に整理すれば、小規模な申請アプリは十分試作できる。
 
 ## あわせて読みたい
 

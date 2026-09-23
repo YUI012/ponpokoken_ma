@@ -4,7 +4,7 @@ title: "VLOOKUPの列番号指定が面倒ならXLOOKUPに変えるべき？3人
 description: "「VLOOKUPの列番号指定が面倒ならXLOOKUPに変えるべき？」という疑問を、3人の実例と原文引用から検証。XLOOKUPへ置き換えることで参照式を読みやすくできるケースがある。実務で再現するポイントと注意点も整理します。"
 slug: "replace-vlookup-with-xlookup"
 date: "2026-09-22"
-updated: "2026-09-22"
+updated: "2026-09-23"
 author: "Microsoft 365仕事術編集部"
 
 category: "excel"
@@ -37,44 +37,26 @@ noindex: false
 ## 3人の実例
 
 ### 事例1
-- finding：VLOOKUPは列挿入時に参照が崩れる例を確認
-
-### 事例2
-- comparison：VLOOKUPは検索対象列の制約がある点を説明
-- xlookup：戻り列が左右どちらでも検索できる点を説明
-
-### 事例3
-- finding：XLOOKUPで左側列からも値を返せることを確認
-
-## 列番号の管理が負担ならXLOOKUPへ寄せる
-
-VLOOKUPは列番号や検索列の位置に依存します。XLOOKUPは検索範囲と戻り範囲を別々に指定でき、左右どちらの列も返せます。新規式からXLOOKUPへ寄せると移行しやすいです。
-
-## VLOOKUPの弱点をXLOOKUPで減らした3例
-
-### 1. VLOOKUPは列挿入時に参照が崩れる例を確認
-
-VLOOKUPは列挿入時に参照が崩れる例を確認。
 
 > ちなみに列を挿入すると、以下のように参照が崩れてしまいます。
 
 [引用元を見る](https://qiita.com/CurryPrince/items/65a0cd5bbd2b8e78d6da)
 
-### 2. VLOOKUPは検索対象列の制約がある点を説明、戻り列が左右どちらでも検索できる点を
-
-VLOOKUPは検索対象列の制約がある点を説明、戻り列が左右どちらでも検索できる点を説明。
+### 事例2
 
 > VLOOKUPより使い勝手がよいので試してみてください。
 
 [引用元を見る](https://qiita.com/higuaki/items/cd7ea5bdb01691d592c2)
 
-### 3. XLOOKUPで左側列からも値を返せることを確認
-
-XLOOKUPで左側列からも値を返せることを確認。
+### 事例3
 
 > B列を基準列としなくていいので左側の列からでも取り出せるようになった
 
 [引用元を見る](https://qiita.com/suzu_travas/items/6f6b82346d1694246c96)
+
+## 列番号の管理が負担ならXLOOKUPへ寄せる
+
+VLOOKUPは列番号や検索列の位置に依存します。XLOOKUPは検索範囲と戻り範囲を別々に指定でき、左右どちらの列も返せます。新規式からXLOOKUPへ寄せると移行しやすいです。
 
 ## 2つの検索関数を比較して覚えるなら
 
@@ -86,10 +68,6 @@ XLOOKUPで左側列からも値を返せることを確認。
 
 :::cta label="Udemyで講座を見る" url="https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fexcelexcelvlookuphlookupxlookup%2F&subId1=m365-work" note="PR：価格・キャンペーンはリンク先でご確認ください"
 :::
-
-## 最終結論
-
-結論、YES。列番号の数え直しや左右制約が負担なら、新規式はXLOOKUPへ寄せる価値があります。
 
 ## あわせて読みたい
 

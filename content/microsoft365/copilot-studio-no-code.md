@@ -42,13 +42,22 @@ noindex: false
 ## 3人の実例
 
 ### 事例1
-- 開始点：デザイナーでAIエージェント構築は初心者 / 方法：UIガイドラインのWord文書を知識源にFAQエージェントを作成 / 結果：対象データを限定してFAQ応答を試作
+
+> 繰り返し聞かれる質問に答えてくれるFAQエージェント
+
+[引用元を見る](https://qiita.com/YukiSaku_2FC/items/d3e9b85cf9f913b7fab3)
 
 ### 事例2
-- 開始点：Copilot Studio初心者向けの試作 / 方法：社内ITヘルプデスクを題材に画面操作中心で構築 / 結果：基本構築ではプログラミング不要と説明
+
+> プログラミングは要りません。
+
+[引用元を見る](https://note.com/fouryou/n/n649d80c4d9e0)
 
 ### 事例3
-- 開始点：AIエージェントをノーコードで試作 / 方法：Copilot Studioの画面で設定を進める / 結果：コードを書かずに基本エージェントを構築
+
+> ノーコードでAIエージェントが作れる
+
+[引用元を見る](https://note.com/dx_king/n/n4e543097ae94)
 
 ## 3人の比較から分かること
 
@@ -62,32 +71,6 @@ noindex: false
 - 外部APIや複雑な業務連携では追加知識が必要
 - ノーコードでも権限・データガバナンスは理解する必要がある
 
-## 3人の詳細実例
-
-### 1. デザイナーがCopilot StudioでFAQエージェントを作ってみた
-
-デザイナーでAIエージェント構築は初心者。UIガイドラインのWord文書を知識源にFAQエージェントを作成。対象データを限定してFAQ応答を試作。
-
-> 繰り返し聞かれる質問に答えてくれるFAQエージェント
-
-[引用元を見る](https://qiita.com/YukiSaku_2FC/items/d3e9b85cf9f913b7fab3)
-
-### 2. Copilot Studio初心者向け：社内ITヘルプデスクを作る
-
-Copilot Studio初心者向けの試作。社内ITヘルプデスクを題材に画面操作中心で構築。基本構築ではプログラミング不要と説明。
-
-> プログラミングは要りません。
-
-[引用元を見る](https://note.com/fouryou/n/n649d80c4d9e0)
-
-### 3. Copilot StudioでノーコードAIエージェントを試してみた
-
-AIエージェントをノーコードで試作。Copilot Studioの画面で設定を進める。コードを書かずに基本エージェントを構築。
-
-> ノーコードでAIエージェントが作れる
-
-[引用元を見る](https://note.com/dx_king/n/n4e543097ae94)
-
 ## 作って学ぶ Copilot Studio！実践的なAIエージェントを作成し業務を任せようで体系的に学ぶなら
 
 **作って学ぶ Copilot Studio！実践的なAIエージェントを作成し業務を任せよう**
@@ -99,10 +82,6 @@ AIエージェントをノーコードで試作。Copilot Studioの画面で設�
 
 :::cta label="Udemyで講座を見る" url="https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fcopilot-studio-one%2F&subId1=m365-work" note="PR：価格・キャンペーンはリンク先でご確認ください"
 :::
-
-## 最終結論
-
-条件付きYES。デザイナーや初心者向けの例で、Copilot Studioの画面操作中心に基本エージェントを作る事例がある。基本構築はノーコードで進められるが、外部連携・複雑な条件・運用管理まで進むとPower Automateやデータ設計など追加知識が必要になる。
 
 ## あわせて読みたい
 

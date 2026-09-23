@@ -42,13 +42,22 @@ UdemyでPower Appsの基本概念と作例を体系的に学べた実例はあ�
 ## 3人の実例
 
 ### 事例1
-- 開始点：Power Appsのスキルアップ目的 / 方法：Udemyの実践講座で基本概念から複数アプリを学習 / 結果：基本概念を体系的に理解できたと記載
+
+> Power Appsの基本概念を体系的に理解
+
+[引用元を見る](https://qiita.com/TBO/items/aab2c52b45f56ee2fbc3)
 
 ### 事例2
-- 開始点：研修後に自分の業務向けアプリへ挑戦 / 方法：予算・経費管理アプリを作成 / 結果：学習作例と自分の業務要件の間に難しさがあることを体験
+
+> はじめてのPower Appsアプリ作成で詰まったところ
+
+[引用元を見る](https://qiita.com/Shinjimama/items/f58ecc6f74b55e300a74)
 
 ### 事例3
-- 開始点：Power Appsを初めて触った状態 / 方法：質問・回答を記録する小さなアプリをExcel Online接続で作成 / 結果：フォーム作成からデータ登録までスムーズに進められたと記載
+
+> Power Apps自体は初めて触ったけど
+
+[引用元を見る](https://qiita.com/sanoy625/items/09fb26ae9569f70246cd)
 
 ## 3人の比較から分かること
 
@@ -62,32 +71,6 @@ UdemyでPower Appsの基本概念と作例を体系的に学べた実例はあ�
 - Udemy視聴だけで実務対応力を保証できない
 - Microsoft公式ドキュメントで最新仕様も補完する
 
-## 3人の詳細実例
-
-### 1. Power AppsをUdemyで学習してみた
-
-Power Appsのスキルアップ目的。Udemyの実践講座で基本概念から複数アプリを学習。基本概念を体系的に理解できたと記載。
-
-> Power Appsの基本概念を体系的に理解
-
-[引用元を見る](https://qiita.com/TBO/items/aab2c52b45f56ee2fbc3)
-
-### 2. Power Appsで予算管理アプリを作ってみたときに詰まったところ
-
-研修後に自分の業務向けアプリへ挑戦。予算・経費管理アプリを作成。学習作例と自分の業務要件の間に難しさがあることを体験。
-
-> はじめてのPower Appsアプリ作成で詰まったところ
-
-[引用元を見る](https://qiita.com/Shinjimama/items/f58ecc6f74b55e300a74)
-
-### 3. 初心者がPower Appsで知識を集める仕組みを作ることにした話
-
-Power Appsを初めて触った状態。質問・回答を記録する小さなアプリをExcel Online接続で作成。フォーム作成からデータ登録までスムーズに進められたと記載。
-
-> Power Apps自体は初めて触ったけど
-
-[引用元を見る](https://qiita.com/sanoy625/items/09fb26ae9569f70246cd)
-
 ## 作って学ぶPower Apps ！すぐに現場で使えるアプリを3つ以上作成で体系的に学ぶなら
 
 **作って学ぶPower Apps ！すぐに現場で使えるアプリを3つ以上作成**
@@ -98,10 +81,6 @@ Power Appsを初めて触った状態。質問・回答を記録する小さな�
 
 :::cta label="Udemyで講座を見る" url="https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpower-platform-one%2F&subId1=m365-work" note="PR：価格・キャンペーンはリンク先でご確認ください"
 :::
-
-## 最終結論
-
-条件付きYES。UdemyでPower Appsの基本概念と作例を体系的に学べた実例はあるが、仕事で使うには自分の業務データ・権限・例外処理へ置き換える練習が必要。Udemyだけを視聴するより、講座→自分の小さな業務アプリの順で試す方が実務へつながりやすい。
 
 ## あわせて読みたい
 

@@ -42,19 +42,22 @@ noindex: false
 ## 3人の実例
 
 ### 事例1
-- design：SharePointリストを申請フォームとして利用
-- automation：Power Automateで承認処理
-- result：ノーコードで構築できたと記載
+
+> 全体的に言うとノーコードで作ることができるため、スクリプトを書けなくても問題なかった。
+
+[引用元を見る](https://qiita.com/arowoftree/items/c71a2e9fb7f9af59eeda)
 
 ### 事例2
-- design：承認者マスターと申請管理リスト
-- columns：承認者・状態・コメント等を保持
-- automation：Power Automateで承認
+
+> 承認者リスト列はユーザー型で複数のユーザーを設定できるようにします。
+
+[引用元を見る](https://qiita.com/Rambosan/items/e5b9fe32ffbd727f5e38)
 
 ### 事例3
-- design：申請詳細と承認履歴を別リスト化
-- input：Power Appsで申請
-- update：Power Automateで承認結果更新
+
+> Power AppsのSubmitForm関数で申請を記録し、Power Automateで承認結果に応じて、
+
+[引用元を見る](https://qiita.com/DEmodoriGatsuO/items/56c3324dae17a961e891)
 
 ## 3人の比較から分かること
 
@@ -68,32 +71,6 @@ noindex: false
 - 権限設計を先に確認する
 - 否認・取消・再申請・代理承認の例外を決める
 
-## 3人の詳細実例
-
-### 1. SharePointリストを申請フォームとして利用、Power Automateで承認処理、ノー
-
-SharePointリストを申請フォームとして利用、Power Automateで承認処理、ノーコードで構築できたと記載。
-
-> 全体的に言うとノーコードで作ることができるため、スクリプトを書けなくても問題なかった。
-
-[引用元を見る](https://qiita.com/arowoftree/items/c71a2e9fb7f9af59eeda)
-
-### 2. 承認者マスターと申請管理リスト、承認者・状態・コメント等を保持、Power Automateで承
-
-承認者マスターと申請管理リスト、承認者・状態・コメント等を保持、Power Automateで承認。
-
-> 承認者リスト列はユーザー型で複数のユーザーを設定できるようにします。
-
-[引用元を見る](https://qiita.com/Rambosan/items/e5b9fe32ffbd727f5e38)
-
-### 3. 申請詳細と承認履歴を別リスト化、Power Appsで申請、Power Automateで承認結
-
-申請詳細と承認履歴を別リスト化、Power Appsで申請、Power Automateで承認結果更新。
-
-> Power AppsのSubmitForm関数で申請を記録し、Power Automateで承認結果に応じて、列を更新していくリストになります。
-
-[引用元を見る](https://qiita.com/DEmodoriGatsuO/items/56c3324dae17a961e891)
-
 ## クラウド版Power Automate基礎マスターコース〖業務プロセスの自動化へ一歩踏み出そう〗〖旧Flow〗で体系的に学ぶなら
 
 **クラウド版Power Automate基礎マスターコース〖業務プロセスの自動化へ一歩踏み出そう〗〖旧Flow〗**
@@ -103,10 +80,6 @@ SharePointリストを申請フォームとして利用、Power Automateで承�
 
 :::cta label="Udemyで講座を見る" url="https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpowerautomate-master%2F&subId1=m365-work" note="PR：価格・キャンペーンはリンク先でご確認ください"
 :::
-
-## 最終結論
-
-YES。申請項目・承認者・状態・否認時の扱いなど条件を定型化できる業務は、SharePointリストとPower Automateを組み合わせて承認フローへ移せる実例がある。複雑な多段承認では権限・履歴・再申請設計が必要。
 
 ## あわせて読みたい
 

@@ -42,20 +42,22 @@ Teamsでファイルを見失う問題は、チャットとチャネルで保存
 ## 3人の実例
 
 ### 事例1
-- verification：TeamsとSharePoint／OneDriveを実機で突き合わせ
-- channel：チャネルはSharePoint
-- chat：チャット添付はOneDrive
+
+> Teams はファイルの見せ場であって、保存場所そのものではありません。
+
+[引用元を見る](https://sananeblog.com/teams-file-storage-location/)
 
 ### 事例2
-- problem：共有した業務ファイルが後から見つからない
-- rule：軽い共有はチャット、継続ファイルはチャネル
-- reason：保存先が投稿者ごとに分散するのを避ける
+
+> 継続的に扱う業務ファイルは必ずチャネルにアップする
+
+[引用元を見る](https://note.com/like_newt3020/n/nfa3845ae214d)
 
 ### 事例3
-- rule：ファイルの持ち主で置き場所を決める
-- onedrive：個人作業
-- teams：双方向の共同作業
-- sharepoint：組織共有
+
+> 判断軸は１つです。置き場所はそのファイルの持ち主は誰かで決めてください。
+
+[引用元を見る](https://zenn.dev/yumekulu/articles/003-sharepoint-teams-onedrive-tsukaiwake)
 
 ## 3人の比較から分かること
 
@@ -69,32 +71,6 @@ Teamsでファイルを見失う問題は、チャットとチャネルで保存
 - チャネルとチャットでは実体の保存先が異なる
 - 既存運用ルールがある場合は組織ルールを優先する
 
-## 3人の詳細実例
-
-### 1. TeamsとSharePoint／OneDriveを実機で突き合わせ、チャネルはSharePoi
-
-TeamsとSharePoint／OneDriveを実機で突き合わせ、チャネルはSharePoint、チャット添付はOneDrive。
-
-> Teams はファイルの見せ場であって、保存場所そのものではありません。
-
-[引用元を見る](https://sananeblog.com/teams-file-storage-location/)
-
-### 2. 共有した業務ファイルが後から見つからない、軽い共有はチャット、継続ファイルはチャネル、保存先が投
-
-共有した業務ファイルが後から見つからない、軽い共有はチャット、継続ファイルはチャネル、保存先が投稿者ごとに分散するのを避ける。
-
-> 継続的に扱う業務ファイルは必ずチャネルにアップする
-
-[引用元を見る](https://note.com/like_newt3020/n/nfa3845ae214d)
-
-### 3. ファイルの持ち主で置き場所を決める、個人作業、双方向の共同作業、組織共有
-
-ファイルの持ち主で置き場所を決める、個人作業、双方向の共同作業、組織共有。
-
-> 判断軸は１つです。置き場所はそのファイルの持ち主は誰かで決めてください。
-
-[引用元を見る](https://zenn.dev/yumekulu/articles/003-sharepoint-teams-onedrive-tsukaiwake)
-
 ## Teams基本の教科書ー基礎＋αのテクニックが学べる初心者向け実践講座で体系的に学ぶなら
 
 **Teams基本の教科書ー基礎＋αのテクニックが学べる初心者向け実践講座**
@@ -105,10 +81,6 @@ TeamsとSharePoint／OneDriveを実機で突き合わせ、チャネルはShareP
 
 :::cta label="Udemyで講座を見る" url="https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fteams-yv%2F&subId1=m365-work" note="PR：価格・キャンペーンはリンク先でご確認ください"
 :::
-
-## 最終結論
-
-YES。Teamsでファイルを見失う問題は、チャットとチャネルで保存先が異なることを理解し、継続的な業務ファイルはチャネルへ集約するなど置き場所のルールを決めると減らしやすい。3人とも保存先や所有者を基準に整理している。
 
 ## あわせて読みたい
 

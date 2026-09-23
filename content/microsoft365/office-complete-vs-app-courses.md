@@ -42,19 +42,22 @@ noindex: false
 ## 3人の実例
 
 ### 事例1
-- experience：Word・Excel・PowerPointを日常利用
-- method：3アプリをそれぞれ3日間で学習
-- finding：実務経験があっても知らない機能を発見
+
+> Word、Excel、PowerPoint、それぞれ３日間でテキストを一巡しました。
+
+[引用元を見る](https://note.com/liovoil/n/n6ceaf4c72693)
 
 ### 事例2
-- recommendation：近いうちに使うアプリから始める
-- reason：覚えた操作をすぐ試せる
-- parallel：初心者は同時並行より片方ずつを推奨
+
+> 近いうちに実際に使うほうから覚える。この決め方なら、勉強した操作をすぐ試せます。
+
+[引用元を見る](https://kurashigoto.osaka.jp/archives/1431)
 
 ### 事例3
-- problem：何をどの順で練習するか分からなかった
-- method：全体像→Excel中心→Word・PowerPointと段階化
-- outcome：1か月で学習を進めたと記載
+
+> Week3：Word/PowerPointのテンプレ＋模試1回目→弱点ノート
+
+[引用元を見る](https://note.com/clean_phlox2804/n/n36eb7efa43f9)
 
 ## 3人の比較から分かること
 
@@ -68,32 +71,6 @@ noindex: false
 - 3例はUdemy講座そのものの比較ではない
 - 総合・個別の選択は仕事で使う範囲に左右される
 
-## 3人の詳細実例
-
-### 1. Word・Excel・PowerPointを日常利用、3アプリをそれぞれ3日間で学習、実務経験が
-
-Word・Excel・PowerPointを日常利用、3アプリをそれぞれ3日間で学習、実務経験があっても知らない機能を発見。
-
-> Word、Excel、PowerPoint、それぞれ３日間でテキストを一巡しました。
-
-[引用元を見る](https://note.com/liovoil/n/n6ceaf4c72693)
-
-### 2. 近いうちに使うアプリから始める、覚えた操作をすぐ試せる、初心者は同時並行より片方ずつを推奨
-
-近いうちに使うアプリから始める、覚えた操作をすぐ試せる、初心者は同時並行より片方ずつを推奨。
-
-> 近いうちに実際に使うほうから覚える。この決め方なら、勉強した操作をすぐ試せます。
-
-[引用元を見る](https://kurashigoto.osaka.jp/archives/1431)
-
-### 3. 何をどの順で練習するか分からなかった、全体像→Excel中心→Word・PowerPointと段
-
-何をどの順で練習するか分からなかった、全体像→Excel中心→Word・PowerPointと段階化、1か月で学習を進めたと記載。
-
-> Week3：Word/PowerPointのテンプレ＋模試1回目→弱点ノート
-
-[引用元を見る](https://note.com/clean_phlox2804/n/n36eb7efa43f9)
-
 ## 〖Word + PowerPoint + Excel〗０から「Office使えます！」と言えるようになる講座で体系的に学ぶなら
 
 **〖Word + PowerPoint + Excel〗０から「Office使えます！」と言えるようになる講座**
@@ -104,10 +81,6 @@ Word・Excel・PowerPointを日常利用、3アプリをそれぞれ3日間で�
 
 :::cta label="Udemyで講座を見る" url="https://trk.udemy.com/c/7431603/4048681/39854?u=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Foffice_basic%2F&subId1=m365-work" note="PR：価格・キャンペーンはリンク先でご確認ください"
 :::
-
-## 最終結論
-
-条件付きYES。複数のOfficeアプリを仕事で使う初心者は総合講座で全体像を掴む価値がある。一方、直近で使うアプリや解決したい業務が明確なら、そのアプリの個別講座を先に選ぶ方が学習内容をすぐ実務で使いやすい。
 
 ## あわせて読みたい
 
