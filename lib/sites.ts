@@ -8,6 +8,13 @@ export type SiteQualificationConfig = {
   description: string;
   match: string[];
   featuredArticleSlugs?: string[];
+  level?: string;
+  examDuration?: string;
+  questionCount?: string;
+  examFee?: string;
+  officialUrl?: string;
+  factsVerified?: string;
+  notice?: string;
 };
 
 export type SiteCategoryConfig = {
@@ -18,6 +25,9 @@ export type SiteCategoryConfig = {
   match: string[];
   featuredArticleSlugs?: string[];
   qualifications?: SiteQualificationConfig[];
+  databaseTitle?: string;
+  databaseDescription?: string;
+  learningRoute?: string[];
 };
 
 export type SiteConfig = {
@@ -34,6 +44,8 @@ export type SiteConfig = {
   topic: string;
   categoryHeading: string;
   keywords: string[];
+  databaseTitle?: string;
+  databaseDescription?: string;
   categories: SiteCategoryConfig[];
 };
 
