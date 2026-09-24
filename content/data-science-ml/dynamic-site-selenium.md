@@ -4,7 +4,7 @@ title: "動的サイトのスクレイピングはSeleniumでできる？"
 description: "動的サイト スクレイピング Seleniumを3つの実践例から検証。3つの独立した実践例では、動的サイト スクレイピング Seleniumに関連して、目的を絞って小さく実装し、結果を確認しながら改善する流れが共通していた。環境やデータで結果は変わるため条件付きで支持する。"
 slug: "dynamic-site-selenium"
 date: "2026-09-23"
-updated: "2026-09-23"
+updated: "2026-09-24"
 author: "データサイエンス・機械学習ラボ編集部"
 category: "data-collection"
 categoryName: "データ収集・スクレイピング"
@@ -31,74 +31,68 @@ noindex: false
 
 ## 結論
 
-3つの独立した実践例では、動的サイト スクレイピング Seleniumに関連して、目的を絞って小さく実装し、結果を確認しながら改善する流れが共通していた。環境やデータで結果は変わるため条件付きで支持する。
-
-3事例に共通するのは、取得と解析の役割を分け、Requests・BeautifulSoup・Seleniumを使い分けている。 実際のWebページで小さな取得処理を作っている。
-
-ただし、対象サイトの規約やrobots.txt、負荷への配慮が必要。
+JavaScript実行後に表示される要素やログイン・クリックなどのブラウザ操作が必要なページは、requestsだけでは取得できないことがあります。その場合はSeleniumでブラウザを操作し、必要なら取得後のHTMLをBeautifulSoupで解析する方法が有効です。
 
 ## 3人の実例
 
 ### 事例1
-- 実践者：Mizuki Ohno
-- 取り組み：RequestsとBeautifulSoupを使う静的ページ取得と、Seleniumを使う動的ページ取得を実践している。
-- 確認結果：JavaScriptで後から描画される内容はRequestsだけでは取得できないケースを説明している。
-- 判断材料：用途に応じてRequests・BeautifulSoup・Seleniumを使い分けている。
+- 実践者：Moh_no
+- 取り組み：静的取得と動的取得を同じ記事で比較。
+- 確認結果：JavaScriptでHTMLが書き換わる場合はwebdriverによる操作が必要と説明。
+- 判断材料：requestsで取れない理由とSeleniumへ切り替える条件が明確。
 
 ### 事例2
-- 実践者：Nozawa Naoki
-- 取り組み：Seleniumでログイン処理を行い、取得したHTMLをBeautifulSoupで解析した。
-- 確認結果：動的サイトのログインを含む取得処理をWindowsとPythonで実装した。
-- 判断材料：ブラウザ操作とHTML解析を役割分担している。
+- 実践者：naokey1228
+- 取り組み：ログインが必要なWEBサイトをSeleniumで操作。
+- 確認結果：Seleniumでログインした後のHTMLをBeautifulSoupで解析。
+- 判断材料：ブラウザ操作とHTML解析を分担する実践例。
 
 ### 事例3
-- 実践者：tomo0227
-- 取り組み：RequestsでWebページを取得し、BeautifulSoupで必要な情報を抽出する一連の処理を実装した。
-- 確認結果：取得と解析を分けて考えるスクレイピングの基本手順を示した。
-- 判断材料：Pythonで小さなWebデータ取得を実践した。
+- 実践者：AzukiImo
+- 取り組み：JavaScriptで変化する動的ページをSeleniumで取得。
+- 確認結果：requestsとBeautifulSoupで難しいページへSeleniumを使用。
+- 判断材料：記事テーマの「動的サイトをSeleniumで取れるか」に直接一致。
 
 ## 実例から分かること
 
-取得と解析の役割を分け、Requests・BeautifulSoup・Seleniumを使い分けている。
-実際のWebページで小さな取得処理を作っている。
-
-静的ページ・動的ページ・ログイン有無など対象が異なる。
-保存形式や巡回規模が異なる。
+- JavaScriptで後から生成される要素はrequestsだけでは取得できない場合がある。
+- Seleniumは実ブラウザを操作し、クリック・ログイン・スクロール後のHTMLを取得できる。
+- Seleniumで操作し、BeautifulSoupでHTML解析する組み合わせも使われている。
 
 ## 実例
 
-### 1. RequestsとBeautifulSoupを使う静的ページ取得と、Seleniumを使う動的ページ取得を実践している
+### 1. 静的取得と動的取得を同じ記事で比較
 
-RequestsとBeautifulSoupを使う静的ページ取得と、Seleniumを使う動的ページ取得を実践している。
-JavaScriptで後から描画される内容はRequestsだけでは取得できないケースを説明している。
+静的取得と動的取得を同じ記事で比較。
+JavaScriptでHTMLが書き換わる場合はwebdriverによる操作が必要と説明。
 
-> JavaScriptはクライアント側でHTMLを書き換えるため、requestsによる解決ができません。そのような場合は
+> 最近のホームページには、JavaScriptによる動的なコンテンツが埋め込まれるようになってきました。JavaScriptはクライアント側でHTMLを書き換えるため、requestsによる解決ができません（サーバ側でページを書き換えるPHPと違い、requestsでパラメータを渡しても目的の要素を獲得できない）。目的の要素を表示させるためには、webdriverでブラウザを操作する必要があります（ボタンを押す、タブを変更するなど）。
 
-用途に応じてRequests・BeautifulSoup・Seleniumを使い分けている。
+requestsで取れない理由とSeleniumへ切り替える条件が明確。
 
 [引用元を見る](https://qiita.com/Moh_no/items/a835f77b6b4e3972fbbe)
 
-### 2. Seleniumでログイン処理を行い、取得したHTMLをBeautifulSoupで解析した
+### 2. ログインが必要なWEBサイトをSeleniumで操作
 
-Seleniumでログイン処理を行い、取得したHTMLをBeautifulSoupで解析した。
-動的サイトのログインを含む取得処理をWindowsとPythonで実装した。
+ログインが必要なWEBサイトをSeleniumで操作。
+Seleniumでログインした後のHTMLをBeautifulSoupで解析。
 
-> 流れとしてはSeleniumでログインを突破し，取得したHTMLをBeautifulSoupで解析するといった感じです．
+> ログインが必要なWEBサイトのスクレイピングとして，WEBブラウザの自動操作を行うSeleniumを用いる方法があります．流れとしてはSeleniumでログインを突破し，取得したHTMLをBeautifulSoupで解析するといった感じです．
 
-ブラウザ操作とHTML解析を役割分担している。
+ブラウザ操作とHTML解析を分担する実践例。
 
 [引用元を見る](https://qiita.com/naokey1228/items/6d0a0065e85ee513a580)
 
-### 3. RequestsでWebページを取得し、BeautifulSoupで必要な情報を抽出する一連の処理を実装した
+### 3. JavaScriptで変化する動的ページをSeleniumで取得
 
-RequestsでWebページを取得し、BeautifulSoupで必要な情報を抽出する一連の処理を実装した。
-取得と解析を分けて考えるスクレイピングの基本手順を示した。
+JavaScriptで変化する動的ページをSeleniumで取得。
+requestsとBeautifulSoupで難しいページへSeleniumを使用。
 
-> RequestsとBeautifulSoupを組み合わせると、webページを取得して、取得したwebページから情報抽出を
+> いくつかスクレイピングに関する記事を紹介したのですが，いずれもrequestsとBeautifulSoupで完結するものでした．今回は，JavaScriptなどでページの内容が変化していくような動的なWebページのスクレイピングをSeleniumを利用して行ってみたいと思います．
 
-Pythonで小さなWebデータ取得を実践した。
+記事テーマの「動的サイトをSeleniumで取れるか」に直接一致。
 
-[引用元を見る](https://qiita.com/tomo0227/items/3e86e10cb6c2033362c5)
+[引用元を見る](https://qiita.com/AzukiImo/items/8641ead416150ecc71e5)
 
 ## 判断するときに外せない条件
 
@@ -125,11 +119,7 @@ Pythonで小さなWebデータ取得を実践した。
 
 ## 最終結論
 
-3つの独立した実践例では、動的サイト スクレイピング Seleniumに関連して、目的を絞って小さく実装し、結果を確認しながら改善する流れが共通していた。環境やデータで結果は変わるため条件付きで支持する。
-
-まずは『対象ページの構造を確認すること』から始め、『静的取得から始め必要ならブラウザ操作へ進むこと』で結果を確認するのが、今回の3事例に近い進め方です。
-
-対象サイトの規約やrobots.txt、負荷への配慮が必要。
+動的サイトでは、最初にrequestsでHTMLを確認し、目的要素がHTML内に存在しない・ログインやクリックが必要ならSeleniumへ切り替えると無駄がありません。Seleniumはブラウザ操作ができる一方で処理が重いため、操作が必要な部分だけSeleniumを使い、取得後の解析はBeautifulSoupへ渡す構成も実用的です。
 
 ## あわせて読みたい
 

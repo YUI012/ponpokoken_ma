@@ -4,7 +4,7 @@ title: "BeautifulSoupとSeleniumどっちを使う？違いを整理"
 description: "BeautifulSoup Selenium 違いを3つの実践例から検証。3つの独立した実践例では、BeautifulSoup Selenium 違いに関連して、目的を絞って小さく実装し、結果を確認しながら改善する流れが共通していた。環境やデータで結果は変わるため条件付きで支持する。"
 slug: "beautifulsoup-vs-selenium"
 date: "2026-09-23"
-updated: "2026-09-23"
+updated: "2026-09-24"
 author: "データサイエンス・機械学習ラボ編集部"
 category: "data-collection"
 categoryName: "データ収集・スクレイピング"
@@ -31,72 +31,66 @@ noindex: false
 
 ## 結論
 
-3つの独立した実践例では、BeautifulSoup Selenium 違いに関連して、目的を絞って小さく実装し、結果を確認しながら改善する流れが共通していた。環境やデータで結果は変わるため条件付きで支持する。
-
-3事例に共通するのは、取得と解析の役割を分け、Requests・BeautifulSoup・Seleniumを使い分けている。 実際のWebページで小さな取得処理を作っている。
-
-ただし、対象サイトの規約やrobots.txt、負荷への配慮が必要。
+BeautifulSoupとSeleniumは競合というより役割が違います。静的HTMLを取得・解析するだけならrequests + BeautifulSoupが軽く、JavaScriptで後から描画される要素やログイン・クリックなどブラウザ操作が必要ならSeleniumが必要になります。実務では「まずrequests/BeautifulSoupで取れるか確認し、必要な箇所だけSelenium」を基本にすると過剰なブラウザ自動化を避けやすいです。
 
 ## 3人の実例
 
 ### 事例1
-- 実践者：Mizuki Ohno
-- 取り組み：RequestsとBeautifulSoupを使う静的ページ取得と、Seleniumを使う動的ページ取得を実践している。
-- 確認結果：JavaScriptで後から描画される内容はRequestsだけでは取得できないケースを説明している。
-- 判断材料：用途に応じてRequests・BeautifulSoup・Seleniumを使い分けている。
+- 実践者：Moh_no
+- 取り組み：requests/BeautifulSoupとSeleniumを同じスクレイピング記事で使い分け。
+- 確認結果：JavaScriptでHTMLが書き換わるケースではwebdriver操作が必要と説明。
+- 判断材料：静的・動的で手段を切り替える根拠が明確。
 
 ### 事例2
-- 実践者：Nozawa Naoki
-- 取り組み：Seleniumでログイン処理を行い、取得したHTMLをBeautifulSoupで解析した。
-- 確認結果：動的サイトのログインを含む取得処理をWindowsとPythonで実装した。
-- 判断材料：ブラウザ操作とHTML解析を役割分担している。
+- 実践者：naokey1228
+- 取り組み：ログインが必要なサイトをSeleniumで操作。
+- 確認結果：Seleniumでログイン後、HTMLをBeautifulSoupで解析する流れを採用。
+- 判断材料：両ツールを組み合わせる具体例になっている。
 
 ### 事例3
 - 実践者：tomo0227
-- 取り組み：RequestsでWebページを取得し、BeautifulSoupで必要な情報を抽出する一連の処理を実装した。
-- 確認結果：取得と解析を分けて考えるスクレイピングの基本手順を示した。
-- 判断材料：Pythonで小さなWebデータ取得を実践した。
+- 取り組み：静的取得と動的取得を一通り実装。
+- 確認結果：SeleniumはJavaScriptを使う動的サイト向けと整理。
+- 判断材料：スクロールやデータ読み込みなどブラウザ操作も含めて説明。
 
 ## 実例から分かること
 
-取得と解析の役割を分け、Requests・BeautifulSoup・Seleniumを使い分けている。
-実際のWebページで小さな取得処理を作っている。
-
-静的ページ・動的ページ・ログイン有無など対象が異なる。
-保存形式や巡回規模が異なる。
+BeautifulSoupは取得済みHTMLの解析に向く。
+JavaScriptで動くページやブラウザ操作が必要な場合はSeleniumが有効。
+Seleniumでページを操作し、取得HTMLをBeautifulSoupで解析する併用もできる。
 
 ## 実例
 
-### 1. RequestsとBeautifulSoupを使う静的ページ取得と、Seleniumを使う動的ページ取得を実践している
+### 1. requests/BeautifulSoupとSeleniumを同じスクレイピング記事で使い分け
 
-RequestsとBeautifulSoupを使う静的ページ取得と、Seleniumを使う動的ページ取得を実践している。
-JavaScriptで後から描画される内容はRequestsだけでは取得できないケースを説明している。
+requests/BeautifulSoupとSeleniumを同じスクレイピング記事で使い分け。
+JavaScriptでHTMLが書き換わるケースではwebdriver操作が必要と説明。
 
-> JavaScriptはクライアント側でHTMLを書き換えるため、requestsによる解決ができません。そのような場合は
+> JavaScriptはクライアント側でHTMLを書き換えるため、requestsによる解決ができません（サーバ側でページを書き換えるPHPと違い、requestsでパラメータを渡しても目的の要素を獲得できない）。目的の要素を表示させるためには、webdriverでブラウザを操作する必要があります（ボタンを押す、タブを変更するなど）。
 
-用途に応じてRequests・BeautifulSoup・Seleniumを使い分けている。
+静的・動的で手段を切り替える根拠が明確。
 
 [引用元を見る](https://qiita.com/Moh_no/items/a835f77b6b4e3972fbbe)
 
-### 2. Seleniumでログイン処理を行い、取得したHTMLをBeautifulSoupで解析した
+### 2. ログインが必要なサイトをSeleniumで操作
 
-Seleniumでログイン処理を行い、取得したHTMLをBeautifulSoupで解析した。
-動的サイトのログインを含む取得処理をWindowsとPythonで実装した。
+ログインが必要なサイトをSeleniumで操作。
+Seleniumでログイン後、HTMLをBeautifulSoupで解析する流れを採用。
 
-> 流れとしてはSeleniumでログインを突破し，取得したHTMLをBeautifulSoupで解析するといった感じです．
+> ログインが必要なWEBサイトのスクレイピングとして，WEBブラウザの自動操作を行うSeleniumを用いる方法があります．流れとしてはSeleniumでログインを突破し，取得したHTMLをBeautifulSoupで解析するといった感じです．今回は検証として，Googleで「Python」と検索した時の検索結果を取得してみました．
 
-ブラウザ操作とHTML解析を役割分担している。
+両ツールを組み合わせる具体例になっている。
 
 [引用元を見る](https://qiita.com/naokey1228/items/6d0a0065e85ee513a580)
 
-### 3. RequestsでWebページを取得し、BeautifulSoupで必要な情報を抽出する一連の処理を実装した
+### 3. 静的取得と動的取得を一通り実装
 
-RequestsでWebページを取得し、BeautifulSoupで必要な情報を抽出する一連の処理を実装した。
-取得と解析を分けて考えるスクレイピングの基本手順を示した。
+静的取得と動的取得を一通り実装。
+SeleniumはJavaScriptを使う動的サイト向けと整理。
 
-> RequestsとBeautifulSoupを組み合わせると、webページを取得して、取得したwebページから情報抽出を
+> 最後にSeleniumについてです。SeleniumはJavaScriptが使われた動的なサイトのスクレイピングで用いられます。ヘッドレスブラウザの操作やページのスクロール、データの読み込み、ページの解析などを行います。
 
-Pythonで小さなWebデータ取得を実践した。
+スクロールやデータ読み込みなどブラウザ操作も含めて説明。
 
 [引用元を見る](https://qiita.com/tomo0227/items/3e86e10cb6c2033362c5)
 
@@ -125,11 +119,7 @@ Pythonで小さなWebデータ取得を実践した。
 
 ## 最終結論
 
-3つの独立した実践例では、BeautifulSoup Selenium 違いに関連して、目的を絞って小さく実装し、結果を確認しながら改善する流れが共通していた。環境やデータで結果は変わるため条件付きで支持する。
-
-まずは『対象ページの構造を確認すること』から始め、『静的取得から始め必要ならブラウザ操作へ進むこと』で結果を確認するのが、今回の3事例に近い進め方です。
-
-対象サイトの規約やrobots.txt、負荷への配慮が必要。
+BeautifulSoupとSeleniumは「どちらが上」ではなく、対象ページの作りで選びます。最初はrequests + BeautifulSoupでHTML取得を試し、JavaScript描画・ログイン・ボタン操作などが必要な部分だけSeleniumに切り替えるのがシンプルです。Seleniumで操作した後のHTMLをBeautifulSoupで解析する併用も有効です。
 
 ## あわせて読みたい
 

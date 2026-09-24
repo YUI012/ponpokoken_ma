@@ -69,21 +69,28 @@ noindex: false
 ### 1. 物理実機なし・Packet Tracerで確認
 Ping-t CCNA合格者さんは、基本的なNW知識ありという条件で946点で合格。学習期間は3週間、教材はCCNA完全合格テキスト、Ping-t、Packet Tracerでした。Udemy利用はUdemy動画を使用です。
 
-> 実機ではできるのに、Packet Tracer上でできない設定があり、無駄に混乱しました。
+> 1. 10時間 Udemy 視聴<br>2. 30時間 ping-t利用<br>3. 10時間 Packet Tracerでコマンドの確認<br>実機ではできるのに、Packet Tracer上でできない設定があり、無駄に混乱しました。
 
 [引用元を見る](https://ping-t.com/modules/xfsection/article.php?articleid=16189)
 
 ### 2. シミュレータで実機代替
 GORITecさんは、未経験という条件でCCNA合格。学習期間は約90日、教材はPacket Tracer、GNS3、Ping-tでした。Udemy利用は記載なしです。
 
-> CCNAはPacket Tracerで十分でした。基本的にCCNAで学ぶ内容はPacket Tracerで対応可能です。
+> 知識を定着させるには、座学だけでなく実践的な学習が必要と考え、GNS3とPacket Tracerを使用して実機学習をしました。
+> GNS3はPacket Tracerよりも本格的な設定が学べるとネットに書いてあったので使用してみましたが、CCNAはPacket Tracerで十分でした。基本的にCCNAで学ぶ内容はPacket Tracerで対応可能です。
 
 [引用元を見る](https://www.goritarou.com/ccna_passing_trial_record/)
 
 ### 3. 短期学習でもPacket Tracerを利用
 となりのインフラ先輩さんは、記載なしという条件でCCNA合格。学習期間は10日、教材はPing-t、Packet Tracer、AIでした。Udemy利用は記載なしです。
 
-> 8〜9日目：Packet Tracerで実機コマンド確認
+> 10日間のスケジュールはこう組まれた。
+> ∙1〜2日目：IPコネクティビティ（OSPF・スタティックルート）
+> ∙3日目：IPサービス（NAT・DHCP・NTP）と基礎
+> ∙4日目：セキュリティと自動化
+> ∙5〜7日目：総復習と模擬試験
+> ∙8〜9日目：Packet Tracerで実機コマンド確認
+> ∙10日目：苦手暗記項目の総ざらい
 
 [引用元を見る](https://note.com/unison_0106/n/nc9d9d0649dde)
 

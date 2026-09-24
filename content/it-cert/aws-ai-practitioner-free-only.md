@@ -69,21 +69,21 @@ noindex: false
 ### 1. 無料Skill Builderのみで合格
 Sho5_Matsuさんは、記載なしという条件で732点で合格。学習期間は記載なし、教材はAWS Skill Builderでした。Udemy利用は使用せずです。
 
-> 私が使用した教材は、AWS Skill Builderのみです。
+> 私が使用した教材は、AWS Skill Builderのみです。参考書やUdemy、有料問題集などは一切使用していません。無料教材だけでも十分合格を目指せる内容でした。
 
 [引用元を見る](https://qiita.com/Sho5_Matsu/items/e6d8083da99c9952387f)
 
 ### 2. 無料Skill Builder中心で合格
 Haruki-Nさんは、業務でAI関連用語やAWSサービスに触れる機会なしという条件でBeta試験合格。学習期間は記載なし、教材は試験ガイド、AWS Skill Builder、Skill Builder模擬試験でした。Udemy利用は使用せずです。
 
-> 受講にあたってSkill BuilderのIDが必要になりますが、無料での受講が可能です。
+> 受講時間は18時間で基本的なAI関連の用語やAWSサービスについて学ぶことができます。受講にあたってSkill BuilderのIDが必要になりますが、無料での受講が可能です。
 
 [引用元を見る](https://qiita.com/Haruki-N/items/8ae907733819fbcdc080)
 
 ### 3. 有料Udemyで1週間合格
 Bambambiさんは、AWS実務・資格学習経験ありという条件で808点で合格。学習期間は約1週間、教材はUdemy動画、Udemy模擬試験、AI、AWS公式ドキュメントでした。Udemy利用はUdemy教材2つを使用です。
 
-> 今回の学習では、Udemyの以下の2つの教材を使用しました。
+> 最初の2日間で動画講座を視聴し、試験範囲の全体像を把握しました。残りの期間は4回分の問題演習に取り組み、苦手分野を動画講座やAI（Claude、ChatGPT）で復習した後、同じ問題をもう一度解きました。
 
 [引用元を見る](https://qiita.com/Bambambi/items/5e506205a313bcedac75)
 

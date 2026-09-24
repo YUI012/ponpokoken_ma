@@ -76,7 +76,7 @@ CLFの受験そのものは必須ではないが、SAAではAWSサービスを�
 ### CLF未取得・AWS資格なしの状態からSAAへ直行して合格
 msys825さんの事例では、AWS実務ほぼなし・AWS資格なしという前提から、約1.5ヶ月でSAA合格でした。使用教材はUdemy、Ping-t、模擬試験です。
 
-> クラウドプラクティショナー（CLF）未取得
+> 受験前のレベル感は、エンジニア歴3年弱（主にPHP / Laravelのバックエンド）、AWS実務はほぼなし（たまにCloudWatch Logsを見る程度）、AWS資格なし、その他IT資格は基本情報技術者という状態でした。
 
 [引用元を見る](https://qiita.com/msys825/items/b2c39e2d3acdebef75af)
 
@@ -84,7 +84,7 @@ msys825さんの事例では、AWS実務ほぼなし・AWS資格なしという�
 ### 一般的なCLF→SAAの順序を逆にしてSAAを先に取得
 yasu_kuriさんの事例では、SAA取得済みという前提から、CLFは20時間弱でSAAを先に取得し、その後CLFも取得でした。使用教材は問題集中心です。
 
-> 一般的にはCLFからの取得を推奨されることが多いのですが、私はSAAから取得しました、、、
+> 一般的にはCLFからの取得を推奨されることが多いのですが、私はSAAから取得しました、、、そこでこの記事では、SAAから取得した人が感じたCLFについてゆる〜く書いていきます。
 
 [引用元を見る](https://qiita.com/yasu_kuri/items/e10774bb9d75e37ebffd)
 
@@ -92,7 +92,7 @@ yasu_kuriさんの事例では、SAA取得済みという前提から、CLFは20
 ### CLFを持たずAWS経験約1か月の状態からSAA合格
 comf_nakamuraさんの事例では、AWS経験は新人研修で約1か月・CLF未取得という前提から、2か月半で793点でSAA合格でした。使用教材はUdemy、Ping-tです。
 
-> ※AWS クラウドプラクティショナー（AWS CLF）は持っていません
+> 勉強開始当時のAWSの経験は、部の新人研修で1か月触った程度で、AWS案件へのアサインと同時にAWS SAAの勉強を開始。2か月半の勉強期間を経て、793点でAWS SAA-C03に合格しました。AWS クラウドプラクティショナー（AWS CLF）は持っていません。
 
 [引用元を見る](https://zenn.dev/comf_nakamura/articles/awssaa_experience)
 
